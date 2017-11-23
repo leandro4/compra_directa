@@ -1,0 +1,34 @@
+en:
+  errors:
+    attributes:
+      email:
+        invalid: "invalid_email_format"
+      date_from:
+        on_or_after: "invalid_datetime"
+      date:
+        on_or_after: "invalid_date"
+      date_to:
+        after: "invalid_datetime"
+
+    messages:
+      blank: "blank"
+      inclusion: "invalid type"
+      taken: "taken"
+      palindrome: "palindrome"
+      record_invalid: "Invalid Record"
+      non_match: "Passwords don't match"
+      extension_whitelist_error: "Invalid file type"
+      too_short: "minimum count is %{count}"
+
+    facebook_token:
+      invalid: "invalid_facebook_token"
+    google_token:
+      invalid: "invalid_google_token"
+    email_athentication:
+      invalid: "invalid_email_password"
+    pass_request:
+      invalid: "invalid_pass_request"
+    session:
+      invalid_credentials: "Invalid credentials"
+    password:
+      expired_token: "Token has expired"

@@ -1,0 +1,74 @@
+{
+  "user_registrations#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_registration",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "first_name": "Kena",
+        "last_name": "Nader",
+        "email": "rosa.lynch@mohrmurazik.com",
+        "password": "password"
+      },
+      "response_data": null,
+      "code": 204,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "user_sessions#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "email": "hyacinth@greenholt.info",
+        "password": "aaaaaaaaaaaaaaaa"
+      },
+      "response_data": {
+        "api_token": "CSzxiddeB6Js3Y7T8N8ov8NpEN5ILfTPJIF0U_zFEFaIenDsVrfkEyOEIAizM5xAofF6dClscmSSlwsjN6EPPA"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "email": "invalid_user",
+        "password": "vvvvvvvvvvvvv"
+      },
+      "response_data": null,
+      "code": 404,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "email": "romeo@funk.info",
+        "password": "invalid"
+      },
+      "response_data": null,
+      "code": 401,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ]
+}
