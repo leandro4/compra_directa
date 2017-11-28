@@ -4,8 +4,6 @@ module Api
   module V1
     module UserRegistration
       class CreateUserTest < Api::ApiIntegrationTest
-        let(:api_token) { Fabricate(:api_token, expire_at: 1.hour.ago, api_authenticable: device) }
-
         let(:valid_params) {{
           email: FFaker::Internet.email,
           password: FFaker::Internet.password,

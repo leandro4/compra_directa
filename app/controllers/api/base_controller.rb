@@ -27,6 +27,10 @@ class Api::BaseController < ActionController::Base
     @current_api_token
   end
 
+  def current_user
+    current_api_token.user
+  end
+
   def default_serializer_options
     {root: false}
   end

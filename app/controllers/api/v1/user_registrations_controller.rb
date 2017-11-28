@@ -6,11 +6,15 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
   api :POST, "/v1/user_registration", "Register an user"
   param :first_name, String
   param :last_name, String
+  param :phone, String
+  param :address, String
+  param :category, String
+  param :user_type, String
   param :email, String
   param :password, String
   ###### End of Documentation #######
   def create
-    Validators::UserValidator.new.validate!(registration_params)
+    Validators::CreateUserValidator.new.validate!(registration_params)
 
     @user = User.create!(registration_params)
 
@@ -20,6 +24,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
     # ensure
     #   clean_tempfile
     # end
+    head :ok
   end
 
   protected

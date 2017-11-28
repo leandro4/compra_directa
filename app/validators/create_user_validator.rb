@@ -1,5 +1,5 @@
 module Validators
-  class UserValidator < BaseValidator
+  class CreateUserValidator < BaseValidator
     attr_accessor :first_name, :last_name, :email, :password, :phone, :address,
       :user_type
 

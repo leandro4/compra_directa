@@ -1,4 +1,74 @@
 {
+  "providers#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/providers",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": "763d889e-bf56-4fb2-8a85-49a0206d00f3",
+          "first_name": "Shemika",
+          "last_name": "Windler",
+          "email": "julio@schmidtvon.us",
+          "phone": "675-682-3897",
+          "address": "88218 Zana Glen",
+          "user_type": "provider"
+        },
+        {
+          "id": "1b0eb594-355a-4ade-8862-fc479425c86c",
+          "first_name": "Lesa",
+          "last_name": "Huels",
+          "email": "santiago_hayes@blandamoore.com",
+          "phone": "300.404.7464",
+          "address": "6190 Leuschke Fort",
+          "user_type": "provider"
+        },
+        {
+          "id": "d81c35a5-50ec-4ac4-bbf6-71f54562010c",
+          "first_name": "Gertha",
+          "last_name": "Von",
+          "email": "shirly.rippin@torpharber.co.uk",
+          "phone": "1-753-781-3671",
+          "address": "56805 Purdy Gardens",
+          "user_type": "provider"
+        },
+        {
+          "id": "6068fd12-8d55-4464-bf58-0ce2282499fa",
+          "first_name": "Francene",
+          "last_name": "Denesik",
+          "email": "yvette_purdy@nitzschepredovic.us",
+          "phone": "778-858-4364 x838",
+          "address": "593 Cruickshank Rest",
+          "user_type": "provider"
+        },
+        {
+          "id": "6d32686e-9655-49d5-a8f7-a39b5000e435",
+          "first_name": "Sue",
+          "last_name": "Conroy",
+          "email": "wynona_macejkovic@champlin.ca",
+          "phone": "682.413.2196 x5697",
+          "address": "983 Gulgowski Lock",
+          "user_type": "provider"
+        },
+        {
+          "id": "a8171955-4e3b-491f-bfa6-36929ad30b63",
+          "first_name": "Deon",
+          "last_name": "Kilback",
+          "email": "ashton@abbottbins.info",
+          "phone": "592.450.8472",
+          "address": "194 Kris Island",
+          "user_type": "provider"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "user_registrations#create": [
     {
       "verb": "POST",
@@ -8,13 +78,16 @@
       ],
       "query": null,
       "request_data": {
-        "first_name": "Kena",
-        "last_name": "Nader",
-        "email": "rosa.lynch@mohrmurazik.com",
-        "password": "password"
+        "email": "jeffrey@oconner.ca",
+        "password": "yyyyyyyyyyyyyy",
+        "first_name": "Williams",
+        "last_name": "Cremin",
+        "phone": "639.774.2750 x91788",
+        "address": "7644 Goodwin Club",
+        "user_type": "commerce"
       },
       "response_data": null,
-      "code": 204,
+      "code": 200,
       "show_in_doc": 1,
       "recorded": true
     }
@@ -28,11 +101,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "hyacinth@greenholt.info",
-        "password": "aaaaaaaaaaaaaaaa"
+        "email": "blaine@runolfsson.us",
+        "password": "uuuuuuuu"
       },
       "response_data": {
-        "api_token": "CSzxiddeB6Js3Y7T8N8ov8NpEN5ILfTPJIF0U_zFEFaIenDsVrfkEyOEIAizM5xAofF6dClscmSSlwsjN6EPPA"
+        "api_token": "Ok4CDujQ8KICrxqm-a2rBW5bsK0e4HcRuATVrMaEVBgdjs42ckBOiO8wdmRpqExjpSX8fsvQ4s96X_EMcm2ttw"
       },
       "code": 200,
       "show_in_doc": 1,
@@ -47,7 +120,7 @@
       "query": null,
       "request_data": {
         "email": "invalid_user",
-        "password": "vvvvvvvvvvvvv"
+        "password": "iiiiiiiiii"
       },
       "response_data": null,
       "code": 404,
@@ -62,12 +135,30 @@
       ],
       "query": null,
       "request_data": {
-        "email": "romeo@funk.info",
+        "email": "gil@mclaughlin.biz",
         "password": "invalid"
       },
       "response_data": null,
       "code": 401,
       "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "users#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/users",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "phone": "390.539.0763",
+        "address": "1519 Lubowitz Meadows"
+      },
+      "response_data": null,
+      "code": 200,
+      "show_in_doc": 1,
       "recorded": true
     }
   ]
