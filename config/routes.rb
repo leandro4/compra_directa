@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   	namespace :v1 do
   		resource :user_session, only: [:create, :destroy]
       resource :user_registration, only: [:create]
+
+      resources :providers
   	end
   end
 end

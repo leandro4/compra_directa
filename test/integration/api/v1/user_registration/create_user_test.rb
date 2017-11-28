@@ -7,10 +7,13 @@ module Api
         let(:api_token) { Fabricate(:api_token, expire_at: 1.hour.ago, api_authenticable: device) }
 
         let(:valid_params) {{
+          email: FFaker::Internet.email,
+          password: FFaker::Internet.password,
           first_name: FFaker::Name.first_name,
           last_name: FFaker::Name.last_name,
-          email: FFaker::Internet.email,
-          password: "password"
+          phone: FFaker::PhoneNumber.phone_number,
+          address: FFaker::Address.street_address,
+          user_type: User::COMMERCE
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
@@ -33,11 +36,16 @@ module Api
 
         context "when the submitted user attributes are not valid" do
           it "reject invalid emails" do
+            post_user_registration(valid_params.merge(user_type: "some"))
+            assert_equal [t("errors.messages.invalid")], json["errors"]["user_type"]
+          end
+
+          it "reject invalid user_types" do
             post_user_registration(valid_params.merge(email: "some@"))
             assert_equal [t("errors.attributes.email.invalid")], json["errors"]["email"]
           end
 
-          [:email, :first_name, :last_name].each do |field|
+          [:email, :first_name, :last_name, :phone, :address, :password, :user_type].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
               post_user_registration(valid_params)

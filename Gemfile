@@ -55,6 +55,8 @@ group :development, :test do
   gem 'selenium-webdriver'
 
   gem 'factory_bot_rails', '~> 4.0'
+
+  gem 'json_expressions'
 end
 
 group :development do

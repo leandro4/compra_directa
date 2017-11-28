@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(version: 20171123002628) do
     t.string "password_digest"
     t.string "first_name"
     t.string "last_name"
+    t.string "phone"
+    t.string "address"
+    t.string "category"
+    t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
