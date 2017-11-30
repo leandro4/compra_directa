@@ -16,7 +16,8 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
   def create
     Validators::CreateUserValidator.new.validate!(registration_params)
 
-    @user = User.create!(registration_params)
+    user_type = params.delete(:user_type).camelize.constantize
+    @user = user_type.create!(registration_params)
 
     # begin
     #   params[:avatar] = parse_image_data(params[:avatar]) if params[:avatar]
@@ -31,7 +32,6 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
 
   def registration_params
     # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
-    params.permit(:first_name, :last_name, :email, :password, :phone, :address,
-      :user_type)
+    params.permit(:first_name, :last_name, :email, :password, :phone, :address, :user_type)
   end
 end

@@ -11,7 +11,7 @@ module Api
           last_name: FFaker::Name.last_name,
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
-          user_type: User::COMMERCE
+          user_type: User::PROVIDER
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
@@ -33,12 +33,12 @@ module Api
         end
 
         context "when the submitted user attributes are not valid" do
-          it "reject invalid emails" do
+          it "reject invalid user_types" do
             post_user_registration(valid_params.merge(user_type: "some"))
             assert_equal [t("errors.messages.invalid")], json["errors"]["user_type"]
           end
 
-          it "reject invalid user_types" do
+          it "reject invalid emails" do
             post_user_registration(valid_params.merge(email: "some@"))
             assert_equal [t("errors.attributes.email.invalid")], json["errors"]["email"]
           end

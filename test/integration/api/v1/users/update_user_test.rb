@@ -4,15 +4,15 @@ module Api
   module V1
     module Users
       class UpdateUserTest < Api::ApiIntegrationTest
-        let(:provider) { create(:provider) }
-        let(:api_token) { create(:api_token, user: provider, expire_at: 1.hour.ago) }
+        let(:user) { create(:user) }
+        let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
 
         before do
-          log_provider
+          log_user
         end
 
-        def log_provider
-          provider
+        def log_user
+          user
         end
 
         let(:valid_params) {{
@@ -34,9 +34,9 @@ module Api
           it "update a user" do
             puts_users(valid_params)
 
-            provider.reload
-            assert_equal valid_params[:phone], provider.phone
-            assert_equal valid_params[:address], provider.address
+            user.reload
+            assert_equal valid_params[:phone], user.phone
+            assert_equal valid_params[:address], user.address
           end
         end
 
@@ -46,7 +46,7 @@ module Api
               valid_params[field] = ""
               puts_users(valid_params)
 
-              refute_equal valid_params[field], provider.reload.phone
+              refute_equal valid_params[field], user.reload.phone
             end
           end
 
@@ -55,7 +55,7 @@ module Api
               valid_params[field] = "some_value"
               puts_users(valid_params)
 
-              refute_equal valid_params[field], provider.reload.phone
+              refute_equal valid_params[field], user.reload.phone
             end
           end
         end

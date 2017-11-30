@@ -4,7 +4,7 @@ module Api
   module V1
     module UserSession
       class CreateUserSessionTest < Api::ApiIntegrationTest
-        let(:user) { create(:user, api_token: nil) }
+        let(:user) { create(:provider, api_token: nil) }
 
         let(:valid_params) {{
           email: user.email,

@@ -7,8 +7,7 @@ class Api::V1::UserPattern < Pattern
       last_name: user.last_name,
       email: user.email,
       phone: user.phone,
-      address: user.address,
-      user_type: user.user_type
+      address: user.address
     }
     self
   end

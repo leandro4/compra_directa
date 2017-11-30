@@ -6,12 +6,5 @@ FactoryBot.define do
   	last_name { FFaker::Name.last_name }
     phone { FFaker::PhoneNumber.phone_number }
     address { FFaker::Address.street_address }
-    user_type { User::COMMERCE }
-
-    trait :provider do
-      user_type { User::PROVIDER }
-    end
-
-    factory :provider, traits: [:provider]
   end
 end

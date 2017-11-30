@@ -6,7 +6,5 @@ class User < ApplicationRecord
 
   has_secure_password(validations: false)
 
-  has_one :api_token, dependent: :destroy
-
-  scope :providers, -> { where(user_type: PROVIDER) }
+  has_one :api_token, dependent: :destroy, as: :user
 end

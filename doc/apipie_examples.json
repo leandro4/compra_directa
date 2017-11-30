@@ -1,4 +1,77 @@
 {
+  "categories#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/categories",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "category_1": "Categoria 1"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "products#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/providers/4d4a4781-d4cf-49d1-ba5c-12440b994dbd/products",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": "945787f8-be9e-461c-b7b0-fdeb2737fdde",
+          "name": "product",
+          "description": "a product",
+          "price": 10.0,
+          "discount_price": 8.5,
+          "is_discount": false
+        },
+        {
+          "id": "ae2986a2-2042-40b6-bfbc-25fbcd5a2e03",
+          "name": "product",
+          "description": "a product",
+          "price": 10.0,
+          "discount_price": 8.5,
+          "is_discount": false
+        },
+        {
+          "id": "c49d6e8b-4410-4b6b-966d-0520a8f1f26c",
+          "name": "product",
+          "description": "a product",
+          "price": 10.0,
+          "discount_price": 8.5,
+          "is_discount": false
+        },
+        {
+          "id": "1a4a1239-f995-4016-a9bb-b547dc1f7804",
+          "name": "product",
+          "description": "a product",
+          "price": 10.0,
+          "discount_price": 8.5,
+          "is_discount": false
+        },
+        {
+          "id": "640e3de2-6eeb-4505-9756-08b984873b56",
+          "name": "product",
+          "description": "a product",
+          "price": 10.0,
+          "discount_price": 8.5,
+          "is_discount": false
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "providers#index": [
     {
       "verb": "GET",
@@ -10,58 +83,52 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "763d889e-bf56-4fb2-8a85-49a0206d00f3",
-          "first_name": "Shemika",
-          "last_name": "Windler",
-          "email": "julio@schmidtvon.us",
-          "phone": "675-682-3897",
-          "address": "88218 Zana Glen",
-          "user_type": "provider"
+          "id": "9a4fd2e2-2b60-4143-94b9-e68e2866af03",
+          "first_name": "Annetta",
+          "last_name": "Pouros",
+          "email": "sheila@jacobson.ca",
+          "phone": "1-700-263-7815 x830",
+          "address": "40684 Corina Valley"
         },
         {
-          "id": "1b0eb594-355a-4ade-8862-fc479425c86c",
-          "first_name": "Lesa",
-          "last_name": "Huels",
-          "email": "santiago_hayes@blandamoore.com",
-          "phone": "300.404.7464",
-          "address": "6190 Leuschke Fort",
-          "user_type": "provider"
+          "id": "25dee629-b540-4109-ae3e-c85e215a9642",
+          "first_name": "Lavona",
+          "last_name": "Davis",
+          "email": "ramon_bailey@kris.us",
+          "phone": "(298)964-7170 x8840",
+          "address": "27195 Sporer Field"
         },
         {
-          "id": "d81c35a5-50ec-4ac4-bbf6-71f54562010c",
-          "first_name": "Gertha",
-          "last_name": "Von",
-          "email": "shirly.rippin@torpharber.co.uk",
-          "phone": "1-753-781-3671",
-          "address": "56805 Purdy Gardens",
-          "user_type": "provider"
+          "id": "681332e8-badf-4ed6-9913-62685f5e7127",
+          "first_name": "Shaunda",
+          "last_name": "Hane",
+          "email": "marco.schuppe@conroy.biz",
+          "phone": "1-815-719-3907",
+          "address": "27681 Dion Meadows"
         },
         {
-          "id": "6068fd12-8d55-4464-bf58-0ce2282499fa",
-          "first_name": "Francene",
-          "last_name": "Denesik",
-          "email": "yvette_purdy@nitzschepredovic.us",
-          "phone": "778-858-4364 x838",
-          "address": "593 Cruickshank Rest",
-          "user_type": "provider"
+          "id": "2875e98f-5e2e-4e3e-b3ae-a7b39b0a3f8e",
+          "first_name": "Ramiro",
+          "last_name": "Wilderman",
+          "email": "herb_schaefer@rowe.biz",
+          "phone": "1-300-228-4039 x83888",
+          "address": "4637 Brendon Forges"
         },
         {
-          "id": "6d32686e-9655-49d5-a8f7-a39b5000e435",
-          "first_name": "Sue",
-          "last_name": "Conroy",
-          "email": "wynona_macejkovic@champlin.ca",
-          "phone": "682.413.2196 x5697",
-          "address": "983 Gulgowski Lock",
-          "user_type": "provider"
+          "id": "ec04a31e-4b7b-4207-80bf-fb60ef0117bd",
+          "first_name": "Johanne",
+          "last_name": "Turcotte",
+          "email": "sarita.russel@willms.us",
+          "phone": "296-242-2978 x38908",
+          "address": "0859 Anette Rapid"
         },
         {
-          "id": "a8171955-4e3b-491f-bfa6-36929ad30b63",
-          "first_name": "Deon",
-          "last_name": "Kilback",
-          "email": "ashton@abbottbins.info",
-          "phone": "592.450.8472",
-          "address": "194 Kris Island",
-          "user_type": "provider"
+          "id": "7aeb9da1-2a18-410d-94a1-b8fe894981fd",
+          "first_name": "Anissa",
+          "last_name": "Waters",
+          "email": "jame@schuster.co.uk",
+          "phone": "1-254-606-4030 x961",
+          "address": "058 Bartoletti Causeway"
         }
       ],
       "code": 200,
@@ -78,13 +145,13 @@
       ],
       "query": null,
       "request_data": {
-        "email": "jeffrey@oconner.ca",
-        "password": "yyyyyyyyyyyyyy",
-        "first_name": "Williams",
-        "last_name": "Cremin",
-        "phone": "639.774.2750 x91788",
-        "address": "7644 Goodwin Club",
-        "user_type": "commerce"
+        "email": "kisha@kerluke.com",
+        "password": "rrrrrrrrrrrrrrr",
+        "first_name": "Vincent",
+        "last_name": "Bahringer",
+        "phone": "355.633.2896",
+        "address": "939 Hagenes Street",
+        "user_type": "provider"
       },
       "response_data": null,
       "code": 200,
@@ -101,13 +168,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "blaine@runolfsson.us",
-        "password": "uuuuuuuu"
+        "email": "invalid_user",
+        "password": "eeeeeeeeeeeeeeee"
       },
-      "response_data": {
-        "api_token": "Ok4CDujQ8KICrxqm-a2rBW5bsK0e4HcRuATVrMaEVBgdjs42ckBOiO8wdmRpqExjpSX8fsvQ4s96X_EMcm2ttw"
-      },
-      "code": 200,
+      "response_data": null,
+      "code": 404,
       "show_in_doc": 1,
       "recorded": true
     },
@@ -119,11 +184,13 @@
       ],
       "query": null,
       "request_data": {
-        "email": "invalid_user",
-        "password": "iiiiiiiiii"
+        "email": "rex.gleichner@waelchi.com",
+        "password": "hhhhhhhhh"
       },
-      "response_data": null,
-      "code": 404,
+      "response_data": {
+        "api_token": "e3Z50G3O043WF4_DHwfeHTqdzW_GvU0Qwq8ai3Xp_8HDUX87tLH5Xm8whBwXmBn6gfxfnT2UEUXpL9UJzQVKSg"
+      },
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     },
@@ -135,7 +202,7 @@
       ],
       "query": null,
       "request_data": {
-        "email": "gil@mclaughlin.biz",
+        "email": "cathrine@gerholdrath.ca",
         "password": "invalid"
       },
       "response_data": null,
@@ -153,8 +220,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "390.539.0763",
-        "address": "1519 Lubowitz Meadows"
+        "phone": "587.709.0677 x239",
+        "address": "2337 Steuber Well"
       },
       "response_data": null,
       "code": 200,
