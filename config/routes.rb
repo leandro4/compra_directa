@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   		resource :user_session, only: [:create, :destroy]
       resource :user_registration, only: [:create]
       resource :users, only: [:update]
-      resources :providers
+      resources :providers, only: [:index]
+      resources :categories, only: [:index]
   	end
   end
 end

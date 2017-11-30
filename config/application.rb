@@ -30,5 +30,7 @@ module CompraDirecta
       g.test_framework :minitest, spec: true, fixture: false
       # g.fixture_replacement :fabrication
     end
+
+    ENV['CATEGORIES_FILE'] = 'app/categories.yml'
   end
 end
