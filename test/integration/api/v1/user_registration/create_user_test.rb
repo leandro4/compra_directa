@@ -11,7 +11,8 @@ module Api
           last_name: FFaker::Name.last_name,
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
-          user_type: User::PROVIDER
+          user_type: User::PROVIDER,
+          category: Category.all.first[0]
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
@@ -38,12 +39,17 @@ module Api
             assert_equal [t("errors.messages.invalid")], json["errors"]["user_type"]
           end
 
+          it "reject invalid category" do
+            post_user_registration(valid_params.merge(category: "some"))
+            assert_equal [t("errors.messages.invalid")], json["errors"]["category"]
+          end
+
           it "reject invalid emails" do
             post_user_registration(valid_params.merge(email: "some@"))
             assert_equal [t("errors.attributes.email.invalid")], json["errors"]["email"]
           end
 
-          [:email, :first_name, :last_name, :phone, :address, :password, :user_type].each do |field|
+          [:email, :first_name, :last_name, :phone, :address, :password, :user_type, :category].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
               post_user_registration(valid_params)

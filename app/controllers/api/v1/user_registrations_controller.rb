@@ -32,6 +32,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
 
   def registration_params
     # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
-    params.permit(:first_name, :last_name, :email, :password, :phone, :address, :user_type)
+    params.permit(:first_name, :last_name, :email, :password, :phone, :address,
+      :user_type, :category)
   end
 end
