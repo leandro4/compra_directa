@@ -4,13 +4,14 @@ class Api::BaseController < ActionController::Base
   before_action :destroy_session
   before_action :authenticate_action
 
+  rescue_from ApplicationError do |exception|
+    render json: { errors: exception.errors }, status: :unprocessable_entity
+  end
+
+
   rescue_from ActiveRecord::RecordInvalid do |exception|
     render json: { errors: exception.record.errors }, status: :unprocessable_entity
   end
-
-  # rescue_from ApplicationError do |exception|
-  #   render json: { errors: exception.errors }, status: :unprocessable_entity
-  # end
 
   rescue_from ActiveRecord::RecordNotFound do |exception|
     head :not_found

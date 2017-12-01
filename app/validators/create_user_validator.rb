@@ -1,16 +1,15 @@
 module Validators
   class CreateUserValidator < BaseValidator
-    attr_accessor :first_name, :last_name, :email, :password, :phone, :address,
-      :user_type, :category
+    attr_accessor :first_name, :last_name, :phone, :address, :user_type,
+      :category, :iva
 
     validates :first_name, presence: true
     validates :last_name, presence: true
-    validates :password, presence: true
     validates :user_type, presence: true
     validates :phone, presence: true
     validates :address, presence: true
     validates :category, presence: true
-    validates :email, presence: true, email: true
+    validates :iva, presence: true
     validate :invalid_user_type
     validate :invalid_category
 

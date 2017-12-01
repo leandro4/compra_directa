@@ -8,19 +8,91 @@
       ],
       "query": null,
       "request_data": null,
-      "response_data": {
-        "category_1": "Categoria 1",
-        "category_2": "Categoria 2"
-      },
+      "response_data": [
+        {
+          "id": "category_1",
+          "label": "Categoria 1"
+        },
+        {
+          "id": "category_2",
+          "label": "Categoria 2"
+        }
+      ],
       "code": 200,
       "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "google_user_sessions#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session/google",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "google_token": ""
+      },
+      "response_data": {
+        "errors": {
+          "google_token": [
+            "blank"
+          ]
+        }
+      },
+      "code": 422,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session/google",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "google_token": "valid"
+      },
+      "response_data": {
+        "id": "09fc43cf-c094-4ce7-8974-bc6c386343de",
+        "first_name": "Juan Manuel",
+        "last_name": "Costello",
+        "email": "sudo.juan@gmail.com",
+        "phone": null,
+        "address": null,
+        "iva": null,
+        "token": "gug3MHQwM4YtAqJYDYRuv4bje3OJEJ-hLgSrnHgJqM2eRBwZhh5JbqFu41gLTbOnItUcrtKIRd2AhycMC1yfbw"
+      },
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session/google",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "google_token": "invalid"
+      },
+      "response_data": {
+        "errors": {
+          "base": "invalid_google_token"
+        }
+      },
+      "code": 422,
+      "show_in_doc": 0,
       "recorded": true
     }
   ],
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/20f20ebd-740c-4bc4-85c7-cf439a70de46/products",
+      "path": "/api/v1/providers/fc279adb-0539-48cc-87bd-7a022115816b/products",
       "versions": [
         "1.0"
       ],
@@ -28,7 +100,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "d892c210-4826-4a37-94ee-b38accaf28e2",
+          "id": "09035778-a24e-4294-9bdc-a49b82908a9c",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -36,7 +108,7 @@
           "is_discount": false
         },
         {
-          "id": "5e349675-d1bf-4e89-a3ae-70c32c899750",
+          "id": "5d6f8d19-1d92-47a8-a7fb-f82122ec0b24",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -44,7 +116,7 @@
           "is_discount": false
         },
         {
-          "id": "7019729d-3933-4f31-a02c-dc76f6fca80f",
+          "id": "e8c0f82f-328e-4e28-b049-47e9b57f3425",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -52,7 +124,7 @@
           "is_discount": false
         },
         {
-          "id": "fd70d80f-6946-4735-95b5-1e001895a091",
+          "id": "7c3a6421-513b-4935-a4cd-a30a2a7192c7",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -60,7 +132,7 @@
           "is_discount": false
         },
         {
-          "id": "ffb6226e-8d39-4864-b795-83db31a4c751",
+          "id": "62e28064-f8f5-48aa-b0b5-bdd9c870b899",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -84,44 +156,49 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "870ca31d-6c00-42ec-9a13-14eaa9cd1515",
-          "first_name": "Ma",
-          "last_name": "Schaefer",
-          "email": "carmelia.durgan@trompyundt.info",
-          "phone": "773-242-3957",
-          "address": "6050 Samantha Highway"
+          "id": "464af7a9-e19f-4deb-9f21-ffbd96436caa",
+          "first_name": "Michaele",
+          "last_name": "Grimes",
+          "email": "tresa@schmitt.us",
+          "phone": "917.867.8940",
+          "address": "0196 Walsh Vista",
+          "iva": "21%"
         },
         {
-          "id": "5119cba6-b6c8-42c1-9b9e-ef609b6a4930",
-          "first_name": "Wilma",
-          "last_name": "Green",
-          "email": "lila.halvorson@blandaschuster.info",
-          "phone": "(456)683-5025 x690",
-          "address": "8275 Bari Locks"
+          "id": "2e924101-fe8f-4bfe-975d-38cfccef04db",
+          "first_name": "Abdul",
+          "last_name": "Cummerata",
+          "email": "zena@mitchell.com",
+          "phone": "341-823-2135 x076",
+          "address": "756 Jennie Rue",
+          "iva": "21%"
         },
         {
-          "id": "bc14523a-c347-4e0a-8158-2d594774c947",
-          "first_name": "Brock",
-          "last_name": "Blanda",
-          "email": "irving@krajcikmorissette.info",
-          "phone": "493.633.2910 x66233",
-          "address": "159 Mertz Expressway"
+          "id": "c71db9ad-c4a9-49f7-a086-bc5b707df997",
+          "first_name": "Layne",
+          "last_name": "Gottlieb",
+          "email": "tomas_kassulke@schultz.biz",
+          "phone": "435.996.8819",
+          "address": "743 Dooley Glen",
+          "iva": "21%"
         },
         {
-          "id": "f3c92c37-4333-4dc3-840a-7f26ba5c62db",
-          "first_name": "Debroah",
-          "last_name": "Walter",
-          "email": "india.muller@bernhardbrakus.us",
-          "phone": "1-573-485-3451",
-          "address": "58526 Joaquina Street"
+          "id": "2a17b952-de5d-4532-aeec-4c88df164ec9",
+          "first_name": "Hae",
+          "last_name": "Monahan",
+          "email": "isaiah.marks@dooley.name",
+          "phone": "245.487.5377 x394",
+          "address": "28039 Fabian Place",
+          "iva": "21%"
         },
         {
-          "id": "1bfbf393-4d8b-4750-b178-853a9ff986c5",
-          "first_name": "Tanika",
-          "last_name": "Bailey",
-          "email": "lavada@lebsack.name",
-          "phone": "1-565-692-4982",
-          "address": "018 Ocie Hill"
+          "id": "de75dc1e-e520-42bf-8527-1f6a9763ce14",
+          "first_name": "Alise",
+          "last_name": "Weimann",
+          "email": "christiane@schuster.biz",
+          "phone": "(812)862-3154",
+          "address": "23079 Orn Haven",
+          "iva": "21%"
         }
       ],
       "code": 200,
@@ -153,6 +230,29 @@
       "recorded": true
     }
   ],
+  "user_registrations#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/user_registration",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "first_name": "Malena",
+        "last_name": "Mante",
+        "phone": "(700)229-9326",
+        "address": "7426 Tiffiny Shoal",
+        "user_type": "provider",
+        "category": "category_1",
+        "iva": "21%"
+      },
+      "response_data": null,
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "user_sessions#create": [
     {
       "verb": "POST",
@@ -163,7 +263,7 @@
       "query": null,
       "request_data": {
         "email": "invalid_user",
-        "password": "xxxxxxxxxx"
+        "password": "iiiiiiiiiiiiiiii"
       },
       "response_data": null,
       "code": 404,
@@ -178,7 +278,7 @@
       ],
       "query": null,
       "request_data": {
-        "email": "trinh@champlin.ca",
+        "email": "lois@romaguerabergnaum.biz",
         "password": "invalid"
       },
       "response_data": null,
@@ -194,11 +294,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "mendy.oreilly@beier.ca",
-        "password": "ddddddddd"
+        "email": "dianna.sanford@hirtheryan.us",
+        "password": "eeeeeeeeeeeeee"
       },
       "response_data": {
-        "api_token": "ayN7Tsgk-3p2nqJOSNNcZ0gMXqcedj3Xcuy588XjeAGAfoIkSkbJfBwfG8wKHEtDbMn0NtvFnyBodALgE8HQ7Q"
+        "api_token": "vuFFfE_R0SbO3JZ6w2MHjF7oVPAgOJIjRbuY5ZstX5XeB451zmmQt0Vm2YUnwThBjfCWlwv_MMQWfLtoQZwR1A"
       },
       "code": 200,
       "show_in_doc": 0,
@@ -214,8 +314,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "(733)879-4914",
-        "address": "915 Cristen Viaduct"
+        "phone": "(364)519-3452 x4693",
+        "address": "809 Karine Coves"
       },
       "response_data": null,
       "code": 200,

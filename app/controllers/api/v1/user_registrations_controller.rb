@@ -1,23 +1,21 @@
 class Api::V1::UserRegistrationsController < Api::V1::BaseController
   # include Concerns::ImageUploaderController
-  skip_before_action :authenticate_action, only: [:create]
 
   ####### Api Documentation #########
-  api :POST, "/v1/user_registration", "Register an user"
+  api :put, "/v1/user_registration", "Update a new user"
   param :first_name, String
   param :last_name, String
   param :phone, String
   param :address, String
   param :category, String
   param :user_type, String
-  param :email, String
-  param :password, String
   ###### End of Documentation #######
-  def create
+  def update
     Validators::CreateUserValidator.new.validate!(registration_params)
 
-    user_type = params.delete(:user_type).camelize.constantize
-    @user = user_type.create!(registration_params)
+    current_user.completed = true
+    current_user.type = params.delete(:user_type).camelize
+    current_user.update!(registration_params)
 
     # begin
     #   params[:avatar] = parse_image_data(params[:avatar]) if params[:avatar]
@@ -32,7 +30,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
 
   def registration_params
     # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
-    params.permit(:first_name, :last_name, :email, :password, :phone, :address,
-      :user_type, :category)
+    params.permit(:first_name, :last_name, :phone, :address, :user_type,
+      :category, :iva)
   end
 end

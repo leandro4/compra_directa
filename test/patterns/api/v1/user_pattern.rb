@@ -8,7 +8,8 @@ class Api::V1::UserPattern < Pattern
         last_name: user.last_name,
         email: user.email,
         phone: user.phone,
-        address: user.address
+        address: user.address,
+        iva: user.iva
       }
     end
 
@@ -25,7 +26,8 @@ class Api::V1::UserPattern < Pattern
         last_name: user.last_name,
         email: user.email,
         phone: user.phone,
-        address: user.address
+        address: user.address,
+        iva: user.iva
       }
     end
 

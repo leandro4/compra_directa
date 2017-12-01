@@ -1,7 +1,10 @@
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/spec'
+require 'webmock/minitest'
 require 'json_expressions/minitest'
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 class ActiveSupport::TestCase
   include AbstractController::Translation
