@@ -20,9 +20,11 @@ module Api
           last_name: FFaker::Name.last_name,
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
+          city: FFaker::Address.city,
           user_type: User::PROVIDER,
           category: Category.all.first[0],
-          iva: "21%"
+          iva: "21%",
+          cuit: "123456"
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
@@ -57,7 +59,8 @@ module Api
             assert_equal [t("errors.messages.invalid")], json["errors"]["category"]
           end
 
-          [:first_name, :last_name, :phone, :address, :user_type, :category].each do |field|
+          [:first_name, :last_name, :phone, :address, :city, :user_type,
+            :category, :iva, :cuit].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
               put_user_registration(valid_params)

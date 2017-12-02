@@ -7,8 +7,11 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
   param :last_name, String
   param :phone, String
   param :address, String
+  param :city, String
+  param :cuit, String
+  param :iva, String
   param :category, String
-  param :user_type, String
+  param :user_type, String, desc: "One of the list: [provider, commerce]"
   ###### End of Documentation #######
   def update
     Validators::CreateUserValidator.new.validate!(registration_params)
@@ -30,7 +33,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
 
   def registration_params
     # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
-    params.permit(:first_name, :last_name, :phone, :address, :user_type,
-      :category, :iva)
+    params.permit(:first_name, :last_name, :phone, :address, :city, :user_type,
+      :category, :iva, :cuit)
   end
 end
