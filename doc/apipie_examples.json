@@ -35,7 +35,7 @@
         "google_token": "valid"
       },
       "response_data": {
-        "id": "4d7d60cb-4724-48f4-8c02-5a247152b8e1",
+        "id": "109a362b-7841-45fb-a20d-0cf2902b8f95",
         "first_name": "Juan Manuel",
         "last_name": "Costello",
         "email": "sudo.juan@gmail.com",
@@ -46,7 +46,7 @@
         "cuit": null,
         "user_type": "",
         "completed": false,
-        "token": "PAZXnaXY-3MzppaG7uoO2Dt-NDf1fVUw2mFiG8gpMY3nB9jWDL1n4rZ4Dq8ctLcOvV68XdMP1C05mCzLtHjBmQ"
+        "token": "sZirXvIFb229m7tLcgvWV0mR59p8Gu0QjVtVRBFZJ_iyHEdYaHWO1WxmMRK0MefJynP9PJ98TkXskcvwJ4ngyQ"
       },
       "code": 200,
       "show_in_doc": 1,
@@ -96,7 +96,7 @@
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/92674155-14ea-45ca-9d78-13bb14ce1d79/products",
+      "path": "/api/v1/providers/ce7e1ff7-356f-400f-96d8-120d325b3f99/products",
       "versions": [
         "1.0"
       ],
@@ -104,7 +104,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "ae510bf1-4889-4330-89c4-207ce19e50d4",
+          "id": "321761fc-d922-4c70-b458-ee58cfdafd93",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -112,7 +112,7 @@
           "is_discount": false
         },
         {
-          "id": "160cb96e-be4b-4627-ad0f-a3d841b0f275",
+          "id": "5b8a4ea4-ed64-423d-9f5b-c6b513cdb087",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -120,7 +120,7 @@
           "is_discount": false
         },
         {
-          "id": "b9e37158-9f97-4d7d-b20c-811d1d1eda12",
+          "id": "9e963fd3-703b-4beb-b8f4-710dd73d0b7d",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -128,7 +128,7 @@
           "is_discount": false
         },
         {
-          "id": "f2f1c0a4-ba4a-4f5d-91bb-06b8c376b797",
+          "id": "4c5811ed-0df2-4770-80cf-5b8a70b92083",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -136,7 +136,7 @@
           "is_discount": false
         },
         {
-          "id": "cb2b9f0f-c819-4fa9-a37f-4f547f146d6b",
+          "id": "94e78f86-8f76-41c8-938d-e27de65330c5",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -144,6 +144,24 @@
           "is_discount": false
         }
       ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "profiles#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/profile",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "phone": "877.702.5305 x3781",
+        "address": "6807 Earlean Row"
+      },
+      "response_data": null,
       "code": 200,
       "show_in_doc": 1,
       "recorded": true
@@ -160,56 +178,56 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "1ea7ba01-1178-4a23-bb7a-34bb0bd79162",
-          "first_name": "Yasmin",
-          "last_name": "Goldner",
-          "email": "brenda@erdman.info",
-          "phone": "879.404.7508",
-          "address": "949 Saran Green",
+          "id": "2f0d53b3-9a5d-44f2-a5ac-401e4a6bab31",
+          "first_name": "Jeremy",
+          "last_name": "Bogan",
+          "email": "elvin.bernier@mosciskileffler.us",
+          "phone": "1-843-931-9349 x0113",
+          "address": "13601 Ira Place",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "fa9e4fe8-7f15-4039-a6dc-4fd92055a9d5",
-          "first_name": "Claudie",
-          "last_name": "Rowe",
-          "email": "eleanor@toy.us",
-          "phone": "(371)779-3161",
-          "address": "48142 Deckow Summit",
+          "id": "14be9dcc-fb27-4709-a373-1b81c00d28b2",
+          "first_name": "Jeraldine",
+          "last_name": "Cronin",
+          "email": "an@hayesbrekke.co.uk",
+          "phone": "1-675-886-9655 x653",
+          "address": "289 Kautzer Knoll",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "2550d630-7061-43b7-a554-28d5b0e8aedb",
-          "first_name": "Delisa",
-          "last_name": "Kuphal",
-          "email": "jean@stehr.name",
-          "phone": "388-638-4843",
-          "address": "985 Josefina Mission",
+          "id": "409a029e-333b-4797-b45f-7ea8c0251876",
+          "first_name": "Kimbery",
+          "last_name": "Cremin",
+          "email": "ronnie@white.ca",
+          "phone": "(602)390-9921 x329",
+          "address": "213 Gibson Ferry",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "c5630d2f-5853-4589-8396-c6ee51de950c",
-          "first_name": "Long",
-          "last_name": "Pollich",
-          "email": "verdell.emard@homenickkertzmann.info",
-          "phone": "674-769-9068 x86244",
-          "address": "734 Burma Shoal",
+          "id": "b5541910-8363-48f9-bdb6-3e5d759f8783",
+          "first_name": "Deeanna",
+          "last_name": "Marvin",
+          "email": "verda_pollich@harberhammes.ca",
+          "phone": "1-972-602-4470 x1603",
+          "address": "4985 Johnston Creek",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "3678e695-c2ef-4803-bfd4-98abb0e3e17b",
-          "first_name": "Jeniffer",
-          "last_name": "Ferry",
-          "email": "janna_hand@lindgren.name",
-          "phone": "443-248-4480 x53369",
-          "address": "28520 Stella Hills",
+          "id": "e74b345b-1b7f-4ee4-a48f-0f0ebf1568e8",
+          "first_name": "Marlo",
+          "last_name": "Mayer",
+          "email": "lynn@muellerruecker.ca",
+          "phone": "(812)416-5081 x673",
+          "address": "286 Chelsey Summit",
           "city": null,
           "iva": "21%",
           "cuit": null
@@ -223,13 +241,13 @@
   "questions#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/providers/0436b108-da51-47b1-a518-a01e5844c992/products/38aa434a-256f-4894-903b-9f1c747b1c31/questions/",
+      "path": "/api/v1/providers/2f46e6a9-bd98-43ec-ac15-144e0dd24977/products/7594b8b1-b9ac-40e4-baa6-7ee0cf2e3329/questions/",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": {
-        "question": "Iste autem culpa neque illum et quis esse aliquid."
+        "question": "Sit id voluptatem eum ut."
       },
       "response_data": null,
       "code": 204,
@@ -270,11 +288,11 @@
       ],
       "query": null,
       "request_data": {
-        "first_name": "Elmo",
-        "last_name": "Kohler",
-        "phone": "298.783.1525 x029",
-        "address": "4819 Leroy Shore",
-        "city": "Danielville",
+        "first_name": "Lorie",
+        "last_name": "Bode",
+        "phone": "1-213-549-5260",
+        "address": "0051 Lemke Cliffs",
+        "city": "Lake Stephine",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -295,7 +313,7 @@
       ],
       "query": null,
       "request_data": {
-        "email": "glory@goldner.com",
+        "email": "deetta_conroy@toy.name",
         "password": "invalid"
       },
       "response_data": null,
@@ -311,11 +329,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "rosalee.wisozk@rippinschiller.ca",
-        "password": "mmmmmmmmmmmmmm"
+        "email": "blythe_baumbach@kuphalnolan.biz",
+        "password": "sssssssssssss"
       },
       "response_data": {
-        "api_token": "tXMYEDETY_p09jqCTPZoOQvO3UY1LVbh4B0wpe4CN0Zo59MLtyNeGqC8OrjZuTWj_zGovLD95pMti3gPnyzUXg"
+        "api_token": "6s4DmlbnTGdI60pxuowCkv_aGXwoMngQb2RZ98elRjCrPCvH93FrLcyG-FTv23FOPGPUCHY1_L3WtSJH01nwWw"
       },
       "code": 200,
       "show_in_doc": 0,
@@ -330,7 +348,7 @@
       "query": null,
       "request_data": {
         "email": "invalid_user",
-        "password": "mmmmmmmmmmmmmmm"
+        "password": "lllllllll"
       },
       "response_data": null,
       "code": 404,

@@ -9,7 +9,8 @@ Rails.application.routes.draw do
       resource :users, only: [:update]
       end
       resource :user_registration, only: [:update]
-      resource :users, only: [:update]
+      resource :profile, only: [:update]
+      resources :users, only: [:show]
       resources :categories, only: [:index]
       resources :providers, only: [:index] do
         resources :products, only: [:index] do
