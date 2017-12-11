@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       resources :users, only: [:show]
       resources :categories, only: [:index]
       resources :providers, only: [:index] do
-        resources :products, only: [:index] do
+        resources :products, only: [:show, :index] do
           resources :questions, only: [:create]
         end
       end

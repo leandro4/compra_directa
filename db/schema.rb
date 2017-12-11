@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20171211005615) do
 
   create_table "questions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "question"
+    t.string "answer"
     t.uuid "commerce_id"
     t.uuid "product_id"
+    t.datetime "answered_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["commerce_id"], name: "index_questions_on_commerce_id"
