@@ -12,7 +12,9 @@ Rails.application.routes.draw do
       resource :users, only: [:update]
       resources :categories, only: [:index]
       resources :providers, only: [:index] do
-        resources :products, only: [:index]
+        resources :products, only: [:index] do
+          resources :questions, only: [:create]
+        end
       end
   	end
   end

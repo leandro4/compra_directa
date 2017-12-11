@@ -35,7 +35,7 @@
         "google_token": "valid"
       },
       "response_data": {
-        "id": "1cacff5f-992c-4f99-b4bf-6bc4c9e2827d",
+        "id": "4d7d60cb-4724-48f4-8c02-5a247152b8e1",
         "first_name": "Juan Manuel",
         "last_name": "Costello",
         "email": "sudo.juan@gmail.com",
@@ -46,10 +46,29 @@
         "cuit": null,
         "user_type": "",
         "completed": false,
-        "token": "iTnm2ynEvczufSlAN6uBagK9ZAXCcXZG36L-rKyNihf4TsEMiZfq7A4-_6g0cpuNexUsD66Gwf-VwdVheTPhrA"
+        "token": "PAZXnaXY-3MzppaG7uoO2Dt-NDf1fVUw2mFiG8gpMY3nB9jWDL1n4rZ4Dq8ctLcOvV68XdMP1C05mCzLtHjBmQ"
       },
       "code": 200,
       "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session/google",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "google_token": "invalid"
+      },
+      "response_data": {
+        "errors": {
+          "base": "invalid_google_token"
+        }
+      },
+      "code": 422,
+      "show_in_doc": 0,
       "recorded": true
     },
     {
@@ -72,31 +91,12 @@
       "code": 422,
       "show_in_doc": 0,
       "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_session/google",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "google_token": "invalid"
-      },
-      "response_data": {
-        "errors": {
-          "base": "invalid_google_token"
-        }
-      },
-      "code": 422,
-      "show_in_doc": 0,
-      "recorded": true
     }
   ],
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/cbc44979-8e17-4813-b614-d95116d30ec5/products",
+      "path": "/api/v1/providers/92674155-14ea-45ca-9d78-13bb14ce1d79/products",
       "versions": [
         "1.0"
       ],
@@ -104,7 +104,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "f96a38b3-fe75-4e14-a21c-b626cf561f1b",
+          "id": "ae510bf1-4889-4330-89c4-207ce19e50d4",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -112,7 +112,7 @@
           "is_discount": false
         },
         {
-          "id": "69247d69-8bda-499e-8c68-9efbc89bcf51",
+          "id": "160cb96e-be4b-4627-ad0f-a3d841b0f275",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -120,7 +120,7 @@
           "is_discount": false
         },
         {
-          "id": "72fa9256-e8fc-46b5-96a6-4829d98c3d5e",
+          "id": "b9e37158-9f97-4d7d-b20c-811d1d1eda12",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -128,7 +128,7 @@
           "is_discount": false
         },
         {
-          "id": "aec2efa6-a582-4d29-b3ea-57cdc2296e2c",
+          "id": "f2f1c0a4-ba4a-4f5d-91bb-06b8c376b797",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -136,7 +136,7 @@
           "is_discount": false
         },
         {
-          "id": "d8e89cac-4525-4435-bec7-9bb968b1512e",
+          "id": "cb2b9f0f-c819-4fa9-a37f-4f547f146d6b",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -160,62 +160,79 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "edb01aac-60df-4aeb-844b-dffba0730fa6",
-          "first_name": "Jenette",
-          "last_name": "Daugherty",
-          "email": "dalene@sanford.biz",
-          "phone": "394.990.6013",
-          "address": "97121 Randall Valley",
+          "id": "1ea7ba01-1178-4a23-bb7a-34bb0bd79162",
+          "first_name": "Yasmin",
+          "last_name": "Goldner",
+          "email": "brenda@erdman.info",
+          "phone": "879.404.7508",
+          "address": "949 Saran Green",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "fbe51a2b-0bb7-4648-a0b6-c776b8d7fc6a",
-          "first_name": "Jeanetta",
-          "last_name": "Orn",
-          "email": "joe.miller@heathcote.info",
-          "phone": "(816)374-7615",
-          "address": "61724 Junie Causeway",
+          "id": "fa9e4fe8-7f15-4039-a6dc-4fd92055a9d5",
+          "first_name": "Claudie",
+          "last_name": "Rowe",
+          "email": "eleanor@toy.us",
+          "phone": "(371)779-3161",
+          "address": "48142 Deckow Summit",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "b3f2eb80-a39a-48f9-b289-df603c7e7fa0",
-          "first_name": "Sherryl",
-          "last_name": "McDermott",
-          "email": "gabriele.roob@oharahettinger.us",
-          "phone": "679-726-6894",
-          "address": "0090 Gaynell Points",
+          "id": "2550d630-7061-43b7-a554-28d5b0e8aedb",
+          "first_name": "Delisa",
+          "last_name": "Kuphal",
+          "email": "jean@stehr.name",
+          "phone": "388-638-4843",
+          "address": "985 Josefina Mission",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "e6a2780c-2c37-44cc-939f-f0f0b1f43365",
-          "first_name": "Tegan",
-          "last_name": "Raynor",
-          "email": "destiny@collinskunde.co.uk",
-          "phone": "1-400-512-1115 x448",
-          "address": "09160 Kelsie Forks",
+          "id": "c5630d2f-5853-4589-8396-c6ee51de950c",
+          "first_name": "Long",
+          "last_name": "Pollich",
+          "email": "verdell.emard@homenickkertzmann.info",
+          "phone": "674-769-9068 x86244",
+          "address": "734 Burma Shoal",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "50b3febd-9584-4edf-b55c-4c4cfe382e3f",
-          "first_name": "Elmo",
-          "last_name": "Kreiger",
-          "email": "delfina.spencer@cremin.co.uk",
-          "phone": "479.476.0471 x5459",
-          "address": "95211 Konopelski Shoals",
+          "id": "3678e695-c2ef-4803-bfd4-98abb0e3e17b",
+          "first_name": "Jeniffer",
+          "last_name": "Ferry",
+          "email": "janna_hand@lindgren.name",
+          "phone": "443-248-4480 x53369",
+          "address": "28520 Stella Hills",
           "city": null,
           "iva": "21%",
           "cuit": null
         }
       ],
       "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "questions#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/providers/0436b108-da51-47b1-a518-a01e5844c992/products/38aa434a-256f-4894-903b-9f1c747b1c31/questions/",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "question": "Iste autem culpa neque illum et quis esse aliquid."
+      },
+      "response_data": null,
+      "code": 204,
       "show_in_doc": 1,
       "recorded": true
     }
@@ -253,11 +270,11 @@
       ],
       "query": null,
       "request_data": {
-        "first_name": "Jae",
-        "last_name": "Sawayn",
-        "phone": "(897)954-6934",
-        "address": "0255 Treutel Harbors",
-        "city": "Port Lionel",
+        "first_name": "Elmo",
+        "last_name": "Kohler",
+        "phone": "298.783.1525 x029",
+        "address": "4819 Leroy Shore",
+        "city": "Danielville",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -278,7 +295,7 @@
       ],
       "query": null,
       "request_data": {
-        "email": "drusilla_dach@grady.ca",
+        "email": "glory@goldner.com",
         "password": "invalid"
       },
       "response_data": null,
@@ -294,11 +311,13 @@
       ],
       "query": null,
       "request_data": {
-        "email": "invalid_user",
-        "password": "rrrrrrrrrrrr"
+        "email": "rosalee.wisozk@rippinschiller.ca",
+        "password": "mmmmmmmmmmmmmm"
       },
-      "response_data": null,
-      "code": 404,
+      "response_data": {
+        "api_token": "tXMYEDETY_p09jqCTPZoOQvO3UY1LVbh4B0wpe4CN0Zo59MLtyNeGqC8OrjZuTWj_zGovLD95pMti3gPnyzUXg"
+      },
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     },
@@ -310,13 +329,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "laurence@upton.com",
-        "password": "kkkkkkkkkk"
+        "email": "invalid_user",
+        "password": "mmmmmmmmmmmmmmm"
       },
-      "response_data": {
-        "api_token": "w6yBzp2PCmfpaF_vsC5U6Ny9IDOSFGoDmX3C9vUAol7h2yuARNWfSc8S9uFD69IkZt8VZPHE9Pben05BEUOq0w"
-      },
-      "code": 200,
+      "response_data": null,
+      "code": 404,
       "show_in_doc": 0,
       "recorded": true
     }
@@ -330,8 +347,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "886-772-0761",
-        "address": "4782 Wiza Loaf"
+        "phone": "933-413-0140 x64244",
+        "address": "16665 Ronda Path"
       },
       "response_data": null,
       "code": 200,
