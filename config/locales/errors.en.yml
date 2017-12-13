@@ -12,22 +12,17 @@ en:
 
     messages:
       blank: "blank"
-      inclusion: "invalid type"
       taken: "taken"
-      palindrome: "palindrome"
-      record_invalid: "Invalid Record"
-      non_match: "Passwords don't match"
-      extension_whitelist_error: "Invalid file type"
-      too_short: "minimum count is %{count}"
+      record_invalid: "record_invalid"
+      non_match: "non_match"
+      too_short: "too_short"
+      inexistant: "inexistant"
+      not_found: "not_found"
+      no_products: "no_products"
+      greater_than: "is_invalid"
 
-    facebook_token:
-      invalid: "invalid_facebook_token"
     google_token:
       invalid: "invalid_google_token"
-    email_athentication:
-      invalid: "invalid_email_password"
-    pass_request:
-      invalid: "invalid_pass_request"
     session:
       invalid_credentials: "Invalid credentials"
     password:
