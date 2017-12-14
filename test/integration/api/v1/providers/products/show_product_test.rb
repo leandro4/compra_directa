@@ -4,7 +4,7 @@ module Api
   module V1
     module Providers
       module Products
-        class ShowProductsTest < Api::ApiIntegrationTest
+        class ShowProductTest < Api::ApiIntegrationTest
           let(:user) { create(:user) }
           let(:provider) { create(:provider) }
           let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
@@ -23,7 +23,7 @@ module Api
           it "[Example] returns a list of products of a provider" do
             get_provider_product(product)
 
-            assert_json_match Api::V1::ProductPattern.new(product).pattern, json
+            assert_json_match Api::V1::ProductPattern.new(product).with_questions.pattern, json
           end
 
           def get_provider_product(product)

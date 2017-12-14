@@ -53,23 +53,14 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": "valid"
+        "google_token": "invalid"
       },
       "response_data": {
-        "id": "7af90f36-bd09-4c49-92c5-637f1f03b3d3",
-        "first_name": "Juan Manuel",
-        "last_name": "Costello",
-        "email": "sudo.juan@gmail.com",
-        "phone": null,
-        "address": null,
-        "city": null,
-        "iva": null,
-        "cuit": null,
-        "user_type": "",
-        "completed": false,
-        "token": "ybVVAvQWbqrT0JTZkNVeY9kyN-Uv6GyILzIB2f4OjWTJX3fAgOFDxD1jCpHABeohPLoKHTsOJQbbFHgAtMUc2w"
+        "errors": {
+          "base": "invalid_google_token"
+        }
       },
-      "code": 200,
+      "code": 422,
       "show_in_doc": 0,
       "recorded": true
     },
@@ -81,14 +72,23 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": "invalid"
+        "google_token": "valid"
       },
       "response_data": {
-        "errors": {
-          "base": "invalid_google_token"
-        }
+        "id": "2b843b76-0342-465d-992e-547ac604b207",
+        "first_name": "Juan Manuel",
+        "last_name": "Costello",
+        "email": "sudo.juan@gmail.com",
+        "phone": null,
+        "address": null,
+        "city": null,
+        "iva": null,
+        "cuit": null,
+        "user_type": "",
+        "completed": false,
+        "token": "kjFJQ9hDv1ETQ-CLmNnQSXX1fE0qcSbAKs5yq-MyoFFBZvP_UCzVJr-6v69prIumPWX5BAcNcYuQQAX6rRZgtg"
       },
-      "code": 422,
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     }
@@ -96,9 +96,9 @@
   "orders#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/87870b7e-8ca1-4d9f-bcbd-c20bce7b213e/orders",
+      "path": "/api/v1/commerce/providers/ee3af9c6-4cd9-4c30-b279-26788b017915/orders",
       "versions": [
-        "1.0"
+
       ],
       "query": null,
       "request_data": {
@@ -117,24 +117,24 @@
         }
       },
       "code": 422,
-      "show_in_doc": 1,
+      "show_in_doc": 0,
       "recorded": true
     },
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/fc65384d-6f5f-42e8-8d24-b2aa473f6208/orders",
+      "path": "/api/v1/commerce/providers/a49ca47e-8163-44e6-a24f-ffc4bc963471/orders",
       "versions": [
-        "1.0"
+
       ],
       "query": null,
       "request_data": {
         "order": [
           {
-            "product_id": "ff90d58f-307a-4837-828c-e7795c36fc75",
+            "product_id": "d355e60f-1937-46ff-a84b-947d5a6ca5fe",
             "quantity": 1
           },
           {
-            "product_id": "d1a08fcd-4c26-41be-af85-daa2da0dab95",
+            "product_id": "985926a6-7bb8-4653-a758-84bff2ded82e",
             "quantity": 2
           }
         ]
@@ -145,10 +145,93 @@
       "recorded": true
     }
   ],
+  "orders#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/provider/orders/45b485bc-849d-44dc-8754-d3714b351d7f",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": "45b485bc-849d-44dc-8754-d3714b351d7f",
+        "status": "pending",
+        "commerce": {
+          "id": "c00ca08c-0701-47e1-9d00-eeb2f673444f",
+          "first_name": "Delora",
+          "last_name": "Ratke",
+          "email": "margherita@feil.ca",
+          "phone": "1-933-726-7201",
+          "address": "55602 Matthew Crest",
+          "city": null,
+          "iva": null,
+          "cuit": null
+        },
+        "order_items": [
+          {
+            "id": "2a711eba-43fd-4449-b675-e627ca2db25c",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "bb26f602-9a08-4bea-85ea-38af143d725e",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "bb38080c-22b8-4822-8d2b-be2f6316cc13",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "b201bf88-2f5d-4203-ade9-f9d1b118e960",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/274299cd-3fbf-43b9-b71f-8ba103849875/products",
+      "path": "/api/v1/providers/a87a0749-f655-42a7-abb1-535823fce76d/products",
       "versions": [
         "1.0"
       ],
@@ -156,7 +239,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "fe14230d-c59e-425e-98e8-a096d091508c",
+          "id": "c6ce0068-a8cd-4f34-8b1a-7ba212e0bfb8",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -164,7 +247,7 @@
           "is_discount": false
         },
         {
-          "id": "17f83af0-01f3-463d-9596-c39b07b61314",
+          "id": "538da451-890a-4837-9761-923201821000",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -172,7 +255,7 @@
           "is_discount": false
         },
         {
-          "id": "a3d40f61-ca16-4fab-9dd0-33d5648ef217",
+          "id": "3390119d-e61d-482b-bde5-0b07bbe8f785",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -180,7 +263,7 @@
           "is_discount": false
         },
         {
-          "id": "9101afc0-2c58-412e-853b-a1cb6dba7dd7",
+          "id": "a335d0d5-c967-45d6-a552-4dcccf56d49d",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -188,7 +271,7 @@
           "is_discount": false
         },
         {
-          "id": "9a8f018b-433c-4614-b651-75b29049c8cd",
+          "id": "7d61bf17-d194-48b7-abec-7e44f8010ea4",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -204,14 +287,14 @@
   "products#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/3bcc3091-cd7c-4fec-b8df-ca743dcc81f0/products/776fd821-3040-4392-afca-5fd6338a9a32",
+      "path": "/api/v1/providers/45cf621e-e38c-43bf-a8a8-e803b328bf42/products/81d85bf1-1d2a-4f47-b588-5a883564b90a",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "776fd821-3040-4392-afca-5fd6338a9a32",
+        "id": "81d85bf1-1d2a-4f47-b588-5a883564b90a",
         "name": "product",
         "description": "a product",
         "price": 10.0,
@@ -219,34 +302,34 @@
         "is_discount": false,
         "questions": [
           {
-            "id": "5631b606-097e-4775-bbf2-68f41e5aaf9d",
-            "question": "Ex et dolore reprehenderit est.",
-            "answer": "Aut unde esse ea ab nobis sint.",
-            "answered_at": "Wed, 13 Dec 2017 21:54:20 +0000"
+            "id": "dda4d226-f1cd-487e-8936-e183dad01c48",
+            "question": "Sequi quisquam illo delectus sit ut.",
+            "answer": "Et asperiores voluptatem architecto voluptas sint.",
+            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
           },
           {
-            "id": "423e9c9c-3569-46c9-a8dd-c0da1a72e70f",
-            "question": "Quo aut rerum architecto in veniam.",
-            "answer": "Qui labore ea repellat eos voluptatem debitis.",
-            "answered_at": "Wed, 13 Dec 2017 21:54:20 +0000"
+            "id": "ae77724a-1ee1-4f37-bb0d-ac7f00c6a180",
+            "question": "Cumque ipsa aliquid voluptas sunt harum quaerat earum.",
+            "answer": "Quae et dolores assumenda nemo amet mollitia et nam.",
+            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
           },
           {
-            "id": "db99a601-ed7b-4336-9375-d6cc0b06a496",
-            "question": "Provident aut eum molestiae assumenda hic neque.",
-            "answer": "Voluptas aliquid aut et et et.",
-            "answered_at": "Wed, 13 Dec 2017 21:54:20 +0000"
+            "id": "2bbf8adf-5151-4511-bdf0-cf1eed71b5f1",
+            "question": "Ratione temporibus eos vitae magni aut enim totam iure.",
+            "answer": "Ea eos ut deserunt quo eius facere libero.",
+            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
           },
           {
-            "id": "b7a78057-8086-4a1d-9cd6-8c0125ddb5e3",
-            "question": "Dolorem harum dolores qui aperiam eos error sunt.",
-            "answer": "Sed dolores magni enim aut qui culpa officiis.",
-            "answered_at": "Wed, 13 Dec 2017 21:54:20 +0000"
+            "id": "27a47c39-4bf6-4d5a-a404-39b814e949a6",
+            "question": "Corrupti recusandae illum qui sapiente.",
+            "answer": "Quos aut voluptas modi dolore et neque non.",
+            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
           },
           {
-            "id": "615666a0-f7ca-4267-bb7f-bd91d929994b",
-            "question": "Perferendis est aliquid delectus dolore rem.",
-            "answer": "Et id dolore natus aperiam nemo nihil.",
-            "answered_at": "Wed, 13 Dec 2017 21:54:20 +0000"
+            "id": "5c8a8344-037d-42de-9ed0-1aa219bfde9f",
+            "question": "Nostrum ea unde culpa architecto.",
+            "answer": "Doloribus enim libero distinctio dolorum debitis natus.",
+            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
           }
         ]
       },
@@ -264,8 +347,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "917.206.9652",
-        "address": "623 Jones Oval"
+        "phone": "422.790.2255 x9229",
+        "address": "59754 Prosacco Union"
       },
       "response_data": null,
       "code": 200,
@@ -284,56 +367,56 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "682e20df-1a82-4fe9-b668-248fd602d037",
-          "first_name": "Isidro",
-          "last_name": "Weissnat",
-          "email": "kaye@jakubowski.ca",
-          "phone": "757.405.9606",
-          "address": "105 Shelley Shores",
+          "id": "14ebc66e-8896-4138-99af-c6b8a0545a81",
+          "first_name": "Dominique",
+          "last_name": "Ernser",
+          "email": "sunni.nolan@weissnat.us",
+          "phone": "785-478-7348",
+          "address": "77527 Casey Drives",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "510cab4b-0f12-471e-bcb0-44b8ccbff1a4",
-          "first_name": "Young",
-          "last_name": "Ankunding",
-          "email": "chin@hand.name",
-          "phone": "580.425.8615",
-          "address": "3204 Caryl Spur",
+          "id": "b65cdba8-21ed-474b-9af2-7d1caf916597",
+          "first_name": "Chelsie",
+          "last_name": "Berge",
+          "email": "hiedi_jones@cruickshank.biz",
+          "phone": "956.871.9104 x760",
+          "address": "537 Carroll Springs",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "2fb3029b-e36d-4b81-908e-da87760c99d2",
-          "first_name": "Arlette",
-          "last_name": "Lakin",
-          "email": "brice@champlinkilback.com",
-          "phone": "(825)391-3031",
-          "address": "0747 Weissnat Common",
+          "id": "386ac52a-745f-4343-a403-961d2559ff80",
+          "first_name": "Brigitte",
+          "last_name": "Ratke",
+          "email": "jacque_rutherford@crona.info",
+          "phone": "1-561-229-4060 x6715",
+          "address": "8242 Davis Station",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "142b65a3-cf1b-4bcf-8148-672728f4ceb8",
-          "first_name": "Reta",
-          "last_name": "Tremblay",
-          "email": "ardis@leannon.info",
-          "phone": "1-213-963-3572 x7625",
-          "address": "024 Borer Run",
+          "id": "4e9f505b-f0fa-4001-b955-2a023a2ec109",
+          "first_name": "Meghann",
+          "last_name": "Hessel",
+          "email": "dorthy_paucek@mohr.name",
+          "phone": "432-801-9690",
+          "address": "41776 Yvette Vista",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "f6124b70-7d78-483a-a3d0-eb82080a3c60",
-          "first_name": "Elsie",
-          "last_name": "Swift",
-          "email": "louella.barrows@bergstrom.info",
-          "phone": "555-977-1015",
-          "address": "165 Morar View",
+          "id": "c51a6feb-32cc-4c54-b16b-dcefa61f516f",
+          "first_name": "Zachary",
+          "last_name": "Ziemann",
+          "email": "spencer@boyer.info",
+          "phone": "578.501.4975 x34824",
+          "address": "155 Beier Vista",
           "city": null,
           "iva": "21%",
           "cuit": null
@@ -347,13 +430,13 @@
   "questions#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/providers/02d4cff9-bad0-4e71-a1ce-68e23f5c497c/products/419c8914-e5c3-4835-93ee-fe8bcae2d551/questions/",
+      "path": "/api/v1/providers/c9348e70-125b-4e68-a445-da4002a54403/products/8a5d011b-83a3-4008-b121-fbf20a695556/questions/",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": {
-        "question": "Quidem iusto quam perspiciatis magnam est consequatur veritatis."
+        "question": "Aliquam iure quae libero et voluptas."
       },
       "response_data": null,
       "code": 204,
@@ -394,11 +477,11 @@
       ],
       "query": null,
       "request_data": {
-        "first_name": "Krissy",
-        "last_name": "Goyette",
-        "phone": "1-910-589-2148",
-        "address": "5415 Mitchell Canyon",
-        "city": "South Xiao",
+        "first_name": "Jenae",
+        "last_name": "Rath",
+        "phone": "(471)479-8202 x4651",
+        "address": "233 Auer Burg",
+        "city": "East Jolandaville",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -419,11 +502,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "richie.steuber@lesch.ca",
-        "password": "invalid"
+        "email": "invalid_user",
+        "password": "bbbbbbbbbbbb"
       },
       "response_data": null,
-      "code": 401,
+      "code": 404,
       "show_in_doc": 1,
       "recorded": true
     },
@@ -435,13 +518,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "yoko@metz.ca",
-        "password": "nnnnnnnnnn"
+        "email": "sidney_hansen@konopelski.info",
+        "password": "invalid"
       },
-      "response_data": {
-        "api_token": "QxGhUK9uwQufvG13XuT74J09N3BCfafOxAfc2Qgr1HD6LOdNsE-D6icJnL70SMqV8ZOFMgGw1stBEzeRHyEdkA"
-      },
-      "code": 200,
+      "response_data": null,
+      "code": 401,
       "show_in_doc": 0,
       "recorded": true
     },
@@ -453,11 +534,13 @@
       ],
       "query": null,
       "request_data": {
-        "email": "invalid_user",
-        "password": "kkkkkkkkkkkkkkkk"
+        "email": "amal@keeblermiller.co.uk",
+        "password": "tttttttttttt"
       },
-      "response_data": null,
-      "code": 404,
+      "response_data": {
+        "api_token": "6wSr3oKmWqUS4ao9yJZG02v-RIi2P13RTLtpoebqx_d9423nrj76vscgYKRF1nUqZNVpGa3aVJJ24LoAiAUuig"
+      },
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     }

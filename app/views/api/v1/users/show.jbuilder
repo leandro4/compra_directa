@@ -1,1 +1,1 @@
-json.partial! 'api/v1/providers/provider', provider: @user
+json.partial! 'user', user: @user

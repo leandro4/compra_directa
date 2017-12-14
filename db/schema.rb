@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20171213031919) do
   end
 
   create_table "order_items", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.decimal "unit_price", precision: 12, scale: 3
+    t.float "unit_price"
     t.integer "quantity"
     t.uuid "order_id"
     t.uuid "product_id"

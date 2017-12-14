@@ -1,7 +1,7 @@
 class CreateOrderItems < ActiveRecord::Migration[5.1]
   def change
     create_table :order_items, id: :uuid do |t|
-      t.decimal :unit_price, precision: 12, scale: 3
+      t.float :unit_price
       t.integer :quantity
       t.uuid :order_id
       t.uuid :product_id

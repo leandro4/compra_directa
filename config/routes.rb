@@ -17,6 +17,9 @@ Rails.application.routes.draw do
           resources :questions, only: [:create]
         end
       end
+      namespace :provider do
+        resources :orders, only: [:show]
+      end
 
       namespace :commerce do
         resources :providers, only: [] do

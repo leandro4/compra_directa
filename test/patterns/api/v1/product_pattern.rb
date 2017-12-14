@@ -8,10 +8,15 @@ class Api::V1::ProductPattern < Pattern
         description: product.description,
         price: product.price,
         discount_price: product.discount_price,
-        is_discount: product.is_discount,
-        questions:  Api::V1::QuestionPattern.new.list(@product.questions).pattern
+        is_discount: product.is_discount
       }
     end
+
+    self
+  end
+
+  def with_questions
+    @pattern.merge!(questions: Api::V1::QuestionPattern.new.list(@product.questions).pattern)
 
     self
   end
