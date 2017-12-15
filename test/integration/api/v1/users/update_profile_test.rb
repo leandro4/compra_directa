@@ -50,7 +50,7 @@ module Api
             end
           end
 
-          [:email, :first_name, :last_name, :user_type].each do |field|
+          [:email, :business_name, :user_type].each do |field|
             it "reject #{field} update" do
               valid_params[field] = "some_value"
               puts_users(valid_params)

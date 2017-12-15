@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213031919) do
+ActiveRecord::Schema.define(version: 20171215114912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,8 +74,6 @@ ActiveRecord::Schema.define(version: 20171213031919) do
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.string "first_name"
-    t.string "last_name"
     t.string "phone"
     t.string "address"
     t.string "category"
@@ -87,6 +85,7 @@ ActiveRecord::Schema.define(version: 20171213031919) do
     t.string "iva"
     t.string "city"
     t.string "cuit"
+    t.string "business_name"
     t.index ["google_id"], name: "index_users_on_google_id"
   end
 

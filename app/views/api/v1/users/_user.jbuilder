@@ -1,2 +1,2 @@
-json.(user, :id, :first_name, :last_name, :email, :phone, :address, :city,
+json.(user, :id, :business_name, :email, :phone, :address, :city,
   :iva, :cuit)

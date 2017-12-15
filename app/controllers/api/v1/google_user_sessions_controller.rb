@@ -24,8 +24,6 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
   def create_user(profile)
     profile["google_id"] = profile.delete("kid")
     attributes = profile.slice("email", "google_id")
-    attributes["first_name"] = profile["given_name"]
-    attributes["last_name"] = profile["family_name"]
     # attributes["profile_picture_url"] = profile["picture"]
     user = User.create!(attributes)
     user

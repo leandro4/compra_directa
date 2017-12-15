@@ -21,8 +21,7 @@ class Api::V1::UserPattern < Pattern
   def pattern_template(user)
     {
       id: user.id,
-      first_name: user.first_name,
-      last_name: user.last_name,
+      business_name: user.business_name,
       email: user.email,
       phone: user.phone,
       address: user.address,

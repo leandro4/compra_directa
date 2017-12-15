@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 provider = Provider.create(email: "some@email.com", category: Category.all.first[0],
-  first_name: "Leandro", last_name: "Gon", phone: "123456", address: "codika", iva: "21%")
+  business_name: "Fiambreria Leandro", phone: "123456", address: "codika", iva: "21%")
 
 provider.products.create(name: "Producto 1", description: "Esta es la descripcion 1",
   price: "10")

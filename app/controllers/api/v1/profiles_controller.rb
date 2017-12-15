@@ -11,7 +11,6 @@ class Api::V1::ProfilesController < Api::V1::BaseController
   protected
 
   def user_update_params
-    # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
     params.permit(:phone, :address).reject{|_, v| v.blank?}
   end
 end

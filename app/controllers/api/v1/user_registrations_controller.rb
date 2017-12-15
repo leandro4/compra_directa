@@ -3,8 +3,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
 
   ####### Api Documentation #########
   api :put, "/v1/user_registration", "Update a new user"
-  param :first_name, String
-  param :last_name, String
+  param :business_name, String
   param :phone, String
   param :address, String
   param :city, String
@@ -32,8 +31,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
   protected
 
   def registration_params
-    # params.permit(:first_name, :last_name, :email, :uid, :uid_type, :avatar)
-    params.permit(:first_name, :last_name, :phone, :address, :city, :user_type,
+    params.permit(:business_name, :phone, :address, :city, :user_type,
       :category, :iva, :cuit)
   end
 end

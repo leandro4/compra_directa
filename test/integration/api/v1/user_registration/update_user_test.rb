@@ -16,8 +16,7 @@ module Api
         end
 
         let(:valid_params) {{
-          first_name: FFaker::Name.first_name,
-          last_name: FFaker::Name.last_name,
+          business_name: FFaker::Name.last_name,
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
           city: FFaker::Address.city,
@@ -42,7 +41,7 @@ module Api
             put_user_registration(valid_params)
             user.reload
 
-            assert_equal valid_params[:first_name], user.first_name
+            assert_equal valid_params[:business_name], user.business_name
 
             assert user.completed?
           end
@@ -59,7 +58,7 @@ module Api
             assert_equal [t("errors.messages.invalid")], json["errors"]["category"]
           end
 
-          [:first_name, :last_name, :phone, :address, :city, :user_type,
+          [:business_name, :phone, :address, :city, :user_type,
             :category, :iva, :cuit].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
