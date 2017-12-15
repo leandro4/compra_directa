@@ -13,6 +13,7 @@ en:
     messages:
       blank: "blank"
       taken: "taken"
+      empty: "empty"
       record_invalid: "record_invalid"
       non_match: "non_match"
       too_short: "too_short"

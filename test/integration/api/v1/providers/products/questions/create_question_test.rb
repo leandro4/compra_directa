@@ -35,6 +35,13 @@ module Api
             end
           end
 
+          context "With invalid params" do
+            it "reject empty question" do
+              post_product_question(product, valid_params.merge(question: ""))
+              assert_equal [t("errors.messages.blank")], json["errors"]["question"]
+            end
+          end
+
           def post_product_question(product, params)
             post "/api/v1/providers/#{product.provider.id}/products/#{product.id}/questions/", params
           end

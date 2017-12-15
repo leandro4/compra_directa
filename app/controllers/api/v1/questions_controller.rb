@@ -3,6 +3,8 @@ class Api::V1::QuestionsController < Api::V1::BaseController
   param :category, String
   ###### End of Documentation #######
   def create
+    Validators::QuestionValidator.new.validate!(question_params)
+
     product.questions.create(question_params)
   end
 

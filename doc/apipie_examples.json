@@ -32,13 +32,11 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": ""
+        "google_token": "invalid"
       },
       "response_data": {
         "errors": {
-          "google_token": [
-            "blank"
-          ]
+          "base": "invalid_google_token"
         }
       },
       "code": 422,
@@ -53,11 +51,13 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": "invalid"
+        "google_token": ""
       },
       "response_data": {
         "errors": {
-          "base": "invalid_google_token"
+          "google_token": [
+            "blank"
+          ]
         }
       },
       "code": 422,
@@ -75,7 +75,7 @@
         "google_token": "valid"
       },
       "response_data": {
-        "id": "2b843b76-0342-465d-992e-547ac604b207",
+        "id": "72d2950a-576a-4833-ab91-92189c56fe27",
         "first_name": "Juan Manuel",
         "last_name": "Costello",
         "email": "sudo.juan@gmail.com",
@@ -86,7 +86,7 @@
         "cuit": null,
         "user_type": "",
         "completed": false,
-        "token": "kjFJQ9hDv1ETQ-CLmNnQSXX1fE0qcSbAKs5yq-MyoFFBZvP_UCzVJr-6v69prIumPWX5BAcNcYuQQAX6rRZgtg"
+        "token": "9J1ldW1mOkEBD9w7mh5xgZUMnSgyIwSj4VKRRrb05xey2hiha5JE8tsz37Ce1owFWbETfFjlbGp120FXHn3qHA"
       },
       "code": 200,
       "show_in_doc": 0,
@@ -96,9 +96,33 @@
   "orders#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/ee3af9c6-4cd9-4c30-b279-26788b017915/orders",
+      "path": "/api/v1/commerce/providers/fe088c8f-0f87-4042-a264-87dc6badad32/orders",
       "versions": [
-
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "order": [
+          {
+            "product_id": "240668b7-bd03-49e1-8edf-376c518076ca",
+            "quantity": 1
+          },
+          {
+            "product_id": "96e3418e-538e-4090-be39-db4c32984c19",
+            "quantity": 2
+          }
+        ]
+      },
+      "response_data": null,
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/commerce/providers/419f3823-39fc-45e0-b86b-9da0fb1b6dcf/orders",
+      "versions": [
+        "1.0"
       ],
       "query": null,
       "request_data": {
@@ -119,62 +143,38 @@
       "code": 422,
       "show_in_doc": 0,
       "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/commerce/providers/a49ca47e-8163-44e6-a24f-ffc4bc963471/orders",
-      "versions": [
-
-      ],
-      "query": null,
-      "request_data": {
-        "order": [
-          {
-            "product_id": "d355e60f-1937-46ff-a84b-947d5a6ca5fe",
-            "quantity": 1
-          },
-          {
-            "product_id": "985926a6-7bb8-4653-a758-84bff2ded82e",
-            "quantity": 2
-          }
-        ]
-      },
-      "response_data": null,
-      "code": 200,
-      "show_in_doc": 0,
-      "recorded": true
     }
   ],
   "orders#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/provider/orders/45b485bc-849d-44dc-8754-d3714b351d7f",
+      "path": "/api/v1/provider/orders/2a606b0a-950e-4f3c-b750-e263cc965470",
       "versions": [
-        "1.0"
+
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "45b485bc-849d-44dc-8754-d3714b351d7f",
+        "id": "2a606b0a-950e-4f3c-b750-e263cc965470",
         "status": "pending",
         "commerce": {
-          "id": "c00ca08c-0701-47e1-9d00-eeb2f673444f",
-          "first_name": "Delora",
-          "last_name": "Ratke",
-          "email": "margherita@feil.ca",
-          "phone": "1-933-726-7201",
-          "address": "55602 Matthew Crest",
+          "id": "a4bf287b-4ce3-4855-bd9b-9b6c249b2953",
+          "first_name": "Vanita",
+          "last_name": "Gusikowski",
+          "email": "sherley@kiehnkoepp.name",
+          "phone": "308.861.9241 x096",
+          "address": "53628 Jamal Courts",
           "city": null,
           "iva": null,
           "cuit": null
         },
         "order_items": [
           {
-            "id": "2a711eba-43fd-4449-b675-e627ca2db25c",
+            "id": "e23de6bd-8358-4a94-9254-ca27d3566311",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "id": "a82cf375-5cc9-46f0-bf7d-969ebf82ecd8",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -183,11 +183,11 @@
             }
           },
           {
-            "id": "bb26f602-9a08-4bea-85ea-38af143d725e",
+            "id": "25eb32aa-1dd5-4d66-ae6f-2f25901fffda",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "id": "a82cf375-5cc9-46f0-bf7d-969ebf82ecd8",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -196,11 +196,11 @@
             }
           },
           {
-            "id": "bb38080c-22b8-4822-8d2b-be2f6316cc13",
+            "id": "ac464d08-ab60-49fe-983f-98f18a3bc289",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "id": "a82cf375-5cc9-46f0-bf7d-969ebf82ecd8",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -209,11 +209,11 @@
             }
           },
           {
-            "id": "b201bf88-2f5d-4203-ade9-f9d1b118e960",
+            "id": "c22c3ad7-793a-40c4-831c-8875e953c948",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "2e0970e9-2471-43db-833b-6303f9445678",
+              "id": "a82cf375-5cc9-46f0-bf7d-969ebf82ecd8",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -224,14 +224,14 @@
         ]
       },
       "code": 200,
-      "show_in_doc": 1,
+      "show_in_doc": 0,
       "recorded": true
     }
   ],
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/a87a0749-f655-42a7-abb1-535823fce76d/products",
+      "path": "/api/v1/providers/7e140d25-334b-4875-92a7-d2988c71f515/products",
       "versions": [
         "1.0"
       ],
@@ -239,7 +239,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "c6ce0068-a8cd-4f34-8b1a-7ba212e0bfb8",
+          "id": "89f434f0-dfb6-4981-bf03-480158e58d6c",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -247,7 +247,7 @@
           "is_discount": false
         },
         {
-          "id": "538da451-890a-4837-9761-923201821000",
+          "id": "b7cd4d8a-1b39-4cc3-9898-b6c3611c6d86",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -255,7 +255,7 @@
           "is_discount": false
         },
         {
-          "id": "3390119d-e61d-482b-bde5-0b07bbe8f785",
+          "id": "9abae6d2-433e-4cb0-9f6a-28fa27a2eecc",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -263,7 +263,7 @@
           "is_discount": false
         },
         {
-          "id": "a335d0d5-c967-45d6-a552-4dcccf56d49d",
+          "id": "feb4851e-37ac-41de-b20d-65ad9f38e495",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -271,7 +271,7 @@
           "is_discount": false
         },
         {
-          "id": "7d61bf17-d194-48b7-abec-7e44f8010ea4",
+          "id": "e0a3c9c4-921a-4a42-97ee-e4f1f2ba3e7d",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -287,14 +287,14 @@
   "products#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/45cf621e-e38c-43bf-a8a8-e803b328bf42/products/81d85bf1-1d2a-4f47-b588-5a883564b90a",
+      "path": "/api/v1/providers/a6d0267c-479c-423a-8580-27b6297c6155/products/109ef512-de89-438b-8eb4-fff39520c33d",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "81d85bf1-1d2a-4f47-b588-5a883564b90a",
+        "id": "109ef512-de89-438b-8eb4-fff39520c33d",
         "name": "product",
         "description": "a product",
         "price": 10.0,
@@ -302,34 +302,34 @@
         "is_discount": false,
         "questions": [
           {
-            "id": "dda4d226-f1cd-487e-8936-e183dad01c48",
-            "question": "Sequi quisquam illo delectus sit ut.",
-            "answer": "Et asperiores voluptatem architecto voluptas sint.",
-            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
+            "id": "4543ec60-5a49-4fa6-93e9-76cba9083da1",
+            "question": "Quas officiis et qui magnam aperiam hic suscipit.",
+            "answer": "Sapiente esse ipsam iste aut ut.",
+            "answered_at": "Fri, 15 Dec 2017 02:02:07 +0000"
           },
           {
-            "id": "ae77724a-1ee1-4f37-bb0d-ac7f00c6a180",
-            "question": "Cumque ipsa aliquid voluptas sunt harum quaerat earum.",
-            "answer": "Quae et dolores assumenda nemo amet mollitia et nam.",
-            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
+            "id": "e8f34cd4-2467-4be7-b96b-6842f73bc15d",
+            "question": "Odit necessitatibus et sunt quod culpa ut.",
+            "answer": "Ad quasi ab ullam quisquam non.",
+            "answered_at": "Fri, 15 Dec 2017 02:02:07 +0000"
           },
           {
-            "id": "2bbf8adf-5151-4511-bdf0-cf1eed71b5f1",
-            "question": "Ratione temporibus eos vitae magni aut enim totam iure.",
-            "answer": "Ea eos ut deserunt quo eius facere libero.",
-            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
+            "id": "48a18a46-97b4-4759-899a-61c502561056",
+            "question": "Voluptate mollitia omnis temporibus quae reiciendis quam.",
+            "answer": "Illum maxime iste ex voluptatum incidunt sit non.",
+            "answered_at": "Fri, 15 Dec 2017 02:02:07 +0000"
           },
           {
-            "id": "27a47c39-4bf6-4d5a-a404-39b814e949a6",
-            "question": "Corrupti recusandae illum qui sapiente.",
-            "answer": "Quos aut voluptas modi dolore et neque non.",
-            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
+            "id": "6bf610de-b056-458e-b216-302d82f7e6c9",
+            "question": "Ad provident rerum aut ratione et ut.",
+            "answer": "Asperiores qui a quam sit sint voluptas dolore voluptas.",
+            "answered_at": "Fri, 15 Dec 2017 02:02:07 +0000"
           },
           {
-            "id": "5c8a8344-037d-42de-9ed0-1aa219bfde9f",
-            "question": "Nostrum ea unde culpa architecto.",
-            "answer": "Doloribus enim libero distinctio dolorum debitis natus.",
-            "answered_at": "Wed, 13 Dec 2017 23:12:56 +0000"
+            "id": "6140c790-eb94-4670-bee7-cc6907252b3f",
+            "question": "Quo dignissimos maiores distinctio nulla aut.",
+            "answer": "Ut cum amet ab atque dicta dolor.",
+            "answered_at": "Fri, 15 Dec 2017 02:02:07 +0000"
           }
         ]
       },
@@ -347,8 +347,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "422.790.2255 x9229",
-        "address": "59754 Prosacco Union"
+        "phone": "(445)994-5228 x422",
+        "address": "814 Gottlieb Mountains"
       },
       "response_data": null,
       "code": 200,
@@ -367,56 +367,56 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "14ebc66e-8896-4138-99af-c6b8a0545a81",
-          "first_name": "Dominique",
-          "last_name": "Ernser",
-          "email": "sunni.nolan@weissnat.us",
-          "phone": "785-478-7348",
-          "address": "77527 Casey Drives",
+          "id": "9f07a298-16ff-48b6-bbfd-099277cdecb0",
+          "first_name": "Janise",
+          "last_name": "Lakin",
+          "email": "dani@gislason.biz",
+          "phone": "738-430-8117 x79480",
+          "address": "1289 Satterfield Path",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "b65cdba8-21ed-474b-9af2-7d1caf916597",
-          "first_name": "Chelsie",
-          "last_name": "Berge",
-          "email": "hiedi_jones@cruickshank.biz",
-          "phone": "956.871.9104 x760",
-          "address": "537 Carroll Springs",
+          "id": "224aa7e2-b2f7-4187-b01d-244b6e88bbc3",
+          "first_name": "Velva",
+          "last_name": "Lesch",
+          "email": "enid_marquardt@gerholdheathcote.us",
+          "phone": "447-841-0008",
+          "address": "63543 Cole Greens",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "386ac52a-745f-4343-a403-961d2559ff80",
-          "first_name": "Brigitte",
-          "last_name": "Ratke",
-          "email": "jacque_rutherford@crona.info",
-          "phone": "1-561-229-4060 x6715",
-          "address": "8242 Davis Station",
+          "id": "2d1286f8-dc0f-447e-8cf4-ca28cbc2fe3a",
+          "first_name": "Bobbie",
+          "last_name": "Gibson",
+          "email": "keva@balistreri.co.uk",
+          "phone": "700.998.0660",
+          "address": "20862 Koss Wall",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "4e9f505b-f0fa-4001-b955-2a023a2ec109",
-          "first_name": "Meghann",
-          "last_name": "Hessel",
-          "email": "dorthy_paucek@mohr.name",
-          "phone": "432-801-9690",
-          "address": "41776 Yvette Vista",
+          "id": "865e9040-2c97-42fb-9fa2-f15cbe12e763",
+          "first_name": "Shila",
+          "last_name": "D'Amore",
+          "email": "agnes.parker@dietrichrobel.name",
+          "phone": "1-699-304-6195",
+          "address": "93171 Kimi Hill",
           "city": null,
           "iva": "21%",
           "cuit": null
         },
         {
-          "id": "c51a6feb-32cc-4c54-b16b-dcefa61f516f",
-          "first_name": "Zachary",
-          "last_name": "Ziemann",
-          "email": "spencer@boyer.info",
-          "phone": "578.501.4975 x34824",
-          "address": "155 Beier Vista",
+          "id": "7293f2b5-9153-4d10-a3f0-39be76cbc172",
+          "first_name": "Kelly",
+          "last_name": "Pollich",
+          "email": "hyman@nitzsche.com",
+          "phone": "1-471-722-9465 x68809",
+          "address": "75236 Stark Parkways",
           "city": null,
           "iva": "21%",
           "cuit": null
@@ -430,16 +430,33 @@
   "questions#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/providers/c9348e70-125b-4e68-a445-da4002a54403/products/8a5d011b-83a3-4008-b121-fbf20a695556/questions/",
+      "path": "/api/v1/providers/04a5fe53-d042-4b56-adb1-fa849d2343a1/products/31969778-d50a-4d5f-9487-106532d01a73/questions/",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "question": "Incidunt nesciunt numquam rerum iusto tenetur."
+      },
+      "response_data": null,
+      "code": 204,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "questions#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/provider/questions/fd0ff8f3-4d65-45a3-bfd3-5fed5375622d",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": {
-        "question": "Aliquam iure quae libero et voluptas."
+        "answer": "In ut quasi nam modi dolores."
       },
       "response_data": null,
-      "code": 204,
+      "code": 200,
       "show_in_doc": 1,
       "recorded": true
     }
@@ -477,11 +494,11 @@
       ],
       "query": null,
       "request_data": {
-        "first_name": "Jenae",
-        "last_name": "Rath",
-        "phone": "(471)479-8202 x4651",
-        "address": "233 Auer Burg",
-        "city": "East Jolandaville",
+        "first_name": "Gwendolyn",
+        "last_name": "Abernathy",
+        "phone": "794-516-7822 x70369",
+        "address": "6342 Dillon Drive",
+        "city": "South Jeannie",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -502,11 +519,13 @@
       ],
       "query": null,
       "request_data": {
-        "email": "invalid_user",
-        "password": "bbbbbbbbbbbb"
+        "email": "rosalind_schultz@aufderhar.us",
+        "password": "bbbbbbbbbbbbb"
       },
-      "response_data": null,
-      "code": 404,
+      "response_data": {
+        "api_token": "kcc84N9ZdL2Mf580_reIvSxG4eDiX9mXiD0IOqi6EutKi4UkwBDJOVRx1BTYq6-pWdSUO-iX6rAf6PUagOR9RA"
+      },
+      "code": 200,
       "show_in_doc": 1,
       "recorded": true
     },
@@ -518,7 +537,7 @@
       ],
       "query": null,
       "request_data": {
-        "email": "sidney_hansen@konopelski.info",
+        "email": "hiroko@schulist.name",
         "password": "invalid"
       },
       "response_data": null,
@@ -534,13 +553,11 @@
       ],
       "query": null,
       "request_data": {
-        "email": "amal@keeblermiller.co.uk",
-        "password": "tttttttttttt"
+        "email": "invalid_user",
+        "password": "ssssssssssssss"
       },
-      "response_data": {
-        "api_token": "6wSr3oKmWqUS4ao9yJZG02v-RIi2P13RTLtpoebqx_d9423nrj76vscgYKRF1nUqZNVpGa3aVJJ24LoAiAUuig"
-      },
-      "code": 200,
+      "response_data": null,
+      "code": 404,
       "show_in_doc": 0,
       "recorded": true
     }

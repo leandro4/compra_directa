@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       end
       namespace :provider do
         resources :orders, only: [:show]
+        resources :questions, only: [:update]
       end
 
       namespace :commerce do
