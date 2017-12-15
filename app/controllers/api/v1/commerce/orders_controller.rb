@@ -1,11 +1,19 @@
 class Api::V1::Commerce::OrdersController < Api::V1::BaseController
-  api :POST, "/v1/commerce/providers/:provider_id/orders", "Creates an order for a provider"
 
+  api :POST, "/v1/commerce/orders", "List a commerce created orders"
+  def index
+    @orders = current_user.orders
+  end
+
+  def show
+    @order = current_user.orders.find(params[:id])
+  end
+
+  api :POST, "/v1/commerce/providers/:provider_id/orders", "Creates an order for a provider"
   param :order, Array, of: Hash do
     param :product_id, String
     param :quantity, Integer
   end
-
   def create
     raise NoProductsError.new if order_params[:order].empty?
 

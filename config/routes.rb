@@ -23,6 +23,8 @@ Rails.application.routes.draw do
       end
 
       namespace :commerce do
+        resources :orders, only: [:index, :show]
+
         resources :providers, only: [] do
           resources :orders, only: [:create]
         end
