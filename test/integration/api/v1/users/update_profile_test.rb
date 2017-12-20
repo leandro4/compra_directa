@@ -4,7 +4,7 @@ module Api
   module V1
     module Users
       class UpdateProfileTest < Api::ApiIntegrationTest
-        let(:user) { create(:user) }
+        let(:user) { create(:commerce) }
         let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
 
         before do

@@ -5,6 +5,8 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
     @orders = current_user.orders
   end
 
+  # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
+  api :GET, '/v1/commerce/orders/:id', 'Show an order'
   def show
     @order = current_user.orders.find(params[:id])
   end

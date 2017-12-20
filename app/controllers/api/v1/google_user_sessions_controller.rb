@@ -13,8 +13,8 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
     profile = authenticate(authentication_params)
     user = User.find_google_user(profile)
     user = create_user(profile) unless user
-    user.google_id = profile["kid"] if user.google_id.nil?
-    user.save!(user)
+    # user.google_id = profile["google_id"] if user.google_id.nil?
+    # user.save!(user)
 
     @api_token = user.create_api_token!
   end
@@ -22,7 +22,6 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
   protected
 
   def create_user(profile)
-    profile["google_id"] = profile.delete("kid")
     attributes = profile.slice("email", "google_id")
     # attributes["profile_picture_url"] = profile["picture"]
     user = User.create!(attributes)
@@ -31,8 +30,8 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
 
   def authenticate(authentication_params)
     response = Net::HTTP.get_response(google_uri(authentication_params[:google_token]))
-    raise NonAuthenticatedGoogleUserError.new if response.code.to_i == 400
-    JSON.parse(response.body)
+      raise NonAuthenticatedGoogleUserError.new if response.code.to_i == 400
+      JSON.parse(response.body)
   end
 
   def google_uri(google_token)

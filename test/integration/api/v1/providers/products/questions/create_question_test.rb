@@ -5,7 +5,7 @@ module Api
     module Providers
       module Products
         class CreateQuestionTest < Api::ApiIntegrationTest
-          let(:user) { create(:user) }
+          let(:user) { create(:commerce) }
 
           let(:provider) { create(:provider) }
           let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
@@ -36,7 +36,7 @@ module Api
           end
 
           context "With invalid params" do
-            it "reject empty question" do
+            it "[Example] reject empty question" do
               post_product_question(product, valid_params.merge(question: ""))
               assert_equal [t("errors.messages.blank")], json["errors"]["question"]
             end

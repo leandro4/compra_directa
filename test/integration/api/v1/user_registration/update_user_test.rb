@@ -4,7 +4,7 @@ module Api
   module V1
     module UserRegistration
       class UpdateUserTest < Api::ApiIntegrationTest
-        let(:user) { create(:user) }
+        let(:user) { create(:provider) }
         let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
 
         before do
@@ -48,7 +48,7 @@ module Api
         end
 
         context "when the submitted user attributes are not valid" do
-          it "reject invalid user_types" do
+          it "[Example] reject invalid user_types" do
             put_user_registration(valid_params.merge(user_type: "some"))
             assert_equal [t("errors.messages.invalid")], json["errors"]["user_type"]
           end

@@ -5,5 +5,7 @@ FactoryBot.define do
   	password { FFaker::Internet.password }
     phone { FFaker::PhoneNumber.phone_number }
     address { FFaker::Address.street_address }
+    city { FFaker::Address.city }
+    cuit "30202020209"
   end
 end

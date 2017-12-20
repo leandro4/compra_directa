@@ -7,7 +7,7 @@ module Api
         describe "create" do
           context "When google authenticates" do
             let(:request_response) { { "email"=>"sudo.juan@gmail.com",
-              "kid"=>"some_id",
+              "google"=>"some_id",
               "picture" => "picture_url",
               "given_name" => "Juan Manuel",
               "family_name" => "Costello" }}
@@ -32,34 +32,7 @@ module Api
             end
 
             context "when the user exist" do
-              let(:user) { create(:user, google_id: request_response["kid"], api_token: nil) }
-
-              test "returns the api token" do
-                valid_post_user_session
-
-                refute_nil json["token"]
-              end
-            end
-
-            context "when the user exist with same email" do
-              let(:user) { create(:user, email: request_response["email"], api_token: nil)}
-
-              before do
-                user
-              end
-
-              test "creates a new api token for the user if he didnt have one" do
-                assert_nil(user.api_token, "Expected to not have an api_token")
-
-                valid_post_user_session
-
-                refute_nil(user.reload.api_token, "Expected to have an api_token")
-              end
-
-              test "associates user with google" do
-                valid_post_user_session
-                assert_equal("some_id", user.reload.google_id)
-              end
+              let(:user) { create(:commerce, google_id: request_response["google_id"], api_token: nil) }
 
               test "returns the api token" do
                 valid_post_user_session

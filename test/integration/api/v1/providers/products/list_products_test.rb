@@ -5,7 +5,7 @@ module Api
     module Providers
       module Products
         class ListProductsTest < Api::ApiIntegrationTest
-          let(:user) { create(:user) }
+          let(:user) { create(:provider) }
           let(:provider) { create(:provider) }
           let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
           let(:products) { create_list(:product, 5, provider: provider)}

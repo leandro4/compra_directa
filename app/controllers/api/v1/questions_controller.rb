@@ -1,11 +1,13 @@
 class Api::V1::QuestionsController < Api::V1::BaseController
   api :POST, "/v1/provider/:provider_id/products/:product_id/questions", "Create a question for a provider's product"
-  param :category, String
+  param :question, String
   ###### End of Documentation #######
   def create
     Validators::QuestionValidator.new.validate!(question_params)
 
-    product.questions.create(question_params)
+    product.questions.create!(question_params)
+
+    head :ok
   end
 
   protected

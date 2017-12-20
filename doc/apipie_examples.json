@@ -32,11 +32,13 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": "invalid"
+        "google_token": ""
       },
       "response_data": {
         "errors": {
-          "base": "invalid_google_token"
+          "google_token": [
+            "blank"
+          ]
         }
       },
       "code": 422,
@@ -51,16 +53,23 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": ""
+        "google_token": "valid"
       },
       "response_data": {
-        "errors": {
-          "google_token": [
-            "blank"
-          ]
-        }
+        "id": "23701273-0372-4123-b287-5340b247a5f5",
+        "business_name": null,
+        "email": "sudo.juan@gmail.com",
+        "phone": null,
+        "address": null,
+        "city": null,
+        "iva": null,
+        "cuit": null,
+        "type": null,
+        "user_type": "",
+        "completed": false,
+        "token": "aHPNY9ef620Pvz2s3eK6a_99qjj-0AwhoQe6jic3dwS4e4LC7oj3mC7va7EPgYtShTa572rjkZKv74x4TalvXw"
       },
-      "code": 422,
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     },
@@ -72,22 +81,14 @@
       ],
       "query": null,
       "request_data": {
-        "google_token": "valid"
+        "google_token": "invalid"
       },
       "response_data": {
-        "id": "393aff9f-c7fd-4229-a9bf-32a6d588e8c9",
-        "business_name": null,
-        "email": "sudo.juan@gmail.com",
-        "phone": null,
-        "address": null,
-        "city": null,
-        "iva": null,
-        "cuit": null,
-        "user_type": "",
-        "completed": false,
-        "token": "I4bVP1P5fjL7S6-HwXGS9-8TCP0pkmaENhHpOYBeTYq8rU5rxGzTmS-aK5ektgWy29BXT9jKubTYVlfCwyDHkA"
+        "errors": {
+          "base": "invalid_google_token"
+        }
       },
-      "code": 200,
+      "code": 422,
       "show_in_doc": 0,
       "recorded": true
     }
@@ -95,7 +96,7 @@
   "orders#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/fc354c86-36f4-4c80-aaea-dc8097e54312/orders",
+      "path": "/api/v1/commerce/providers/e94890fc-a40a-4d0a-9c04-2ef93138babc/orders",
       "versions": [
         "1.0"
       ],
@@ -121,7 +122,7 @@
     },
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/a8533864-9c4b-4ac8-9e59-42bc964c9131/orders",
+      "path": "/api/v1/commerce/providers/053384ed-b70d-41c3-9600-c03fc56d91e3/orders",
       "versions": [
         "1.0"
       ],
@@ -129,11 +130,11 @@
       "request_data": {
         "order": [
           {
-            "product_id": "972e5745-4f20-4cb1-863a-8776056c67b2",
+            "product_id": "fae126e1-f578-44e0-a67b-00a9993113fa",
             "quantity": 1
           },
           {
-            "product_id": "31c62792-ecbd-45bb-be14-6cb8a5526215",
+            "product_id": "561d014f-7b8b-48a6-b5a0-3a7ba8935f8b",
             "quantity": 2
           }
         ]
@@ -155,78 +156,83 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "060507ee-1d76-4788-9f77-d06bc5c33759",
+          "id": "b26d913a-ae19-4ae7-bc33-ae4f3a4eba9a",
           "status": "pending",
           "items": 4,
           "provider": {
-            "id": "ba2eda9b-4a80-4cf3-b7ed-701f8f5fd4fc",
-            "business_name": "Lesch",
-            "email": "barrie_batz@bednar.com",
-            "phone": "1-396-543-5714 x439",
-            "address": "8544 Stroman Row",
-            "city": null,
-            "iva": "21%",
-            "cuit": null
-          }
-        },
-        {
-          "id": "fcd1d469-1e10-4713-a12b-ae3c8fdec5bc",
-          "status": "pending",
-          "items": 4,
-          "provider": {
-            "id": "1fc4a2d5-2a0c-4446-b89b-6db21f687442",
-            "business_name": "Orn",
-            "email": "cleo_hodkiewicz@bartell.info",
-            "phone": "919-474-7954 x12415",
-            "address": "201 Mann Point",
-            "city": null,
-            "iva": "21%",
-            "cuit": null
-          }
-        },
-        {
-          "id": "0ab54ed4-98c7-44b2-a03b-79b2b090f231",
-          "status": "pending",
-          "items": 4,
-          "provider": {
-            "id": "4838e669-e76b-42b2-885f-abfd35ea3b54",
+            "id": "6c4013c3-e3d9-459c-8192-f0a82d1f6484",
             "business_name": "Goldner",
-            "email": "gene@wilkinsonschultz.name",
-            "phone": "(512)576-7634 x30965",
-            "address": "12540 Quitzon Lane",
-            "city": null,
+            "email": "dewayne@barrowshauck.biz",
+            "phone": "624.631.2801 x72496",
+            "address": "91741 Leah Park",
+            "city": "Shumouth",
             "iva": "21%",
-            "cuit": null
+            "cuit": "30202020209",
+            "type": "provider"
           }
         },
         {
-          "id": "77679be7-55f5-4a9a-a101-fc102f8b4355",
+          "id": "65aea868-2615-4ee2-9a5a-f993d70550b5",
           "status": "pending",
           "items": 4,
           "provider": {
-            "id": "f576764d-d607-41c0-9ed7-7fe6bdb747c1",
-            "business_name": "Hartmann",
-            "email": "alysa_kerluke@konopelski.biz",
-            "phone": "959.875.5456",
-            "address": "876 Batz Trafficway",
-            "city": null,
+            "id": "9546134d-d09c-4d01-96bc-0c5d72db9308",
+            "business_name": "Schumm",
+            "email": "carla@vonrueden.ca",
+            "phone": "937.384.1266 x48571",
+            "address": "09024 Purdy Isle",
+            "city": "Tillmanfort",
             "iva": "21%",
-            "cuit": null
+            "cuit": "30202020209",
+            "type": "provider"
           }
         },
         {
-          "id": "a17e7dac-3bd3-4734-91a9-68cf9b6884d6",
+          "id": "d5621cb5-72ce-465f-9891-c027c7ff48af",
           "status": "pending",
           "items": 4,
           "provider": {
-            "id": "e9ea0243-dd51-425e-ae3a-f713c4691bd5",
-            "business_name": "Berge",
-            "email": "carissa@towne.ca",
-            "phone": "1-956-692-6975 x9876",
-            "address": "136 Huels Wells",
-            "city": null,
+            "id": "fd60ad5f-0e19-4f0b-bd07-01482eb831ae",
+            "business_name": "Conroy",
+            "email": "marine@hahn.us",
+            "phone": "701.299.0008",
+            "address": "19106 Armand Trafficway",
+            "city": "South Regan",
             "iva": "21%",
-            "cuit": null
+            "cuit": "30202020209",
+            "type": "provider"
+          }
+        },
+        {
+          "id": "63db1821-7f94-40c9-abc6-bccdd719f5f2",
+          "status": "pending",
+          "items": 4,
+          "provider": {
+            "id": "90588a94-ed37-47ae-9562-8133f0a77d88",
+            "business_name": "Murray",
+            "email": "shawana_mcclure@wolfemard.co.uk",
+            "phone": "679.531.7159",
+            "address": "2899 Armstrong Green",
+            "city": "Port Melonyview",
+            "iva": "21%",
+            "cuit": "30202020209",
+            "type": "provider"
+          }
+        },
+        {
+          "id": "91424154-1106-4b85-ba7b-b6c010473031",
+          "status": "pending",
+          "items": 4,
+          "provider": {
+            "id": "7d365411-9bb1-4646-828a-35b26f3d7dbc",
+            "business_name": "Braun",
+            "email": "jacki.raynor@leschstiedemann.com",
+            "phone": "1-707-607-0709 x95875",
+            "address": "964 Koepp Groves",
+            "city": "Lynchberg",
+            "iva": "21%",
+            "cuit": "30202020209",
+            "type": "provider"
           }
         }
       ],
@@ -238,32 +244,115 @@
   "orders#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/provider/orders/8cb9a908-031e-4ff1-adc7-cfa0ae58eaf8",
+      "path": "/api/v1/commerce/orders/632f6c71-de06-4809-90b4-1cdb15bc16b4",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": "632f6c71-de06-4809-90b4-1cdb15bc16b4",
+        "status": "pending",
+        "items": 4,
+        "provider": {
+          "id": "903a8210-96e9-46a6-9cda-d33535561de7",
+          "business_name": "Nitzsche",
+          "email": "aimee_larson@halvorson.info",
+          "phone": "728-680-5626 x8560",
+          "address": "37878 Kristle Motorway",
+          "city": "New Chantellebury",
+          "iva": "21%",
+          "cuit": "30202020209",
+          "type": "provider"
+        },
+        "order_items": [
+          {
+            "id": "00e0d261-cda4-4067-8a90-399b45608b66",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "25ecb0ff-1c3e-4d95-b458-452404c85528",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "7d1083cb-081a-47ef-a57c-3b7669a2397a",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "25ecb0ff-1c3e-4d95-b458-452404c85528",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "052b9542-b735-4758-ae5f-514ca57fd3f7",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "25ecb0ff-1c3e-4d95-b458-452404c85528",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          },
+          {
+            "id": "c908c8f6-4db4-4736-afe0-8e6242fc96cb",
+            "quantity": 1,
+            "unit_price": 10.0,
+            "product": {
+              "id": "25ecb0ff-1c3e-4d95-b458-452404c85528",
+              "name": "product",
+              "description": "a product",
+              "price": 10.0,
+              "discount_price": 8.5,
+              "is_discount": false
+            }
+          }
+        ]
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/provider/orders/5d353489-2b5e-4920-a0cd-12d47a02456c",
       "versions": [
 
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "8cb9a908-031e-4ff1-adc7-cfa0ae58eaf8",
+        "id": "5d353489-2b5e-4920-a0cd-12d47a02456c",
         "status": "pending",
         "commerce": {
-          "id": "96dbe545-bab5-420a-b913-df2087505d79",
-          "business_name": "Walter",
-          "email": "tana@emmerich.biz",
-          "phone": "1-331-754-1679",
-          "address": "816 Graham Views",
-          "city": null,
+          "id": "06d64cbe-28a5-44ad-82d0-6e597da227cd",
+          "business_name": "Bernhard",
+          "email": "marquetta.hayes@huels.name",
+          "phone": "680.588.9640",
+          "address": "612 Kaleigh Crest",
+          "city": "East Eda",
           "iva": null,
-          "cuit": null
+          "cuit": "30202020209",
+          "type": "commerce"
         },
         "order_items": [
           {
-            "id": "edd68826-cfd5-4067-8968-6d426195e5e4",
+            "id": "c5c0c7ec-85d0-4aad-af5e-c88dfe83e310",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "953f9254-d28d-480d-8ebb-0d6c33ba9edf",
+              "id": "166803ce-308f-4ed6-af39-88451857366b",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -272,11 +361,11 @@
             }
           },
           {
-            "id": "265804a2-3f8f-47e6-8d2b-1fe7a9a41a45",
+            "id": "e92e7614-80f9-45df-a224-0d578ea91b01",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "953f9254-d28d-480d-8ebb-0d6c33ba9edf",
+              "id": "166803ce-308f-4ed6-af39-88451857366b",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -285,11 +374,11 @@
             }
           },
           {
-            "id": "609cac79-69ca-43ae-b68c-781c3f5ceedd",
+            "id": "b60f874f-906e-46a8-8d36-f850c73d44f5",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "953f9254-d28d-480d-8ebb-0d6c33ba9edf",
+              "id": "166803ce-308f-4ed6-af39-88451857366b",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -298,11 +387,11 @@
             }
           },
           {
-            "id": "9fded141-24b5-4e3f-9784-0bf91f0fdb39",
+            "id": "153b6698-2623-45d9-a0d9-d5ee0a2d9d23",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "953f9254-d28d-480d-8ebb-0d6c33ba9edf",
+              "id": "166803ce-308f-4ed6-af39-88451857366b",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -315,93 +404,12 @@
       "code": 200,
       "show_in_doc": 0,
       "recorded": true
-    },
-    {
-      "verb": "GET",
-      "path": "/api/v1/commerce/orders/c885fb06-7305-4081-8ba7-94c6e6fb2fa5",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": null,
-      "response_data": {
-        "id": "c885fb06-7305-4081-8ba7-94c6e6fb2fa5",
-        "status": "pending",
-        "items": 4,
-        "provider": {
-          "id": "dfdaeb02-2883-48cd-bc0a-075e613cb763",
-          "business_name": "Murazik",
-          "email": "carlo.labadie@dibbert.info",
-          "phone": "974-892-1196 x952",
-          "address": "77678 Anjelica Haven",
-          "city": null,
-          "iva": "21%",
-          "cuit": null
-        },
-        "order_items": [
-          {
-            "id": "631c77dd-d703-4b6e-893e-9c68b3d871af",
-            "quantity": 1,
-            "unit_price": 10.0,
-            "product": {
-              "id": "7e2ef137-79ad-49ee-9474-bc46bc302a32",
-              "name": "product",
-              "description": "a product",
-              "price": 10.0,
-              "discount_price": 8.5,
-              "is_discount": false
-            }
-          },
-          {
-            "id": "59c3ce1f-fbec-4906-9748-761ec1a4d821",
-            "quantity": 1,
-            "unit_price": 10.0,
-            "product": {
-              "id": "7e2ef137-79ad-49ee-9474-bc46bc302a32",
-              "name": "product",
-              "description": "a product",
-              "price": 10.0,
-              "discount_price": 8.5,
-              "is_discount": false
-            }
-          },
-          {
-            "id": "2aa516fc-4a6f-430f-8496-92d1f54663cb",
-            "quantity": 1,
-            "unit_price": 10.0,
-            "product": {
-              "id": "7e2ef137-79ad-49ee-9474-bc46bc302a32",
-              "name": "product",
-              "description": "a product",
-              "price": 10.0,
-              "discount_price": 8.5,
-              "is_discount": false
-            }
-          },
-          {
-            "id": "8d25cf66-d20a-4e2b-8529-cade8b582459",
-            "quantity": 1,
-            "unit_price": 10.0,
-            "product": {
-              "id": "7e2ef137-79ad-49ee-9474-bc46bc302a32",
-              "name": "product",
-              "description": "a product",
-              "price": 10.0,
-              "discount_price": 8.5,
-              "is_discount": false
-            }
-          }
-        ]
-      },
-      "code": 200,
-      "show_in_doc": 1,
-      "recorded": true
     }
   ],
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/f099a10b-a1ce-4235-9843-7d0e51f5f222/products",
+      "path": "/api/v1/providers/d18fc189-b4d4-4164-88b5-a40d4fe464cf/products",
       "versions": [
         "1.0"
       ],
@@ -409,7 +417,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "3940abe3-c009-4d91-9f46-92c2ee0527bc",
+          "id": "91030011-bd3e-46a1-900f-3949cf041c99",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -417,7 +425,7 @@
           "is_discount": false
         },
         {
-          "id": "b764cac4-86d7-4b9a-a8dc-34a8bfaeb463",
+          "id": "8a397596-72e6-488c-b7d0-647add6bdad2",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -425,7 +433,7 @@
           "is_discount": false
         },
         {
-          "id": "d22f7874-5627-4bed-82d5-97003d930d33",
+          "id": "316c30a6-44af-4180-9c15-febdc0df39ac",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -433,7 +441,7 @@
           "is_discount": false
         },
         {
-          "id": "f7c20c3d-4f46-4ad1-841a-01f1e885248d",
+          "id": "e6fb3891-66a2-4105-ab1d-032709616673",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -441,7 +449,7 @@
           "is_discount": false
         },
         {
-          "id": "dc71cd32-e878-4bfd-93c2-85700a971826",
+          "id": "f5265125-0ddc-41f1-b039-6a444644867e",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -457,14 +465,14 @@
   "products#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/d223be58-65f3-434f-876f-2cb049169f81/products/ca7268c2-e0b2-477c-a687-866716f83d77",
+      "path": "/api/v1/providers/ef178e2e-a667-4278-8e92-98b1719f7081/products/1f8ca793-b9b4-435d-ae75-7f96f652f0f4",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "ca7268c2-e0b2-477c-a687-866716f83d77",
+        "id": "1f8ca793-b9b4-435d-ae75-7f96f652f0f4",
         "name": "product",
         "description": "a product",
         "price": 10.0,
@@ -472,34 +480,34 @@
         "is_discount": false,
         "questions": [
           {
-            "id": "7d216a99-07de-48cd-afab-3a19bcece2d0",
-            "question": "Doloribus libero vel sed qui qui nisi cum repellendus.",
-            "answer": "Et architecto sed error sunt.",
-            "answered_at": "Fri, 15 Dec 2017 20:29:16 +0000"
+            "id": "09348472-85d9-41a2-933f-d51f845b5cb6",
+            "question": "Ut architecto exercitationem numquam alias saepe sint veritatis.",
+            "answer": "Qui tempore facere minus ut eveniet facilis.",
+            "answered_at": "Wed, 20 Dec 2017 15:22:28 +0000"
           },
           {
-            "id": "d34d0174-5911-4a28-aad0-420af17523ed",
-            "question": "Similique odio quis iure quas molestiae.",
-            "answer": "Ad nihil explicabo quas ullam dolor.",
-            "answered_at": "Fri, 15 Dec 2017 20:29:16 +0000"
+            "id": "8828e5da-30bd-405e-b10b-d8f4dc8b3abb",
+            "question": "Rerum aut rem debitis est.",
+            "answer": "Inventore perferendis eos est sunt perspiciatis itaque.",
+            "answered_at": "Wed, 20 Dec 2017 15:22:28 +0000"
           },
           {
-            "id": "7c8d5171-957e-42ff-8ae1-a2dabb4a8010",
-            "question": "Perspiciatis et voluptatem eum ea.",
-            "answer": "Soluta ipsa vel consequuntur itaque sed.",
-            "answered_at": "Fri, 15 Dec 2017 20:29:16 +0000"
+            "id": "4e097880-06f3-414d-ba90-1bf743207c0f",
+            "question": "Numquam sit vel nemo eius.",
+            "answer": "Sunt quod non qui totam doloribus.",
+            "answered_at": "Wed, 20 Dec 2017 15:22:28 +0000"
           },
           {
-            "id": "933d28c2-1a38-4a15-81b4-5680120c2150",
-            "question": "Quae odit molestias aliquid sunt odio nobis sit doloribus.",
-            "answer": "Nihil dignissimos nemo aut dolorum est pariatur.",
-            "answered_at": "Fri, 15 Dec 2017 20:29:16 +0000"
+            "id": "17ddcaac-b50d-4fc7-917a-83fbf60e6774",
+            "question": "Nostrum soluta id sint et molestiae dolores perferendis enim.",
+            "answer": "Similique maiores maxime in corrupti numquam illum ipsam et.",
+            "answered_at": "Wed, 20 Dec 2017 15:22:28 +0000"
           },
           {
-            "id": "62bb8985-67c1-4ade-b8d8-839e525cedf7",
-            "question": "Sed et ea dolor quisquam soluta accusantium.",
-            "answer": "Iusto eos sed sit laboriosam dolorem ea.",
-            "answered_at": "Fri, 15 Dec 2017 20:29:16 +0000"
+            "id": "c01325a1-31a0-4fb8-afa0-750777a228b3",
+            "question": "Ducimus est facere temporibus dolore nam voluptatem.",
+            "answer": "Quisquam et magni laudantium expedita ipsam sunt.",
+            "answered_at": "Wed, 20 Dec 2017 15:22:28 +0000"
           }
         ]
       },
@@ -517,8 +525,8 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "367-779-0185 x9619",
-        "address": "728 Shannon Walk"
+        "phone": "896.813.7640 x99722",
+        "address": "57219 Carlo Road"
       },
       "response_data": null,
       "code": 200,
@@ -537,54 +545,59 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "228ebb0e-5abd-4c34-bc13-6d066d86208a",
-          "business_name": "Reinger",
-          "email": "lan@okeefe.info",
-          "phone": "702-450-6813",
-          "address": "7603 Patty Valleys",
-          "city": null,
+          "id": "7f927e56-41da-4b92-aa4a-f7d6e82c31ed",
+          "business_name": "Hane",
+          "email": "melissia@hoegerkoss.biz",
+          "phone": "966.414.6749 x87422",
+          "address": "70764 Karren Brooks",
+          "city": "Port Maurice",
           "iva": "21%",
-          "cuit": null
+          "cuit": "30202020209",
+          "type": "provider"
         },
         {
-          "id": "68cd40ba-7630-45e2-9c95-fea4d6f31778",
+          "id": "8b755d13-cd4d-453a-b3d1-39e200720208",
+          "business_name": "Batz",
+          "email": "spring@bruen.com",
+          "phone": "(984)905-0403",
+          "address": "23672 Koepp Extension",
+          "city": "North Carsonchester",
+          "iva": "21%",
+          "cuit": "30202020209",
+          "type": "provider"
+        },
+        {
+          "id": "26a1caf6-e0f0-4d71-bcfb-b48c244e6d50",
+          "business_name": "Mueller",
+          "email": "virgen.batz@gutkowski.co.uk",
+          "phone": "(447)375-5478 x6490",
+          "address": "0436 Kathrin Freeway",
+          "city": "Schulisthaven",
+          "iva": "21%",
+          "cuit": "30202020209",
+          "type": "provider"
+        },
+        {
+          "id": "3e751c8f-0c67-4c94-b353-78c20ccc7bfa",
+          "business_name": "Kassulke",
+          "email": "jerrell@farrell.co.uk",
+          "phone": "(821)343-3806",
+          "address": "695 Keeling Meadow",
+          "city": "Lake Agathaland",
+          "iva": "21%",
+          "cuit": "30202020209",
+          "type": "provider"
+        },
+        {
+          "id": "46e2b153-ac1b-4f04-8012-a381f64de600",
           "business_name": "Schmeler",
-          "email": "stacy@jakubowski.co.uk",
-          "phone": "1-823-618-9222 x34239",
-          "address": "610 Brown Causeway",
-          "city": null,
+          "email": "marylouise.cummerata@fisherstark.co.uk",
+          "phone": "941.386.1790 x87476",
+          "address": "44619 Friesen Harbor",
+          "city": "Sumouth",
           "iva": "21%",
-          "cuit": null
-        },
-        {
-          "id": "e1b500f6-4d02-4df7-8542-68eff5defbcf",
-          "business_name": "Wunsch",
-          "email": "maira@beatty.name",
-          "phone": "472-895-8940",
-          "address": "50046 Fisher Walks",
-          "city": null,
-          "iva": "21%",
-          "cuit": null
-        },
-        {
-          "id": "86559465-dc60-4a4d-84d3-e35d40d0b8fc",
-          "business_name": "Hickle",
-          "email": "verdell@hillldavis.name",
-          "phone": "1-277-341-3141",
-          "address": "73001 Ayana Junctions",
-          "city": null,
-          "iva": "21%",
-          "cuit": null
-        },
-        {
-          "id": "6f7ad370-b476-4ee9-bc7b-49ac1e608839",
-          "business_name": "Larkin",
-          "email": "basilia.dickinson@kihn.info",
-          "phone": "1-919-418-0379 x6555",
-          "address": "517 Schumm Mountain",
-          "city": null,
-          "iva": "21%",
-          "cuit": null
+          "cuit": "30202020209",
+          "type": "provider"
         }
       ],
       "code": 200,
@@ -595,16 +608,37 @@
   "questions#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/providers/8ad06996-32ad-46f6-a394-eb4f9d4d5212/products/c1b5a2e0-b7a5-4be7-8f3c-478420ad19ef/questions/",
+      "path": "/api/v1/providers/9e9d2adb-931f-4aab-be02-10e7de92e1b1/products/98ad1425-2bb2-42d9-805c-bfaa36d977e9/questions/",
       "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": {
-        "question": "In maiores ipsa aut laborum dolore iusto et."
+        "question": "Ex illo sunt quae dolore voluptatem ut."
       },
       "response_data": null,
-      "code": 204,
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/providers/21cd7a97-3e55-46d3-bf5a-5fdff3a4fafc/products/a74f6751-85f7-4fa8-a3d5-f5b7284d9072/questions/",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "question": ""
+      },
+      "response_data": {
+        "errors": {
+          "question": [
+            "blank"
+          ]
+        }
+      },
+      "code": 422,
       "show_in_doc": 0,
       "recorded": true
     }
@@ -612,41 +646,17 @@
   "questions#update": [
     {
       "verb": "PUT",
-      "path": "/api/v1/provider/questions/9efaa9af-1260-4ffb-9185-19aefe88e50e",
+      "path": "/api/v1/provider/questions/d7dfc62b-9100-40da-9618-54673deb56d6",
       "versions": [
-        "1.0"
+
       ],
       "query": null,
       "request_data": {
-        "answer": "Nesciunt repellat sed eveniet veniam libero quisquam."
+        "answer": "Voluptatem aut ea repellat sit reiciendis."
       },
       "response_data": null,
       "code": 200,
-      "show_in_doc": 1,
-      "recorded": true
-    }
-  ],
-  "user_registrations#create": [
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_registration",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "email": "sharika_frami@hudson.biz",
-        "password": "iiiiiiiiiiiiiiii",
-        "first_name": "Benton",
-        "last_name": "Klein",
-        "phone": "525.980.7820",
-        "address": "1268 Mayert Gateway",
-        "user_type": "provider",
-        "category": "category_1"
-      },
-      "response_data": null,
-      "code": 200,
-      "show_in_doc": 1,
+      "show_in_doc": 0,
       "recorded": true
     }
   ],
@@ -659,10 +669,10 @@
       ],
       "query": null,
       "request_data": {
-        "business_name": "Maggio",
-        "phone": "(535)679-2607 x12152",
-        "address": "8047 Breanna Heights",
-        "city": "Schmelerville",
+        "business_name": "Price",
+        "phone": "952.379.9025 x44807",
+        "address": "0920 Cary Turnpike",
+        "city": "Fredrickastad",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -672,73 +682,56 @@
       "code": 200,
       "show_in_doc": 1,
       "recorded": true
-    }
-  ],
-  "user_sessions#create": [
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_session",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "email": "alejandra.kihn@emard.co.uk",
-        "password": "invalid"
-      },
-      "response_data": null,
-      "code": 401,
-      "show_in_doc": 1,
-      "recorded": true
     },
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_session",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "email": "lynna_sipes@mckenzie.name",
-        "password": "rrrrrrrrr"
-      },
-      "response_data": {
-        "api_token": "7_Y6tIGZIjIYLu7qB9QHpSFCqvjSNdXDwnJ49VTP5AXBQEHCtadijMU0wWK57B0Z7sAwE5S7ThhwzNGeahrnMA"
-      },
-      "code": 200,
-      "show_in_doc": 0,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_session",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "email": "invalid_user",
-        "password": "jjjjjjjjjj"
-      },
-      "response_data": null,
-      "code": 404,
-      "show_in_doc": 0,
-      "recorded": true
-    }
-  ],
-  "users#update": [
     {
       "verb": "PUT",
-      "path": "/api/v1/users",
+      "path": "/api/v1/user_registration",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": {
-        "phone": "933-413-0140 x64244",
-        "address": "16665 Ronda Path"
+        "business_name": "Schumm",
+        "phone": "(291)304-5389 x7385",
+        "address": "6353 Shala Stream",
+        "city": "East Lajuanamouth",
+        "user_type": "some",
+        "category": "category_1",
+        "iva": "21%",
+        "cuit": "123456"
       },
-      "response_data": null,
+      "response_data": {
+        "errors": {
+          "user_type": [
+            "is invalid"
+          ]
+        }
+      },
+      "code": 422,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "users#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/users/1317815d-2ea0-4e47-bf7f-91d50ff4c977",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": "1317815d-2ea0-4e47-bf7f-91d50ff4c977",
+        "business_name": "Borer",
+        "email": "everett.mayert@langworth.name",
+        "phone": "801-739-1432",
+        "address": "557 Hirthe Ranch",
+        "city": "Lake Sang",
+        "iva": "21%",
+        "cuit": "30202020209",
+        "type": "provider"
+      },
       "code": 200,
       "show_in_doc": 1,
       "recorded": true

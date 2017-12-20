@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'apipie-rails', '0.5.5'
+gem 'apipie-rails', '0.5.6'
 
 group :development, :test do
   gem 'pry'

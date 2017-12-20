@@ -9,6 +9,6 @@ class User < ApplicationRecord
   has_one :api_token, dependent: :destroy, as: :user
 
   def self.find_google_user(profile)
-    where("google_id = ? OR email = ?", profile["kid"], profile["email"]).first
+    where("google_id = ? OR email = ?", profile["google_id"], profile["email"]).first
   end
 end
