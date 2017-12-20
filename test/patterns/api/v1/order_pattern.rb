@@ -5,6 +5,7 @@ class Api::V1::OrderPattern < Pattern
       @pattern = {
         id: order.id,
         status: order.status,
+        created_at: l(order.created_at),
         order_items: Api::V1::OrderItemPattern.new.list(order.order_items).pattern
       }
     end
@@ -48,6 +49,7 @@ class Api::V1::OrderPattern < Pattern
     {
         id: order.id,
         status: order.status,
+        created_at: l(order.created_at),
         items: order.order_items.size,
     }
   end
