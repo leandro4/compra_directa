@@ -1,9 +1,10 @@
 module Validators
   class CreateUserValidator < BaseValidator
-    attr_accessor :business_name, :phone, :address, :user_type,
+    attr_accessor :business_name, :description, :phone, :address, :user_type,
       :category, :iva, :city, :cuit
 
     validates :business_name, presence: true
+    validates :description, presence: true
     validates :user_type, presence: true
     validates :phone, presence: true
     validates :address, presence: true

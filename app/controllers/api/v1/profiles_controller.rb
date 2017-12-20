@@ -1,8 +1,10 @@
 class Api::V1::ProfilesController < Api::V1::BaseController
 
   api :PUT, "/v1/profile", "Update the user profile"
+  param :description, String
   param :phone, String
   param :address, String
+  param :city, String
   def update
     current_user.update(user_update_params)
     head :ok
@@ -11,6 +13,6 @@ class Api::V1::ProfilesController < Api::V1::BaseController
   protected
 
   def user_update_params
-    params.permit(:phone, :address).reject{|_, v| v.blank?}
+    params.permit(:phone, :address, :description, :city).reject{|_, v| v.blank?}
   end
 end

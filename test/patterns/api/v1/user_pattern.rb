@@ -22,6 +22,7 @@ class Api::V1::UserPattern < Pattern
     {
       id: user.id,
       business_name: user.business_name,
+      description: user.description,
       email: user.email,
       phone: user.phone,
       address: user.address,

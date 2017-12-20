@@ -18,6 +18,8 @@ module Api
         let(:valid_params) {{
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
+          city: FFaker::Address.city,
+          description: FFaker::Lorem.paragraph
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
@@ -41,7 +43,7 @@ module Api
         end
 
         context "when the submitted user attributes are not valid" do
-          [:phone, :address].each do |field|
+          [:phone, :address, :description, :city].each do |field|
             it "ignore blank #{field}" do
               valid_params[field] = ""
               puts_users(valid_params)

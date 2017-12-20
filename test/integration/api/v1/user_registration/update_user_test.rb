@@ -17,6 +17,7 @@ module Api
 
         let(:valid_params) {{
           business_name: FFaker::Name.last_name,
+          description: FFaker::Lorem.paragraph,
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
           city: FFaker::Address.city,
@@ -58,7 +59,7 @@ module Api
             assert_equal [t("errors.messages.invalid")], json["errors"]["category"]
           end
 
-          [:business_name, :phone, :address, :city, :user_type,
+          [:business_name, :description, :phone, :address, :city, :user_type,
             :category, :iva, :cuit].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
