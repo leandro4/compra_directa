@@ -35,7 +35,7 @@
         "google_token": "valid"
       },
       "response_data": {
-        "id": "3f5f3452-1450-418b-9f6c-16ffc807f2e1",
+        "id": "0b72c12b-676a-49d7-8632-302626e6b3bb",
         "business_name": null,
         "description": null,
         "email": "sudo.juan@gmail.com",
@@ -47,10 +47,29 @@
         "type": null,
         "user_type": "",
         "completed": false,
-        "token": "10rXg6I9Fbuw75dCLMCGs1hUrfLfztOrfndeEH4pEElFPPMBW4PENkJQxP1rd6pnPVN_-98Xa8sTXnKgyVvCCQ"
+        "token": "YK8RdzYyNIUi0EHQQsYFxEuEuiusQPrfxSNevaW7tWDDPVqWztN08IzoR7dT2PAZ3wlY7vLxNNhsfB-CrmdKRA"
       },
       "code": 200,
       "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/user_session/google",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "google_token": "invalid"
+      },
+      "response_data": {
+        "errors": {
+          "base": "invalid_google_token"
+        }
+      },
+      "code": 422,
+      "show_in_doc": 0,
       "recorded": true
     },
     {
@@ -73,31 +92,12 @@
       "code": 422,
       "show_in_doc": 0,
       "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/user_session/google",
-      "versions": [
-        "1.0"
-      ],
-      "query": null,
-      "request_data": {
-        "google_token": "invalid"
-      },
-      "response_data": {
-        "errors": {
-          "base": "invalid_google_token"
-        }
-      },
-      "code": 422,
-      "show_in_doc": 0,
-      "recorded": true
     }
   ],
   "orders#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/31b1abba-9db9-4b5f-8795-f46486142f5a/orders",
+      "path": "/api/v1/commerce/providers/29b6b9d1-847c-4ef9-9b74-6f9408ef7d9e/orders",
       "versions": [
         "1.0"
       ],
@@ -123,7 +123,7 @@
     },
     {
       "verb": "POST",
-      "path": "/api/v1/commerce/providers/12f29d04-5c60-400d-bc71-38a1547aa575/orders",
+      "path": "/api/v1/commerce/providers/5189d2e0-5088-41ea-a9b2-4bf2ab611b5c/orders",
       "versions": [
         "1.0"
       ],
@@ -131,11 +131,11 @@
       "request_data": {
         "order": [
           {
-            "product_id": "e0fbbe28-c32f-4925-84ed-d318bdb7d243",
+            "product_id": "b504048d-fad8-45da-ba4e-b4be5f8f03eb",
             "quantity": 1
           },
           {
-            "product_id": "a5b15c15-d818-4cc4-a7e7-c41496634307",
+            "product_id": "7fb33a2a-6785-4c5f-b2c0-c00e24241dfa",
             "quantity": 2
           }
         ]
@@ -157,90 +157,90 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "bad2cad8-195e-4fa7-86b3-48878172bc1c",
+          "id": "198f98f7-bf5c-4bea-90bb-fb8e11868f31",
           "status": "pending",
-          "created_at": "Wed, 20 Dec 2017 20:16:57 +0000",
+          "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
           "items": 4,
           "provider": {
-            "id": "7267fe26-75d2-47d7-913a-6900a5ce6251",
-            "business_name": "Jast",
+            "id": "e288c9cf-fd3b-408f-b3b9-7674c0f8406e",
+            "business_name": "Kuhic",
             "description": null,
-            "email": "heidi_kihn@daugherty.co.uk",
-            "phone": "369.294.4888 x0059",
-            "address": "226 McGlynn Crest",
-            "city": "East Youlandashire",
+            "email": "celesta@volkman.ca",
+            "phone": "385.788.1494 x59806",
+            "address": "92367 Reilly Forest",
+            "city": "Wardburgh",
             "iva": "21%",
             "cuit": "30202020209",
             "type": "provider"
           }
         },
         {
-          "id": "1356624a-4990-49d0-bb93-d066de1ad07a",
+          "id": "bb11d2b4-05f3-401b-a95e-65c7bb82e4f7",
           "status": "pending",
-          "created_at": "Wed, 20 Dec 2017 20:16:57 +0000",
+          "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
           "items": 4,
           "provider": {
-            "id": "8e341df6-931a-4fe2-81a0-fa694ab5b010",
-            "business_name": "Price",
+            "id": "eaa1c288-13fb-4019-8c9c-f26bf48d73ce",
+            "business_name": "Witting",
             "description": null,
-            "email": "terrilyn@marquardt.info",
-            "phone": "1-994-514-6982",
-            "address": "352 Liliana Haven",
-            "city": "North Tegan",
+            "email": "kirstie@wildermanemmerich.name",
+            "phone": "492.249.5513 x38386",
+            "address": "472 Neda Plaza",
+            "city": "West Celesta",
             "iva": "21%",
             "cuit": "30202020209",
             "type": "provider"
           }
         },
         {
-          "id": "3694135a-1773-4cf6-a53a-e226c2090f63",
+          "id": "bfd9ecf4-e5fd-4a78-866f-8253b692bdd5",
           "status": "pending",
-          "created_at": "Wed, 20 Dec 2017 20:16:57 +0000",
+          "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
           "items": 4,
           "provider": {
-            "id": "4774fad7-158d-4687-8980-9e117bb04777",
-            "business_name": "Donnelly",
+            "id": "6db1aed2-f398-413c-9e91-eaa611f7fb39",
+            "business_name": "Bernier",
             "description": null,
-            "email": "kai.feest@kunze.biz",
-            "phone": "432-606-2099 x7698",
-            "address": "212 Bashirian Lights",
-            "city": "East Charles",
+            "email": "chiquita@schimmelglover.co.uk",
+            "phone": "(322)954-3722 x78797",
+            "address": "04230 Franecki Ranch",
+            "city": "North Luciana",
             "iva": "21%",
             "cuit": "30202020209",
             "type": "provider"
           }
         },
         {
-          "id": "1b4c1e65-8569-4d27-ae87-9b9e03b77632",
+          "id": "8f74388a-a263-403a-9d3e-dfa4990d3afe",
           "status": "pending",
-          "created_at": "Wed, 20 Dec 2017 20:16:57 +0000",
+          "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
           "items": 4,
           "provider": {
-            "id": "17c8bfcb-578d-431f-9aef-62d50f1487c6",
-            "business_name": "Lemke",
+            "id": "5aba8d29-8b72-4e64-93e2-31b58ccadda5",
+            "business_name": "Beer",
             "description": null,
-            "email": "tressa_ledner@jakubowski.com",
-            "phone": "534.202.1146 x86914",
-            "address": "3963 Lyla Place",
-            "city": "Gleasonville",
+            "email": "carma@gloverwillms.co.uk",
+            "phone": "906.217.2441 x057",
+            "address": "7244 Ngoc Fields",
+            "city": "East Victorport",
             "iva": "21%",
             "cuit": "30202020209",
             "type": "provider"
           }
         },
         {
-          "id": "1db10784-6500-4a6f-bb7b-35d2c39134b5",
+          "id": "82a7e02c-94d1-43b2-9107-3fa5af93a3ea",
           "status": "pending",
-          "created_at": "Wed, 20 Dec 2017 20:16:57 +0000",
+          "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
           "items": 4,
           "provider": {
-            "id": "92185fe6-9a1f-4bfd-b014-551b3680ffd8",
-            "business_name": "Marks",
+            "id": "188ce351-4fac-48dd-b08e-8ebb2ee137d9",
+            "business_name": "Ernser",
             "description": null,
-            "email": "sung.windler@hettinger.ca",
-            "phone": "1-477-646-2742",
-            "address": "3467 Conroy Rapid",
-            "city": "Lake Brady",
+            "email": "lelah@schneiderdickens.co.uk",
+            "phone": "(479)598-2705 x2309",
+            "address": "29500 Hettinger Spring",
+            "city": "West Janita",
             "iva": "21%",
             "cuit": "30202020209",
             "type": "provider"
@@ -255,36 +255,36 @@
   "orders#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/commerce/orders/14f6c6b2-4e43-4b5f-a12b-495b44e9ec94",
+      "path": "/api/v1/commerce/orders/fd952173-1c20-4b1d-836a-3ec6f6a8f213",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "14f6c6b2-4e43-4b5f-a12b-495b44e9ec94",
+        "id": "fd952173-1c20-4b1d-836a-3ec6f6a8f213",
         "status": "pending",
-        "created_at": "Wed, 20 Dec 2017 20:16:58 +0000",
+        "created_at": "Fri, 22 Dec 2017 03:32:01 +0000",
         "items": 4,
         "provider": {
-          "id": "2b925fbb-f500-48ce-88d8-397457ae33f3",
-          "business_name": "Jacobi",
+          "id": "19b77e4a-3a33-4bd8-bcd9-467555ac72f7",
+          "business_name": "Price",
           "description": null,
-          "email": "terrance.buckridge@bernier.com",
-          "phone": "917-335-4177 x36378",
-          "address": "0597 Goodwin Pines",
-          "city": "Marismouth",
+          "email": "rebecka.beahan@rohan.us",
+          "phone": "252-475-9483 x93295",
+          "address": "33314 Stoltenberg Knolls",
+          "city": "Larissaberg",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
         },
         "order_items": [
           {
-            "id": "bf66bdf3-40e9-4879-91a2-81b85156fcb8",
+            "id": "b96cb060-f94b-425e-bd42-9090114d66cd",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "0eff6d59-4c5e-49c3-9c2a-43991085f506",
+              "id": "c8759c64-0a39-4b60-9f99-7e0fbb111d51",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -293,11 +293,11 @@
             }
           },
           {
-            "id": "32686bc0-4406-4e9a-8948-47aec0b5fc91",
+            "id": "63f0155b-52a8-454b-93c0-7e13214150a9",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "0eff6d59-4c5e-49c3-9c2a-43991085f506",
+              "id": "c8759c64-0a39-4b60-9f99-7e0fbb111d51",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -306,11 +306,11 @@
             }
           },
           {
-            "id": "f356304c-b2c0-4977-bfc5-afce54560dc9",
+            "id": "d1619dc4-c170-4f25-8749-e2aa3d5f7463",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "0eff6d59-4c5e-49c3-9c2a-43991085f506",
+              "id": "c8759c64-0a39-4b60-9f99-7e0fbb111d51",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -319,11 +319,11 @@
             }
           },
           {
-            "id": "f25f204a-8701-42db-9aa2-bbbadd61ab19",
+            "id": "57ddb394-cb15-470f-9cb8-d6634a9044c0",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "0eff6d59-4c5e-49c3-9c2a-43991085f506",
+              "id": "c8759c64-0a39-4b60-9f99-7e0fbb111d51",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -339,35 +339,35 @@
     },
     {
       "verb": "GET",
-      "path": "/api/v1/provider/orders/9a0e17ac-c169-4db1-b17a-a207c4f7374e",
+      "path": "/api/v1/provider/orders/65af612b-3fe4-4282-9783-671badadbfdc",
       "versions": [
 
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "9a0e17ac-c169-4db1-b17a-a207c4f7374e",
+        "id": "65af612b-3fe4-4282-9783-671badadbfdc",
         "status": "pending",
-        "created_at": "Wed, 20 Dec 2017 20:16:58 +0000",
+        "created_at": "Fri, 22 Dec 2017 03:32:02 +0000",
         "commerce": {
-          "id": "ce1e56aa-eba8-44c0-a367-c128e23d8845",
-          "business_name": "Hammes",
+          "id": "80f2d00d-29c2-4f1a-a72f-b58567ff1989",
+          "business_name": "West",
           "description": null,
-          "email": "marivel@jewess.com",
-          "phone": "521-692-4895 x0989",
-          "address": "0908 Ernser Islands",
-          "city": "Freidaberg",
+          "email": "desirae@frami.name",
+          "phone": "766.973.8014 x1500",
+          "address": "526 Gearldine Knoll",
+          "city": "Lake Kimstad",
           "iva": null,
           "cuit": "30202020209",
           "type": "commerce"
         },
         "order_items": [
           {
-            "id": "839bc96e-3e0f-44af-a897-233ff929aaee",
+            "id": "808eb8a2-58dc-4ccd-b7e6-5847e1db9c18",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "8940686f-5ffb-4c3e-9a95-888ec6b9462d",
+              "id": "44c71ca8-ab9c-4aa1-a188-7818c21c8bee",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -376,11 +376,11 @@
             }
           },
           {
-            "id": "f38072b6-b9f6-4098-bf89-afee77e4369e",
+            "id": "dc3940ae-8df3-463f-8ee5-9e06600083c0",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "8940686f-5ffb-4c3e-9a95-888ec6b9462d",
+              "id": "44c71ca8-ab9c-4aa1-a188-7818c21c8bee",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -389,11 +389,11 @@
             }
           },
           {
-            "id": "98006b73-dcbb-4134-b67d-aae9bd9928ae",
+            "id": "64e2f362-b9ef-41f5-9d54-00526f427882",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "8940686f-5ffb-4c3e-9a95-888ec6b9462d",
+              "id": "44c71ca8-ab9c-4aa1-a188-7818c21c8bee",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -402,11 +402,11 @@
             }
           },
           {
-            "id": "56b1eaf7-91bf-4802-865a-3dc9b1034abd",
+            "id": "b393bac7-7471-4851-a74f-9b24ac29e647",
             "quantity": 1,
             "unit_price": 10.0,
             "product": {
-              "id": "8940686f-5ffb-4c3e-9a95-888ec6b9462d",
+              "id": "44c71ca8-ab9c-4aa1-a188-7818c21c8bee",
               "name": "product",
               "description": "a product",
               "price": 10.0,
@@ -424,7 +424,7 @@
   "products#index": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/51d02152-9ce7-4b72-a4d4-4883d0ecee10/products",
+      "path": "/api/v1/providers/dd2ac484-bacf-4628-a8a9-c7be020a4d2c/products",
       "versions": [
         "1.0"
       ],
@@ -432,7 +432,7 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "f9126327-c221-4fe5-b12f-da17792b826f",
+          "id": "bd22bb7f-eff9-4037-b9a0-2a7f526dfd7e",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -440,7 +440,7 @@
           "is_discount": false
         },
         {
-          "id": "51322b65-b7a9-4975-b089-9784af6cbecd",
+          "id": "6f87a3de-d933-4073-b324-90a7dfb1a641",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -448,7 +448,7 @@
           "is_discount": false
         },
         {
-          "id": "ce3b9501-a9db-444f-bad4-8fda76901feb",
+          "id": "5bd7ae23-707e-4aa3-ab4b-81d8e0be5333",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -456,7 +456,7 @@
           "is_discount": false
         },
         {
-          "id": "88143bdb-c133-4ee9-b9e5-fad724d5fe67",
+          "id": "8b4d736e-5213-4227-9e67-5f0d1f533dfa",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -464,7 +464,7 @@
           "is_discount": false
         },
         {
-          "id": "15e2850b-6c5c-4434-b41f-0f4c6464fa68",
+          "id": "3b24b9fe-aaf0-498e-b281-35c51f1fbd57",
           "name": "product",
           "description": "a product",
           "price": 10.0,
@@ -480,14 +480,14 @@
   "products#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/providers/439f8e40-5efd-4717-8f3a-87840c10616a/products/75d82a18-064d-4f44-894b-2850937a5103",
+      "path": "/api/v1/providers/195200e8-4908-44b1-bfda-43708fd4134c/products/ced890e6-ed98-46af-ab06-be062577f840",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "75d82a18-064d-4f44-894b-2850937a5103",
+        "id": "ced890e6-ed98-46af-ab06-be062577f840",
         "name": "product",
         "description": "a product",
         "price": 10.0,
@@ -495,34 +495,34 @@
         "is_discount": false,
         "questions": [
           {
-            "id": "50506454-3ed1-4942-92d7-083a5d98be9a",
-            "question": "Maiores a repellendus quibusdam inventore enim dolores.",
-            "answer": "Et et molestiae illo tenetur reprehenderit officiis corrupti.",
-            "answered_at": "Wed, 20 Dec 2017 19:16:58 +0000"
+            "id": "5f77a848-b194-4c94-8b68-a1fe60a4746b",
+            "question": "Rerum dolorem nesciunt ad quasi magnam suscipit a.",
+            "answer": "Repellendus qui qui ut odit unde commodi minima et.",
+            "answered_at": "Fri, 22 Dec 2017 02:32:02 +0000"
           },
           {
-            "id": "5b4a0983-dedf-4f6d-b2e5-4e17411ba0d2",
-            "question": "Corporis voluptatem dolorem omnis voluptatem ut dicta velit est.",
-            "answer": "Natus facilis magni impedit qui dolorem.",
-            "answered_at": "Wed, 20 Dec 2017 19:16:58 +0000"
+            "id": "8d13d739-3d3f-44fc-8a25-b79246669df6",
+            "question": "Doloribus et qui veritatis eius id quam.",
+            "answer": "Voluptatem nam molestiae saepe pariatur ut.",
+            "answered_at": "Fri, 22 Dec 2017 02:32:02 +0000"
           },
           {
-            "id": "4943b263-3334-4593-92c2-ecb6bb1b4432",
-            "question": "Nesciunt unde nobis ut ullam.",
-            "answer": "Doloribus provident omnis omnis quam.",
-            "answered_at": "Wed, 20 Dec 2017 19:16:58 +0000"
+            "id": "ff82c42d-6bd3-4d90-b9c2-9b7870fcba7b",
+            "question": "Velit ut debitis tenetur qui.",
+            "answer": "Animi iste illum nobis ipsum possimus ut facere quisquam.",
+            "answered_at": "Fri, 22 Dec 2017 02:32:02 +0000"
           },
           {
-            "id": "87f7abb7-39aa-4280-8658-1c36c6fa5915",
-            "question": "Perspiciatis quo incidunt ducimus fugit qui velit consectetur porro.",
-            "answer": "Voluptatem quos quam non voluptas quo aut et porro.",
-            "answered_at": "Wed, 20 Dec 2017 19:16:58 +0000"
+            "id": "93bc7d03-fb96-4798-9125-5bd6fe32f7ec",
+            "question": "Reprehenderit non voluptates beatae molestias enim.",
+            "answer": "Placeat nulla dolor id doloremque totam.",
+            "answered_at": "Fri, 22 Dec 2017 02:32:02 +0000"
           },
           {
-            "id": "cce63e9f-9429-4c05-8ffa-4e0509048560",
-            "question": "Qui assumenda voluptatem nobis rerum.",
-            "answer": "Aspernatur laborum rerum excepturi accusamus voluptas odit repellendus.",
-            "answered_at": "Wed, 20 Dec 2017 19:16:58 +0000"
+            "id": "a478ecd8-9d2d-4f35-b944-c64f8ba45239",
+            "question": "Corrupti consectetur impedit voluptate ipsum molestiae aut.",
+            "answer": "Minus molestiae sit quia ut expedita.",
+            "answered_at": "Fri, 22 Dec 2017 02:32:02 +0000"
           }
         ]
       },
@@ -540,10 +540,10 @@
       ],
       "query": null,
       "request_data": {
-        "phone": "(989)963-0750 x94394",
-        "address": "0985 Maggie Expressway",
-        "city": "South Kaleigh",
-        "description": "Deserunt at cupiditate magnam quia maxime magni. Exercitationem aut voluptas non aliquid sint culpa. Eos aut at officiis eius. Et ad omnis aut eius id."
+        "phone": "(240)772-3745",
+        "address": "706 Weissnat Cape",
+        "city": "Lake Dong",
+        "description": "Et ad voluptatem quasi perferendis. Ullam aut omnis cupiditate voluptas atque voluptate beatae voluptas. Laboriosam vel natus provident est voluptatem et aut possimus. Dolor qui magnam maiores et nemo blanditiis est."
       },
       "response_data": null,
       "code": 200,
@@ -562,61 +562,61 @@
       "request_data": null,
       "response_data": [
         {
-          "id": "e1ec7a56-9f95-4893-87b4-86fd467197f5",
-          "business_name": "Keebler",
+          "id": "6fc1152e-42fd-44bf-b4e5-28b613203c62",
+          "business_name": "Herzog",
           "description": null,
-          "email": "kali@cartwrightcorkery.co.uk",
-          "phone": "(231)699-4648 x5384",
-          "address": "602 Loretta Motorway",
-          "city": "Lake Alphaland",
+          "email": "elin@konopelskisporer.com",
+          "phone": "1-810-831-6195 x254",
+          "address": "0890 Lucia Glen",
+          "city": "North Linnea",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
         },
         {
-          "id": "1d424ac7-6267-432c-9477-fd082f4111b5",
-          "business_name": "Graham",
+          "id": "21320711-c5e8-4c0d-8d4e-2d2a7b07d269",
+          "business_name": "Hyatt",
           "description": null,
-          "email": "philip@green.com",
-          "phone": "1-907-921-2065 x78220",
-          "address": "80609 Crona Via",
-          "city": "Ryanton",
+          "email": "jody@smith.biz",
+          "phone": "204-809-9101",
+          "address": "856 Kathey Ports",
+          "city": "Howellland",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
         },
         {
-          "id": "bca63fbc-efe1-4394-9a66-eea40d30faa1",
-          "business_name": "Considine",
+          "id": "7423f0e4-2559-4ee7-a99e-78295702523c",
+          "business_name": "Kessler",
           "description": null,
-          "email": "gina.cormier@lebsackheidenreich.ca",
-          "phone": "1-392-997-1006 x38826",
-          "address": "296 West Groves",
-          "city": "Shenaburgh",
+          "email": "lon_shields@kiehn.ca",
+          "phone": "987.455.9238",
+          "address": "3322 Mei Stream",
+          "city": "South Danielefurt",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
         },
         {
-          "id": "2acdb2e5-c083-476f-a84f-b4d7a4a60548",
-          "business_name": "Metz",
+          "id": "26dac7b5-2f3e-4baa-b711-567fd8168e26",
+          "business_name": "Kunde",
           "description": null,
-          "email": "librada@torphy.ca",
-          "phone": "407.924.3380 x38961",
-          "address": "57424 Octavio Plains",
-          "city": "Kihnberg",
+          "email": "clayton_mohr@jacobsbeier.ca",
+          "phone": "(483)520-1740",
+          "address": "36999 Brooks Causeway",
+          "city": "South Jaunitaburgh",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
         },
         {
-          "id": "ba50bdb0-5381-4fc2-9ce4-a962fd3bfb7a",
-          "business_name": "Wyman",
+          "id": "7d87a023-36c3-435d-bcf9-fd53bc7e6576",
+          "business_name": "Conroy",
           "description": null,
-          "email": "jillian_jacobi@hilllmckenzie.biz",
-          "phone": "578.972.2601 x4069",
-          "address": "8007 Hui Hill",
-          "city": "Cliftonbury",
+          "email": "lilli@blickkuhlman.ca",
+          "phone": "1-393-352-7631 x05919",
+          "address": "254 Leannon Path",
+          "city": "Lanellebury",
           "iva": "21%",
           "cuit": "30202020209",
           "type": "provider"
@@ -630,24 +630,9 @@
   "questions#create": [
     {
       "verb": "POST",
-      "path": "/api/v1/providers/7c9944ca-edee-42e0-8b71-89b51b6281f6/products/14be9fdb-d761-4023-893d-f3cee38547e0/questions/",
+      "path": "/api/v1/providers/135f4eaa-59a6-4352-b151-839492a33786/products/0d4b18c4-e6ea-4431-99b8-c22bb283e887/questions/",
       "versions": [
-
-      ],
-      "query": null,
-      "request_data": {
-        "question": "Et autem dicta vitae aliquam a optio."
-      },
-      "response_data": null,
-      "code": 200,
-      "show_in_doc": 0,
-      "recorded": true
-    },
-    {
-      "verb": "POST",
-      "path": "/api/v1/providers/47e10b4b-d100-47dc-8276-52f3d7e08ec0/products/fad2d557-a3a2-4b85-8512-56bbf3aa279f/questions/",
-      "versions": [
-
+        "1.0"
       ],
       "query": null,
       "request_data": {
@@ -661,6 +646,21 @@
         }
       },
       "code": 422,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/providers/6027445c-455c-4a77-929b-db584290517c/products/bc016a57-d312-4869-bdb6-5f9995df5217/questions/",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "question": "Distinctio explicabo consectetur facilis architecto excepturi officia saepe."
+      },
+      "response_data": null,
+      "code": 200,
       "show_in_doc": 0,
       "recorded": true
     }
@@ -668,17 +668,17 @@
   "questions#update": [
     {
       "verb": "PUT",
-      "path": "/api/v1/provider/questions/3fabef33-15e0-4b5d-8f9d-0fe918bc23c7",
+      "path": "/api/v1/provider/questions/99426ade-6e01-495f-b4e0-7661d78db2ac",
       "versions": [
-        "1.0"
+
       ],
       "query": null,
       "request_data": {
-        "answer": "Reiciendis quia et tempore enim rerum."
+        "answer": "Sint fugit velit pariatur quia natus."
       },
       "response_data": null,
       "code": 200,
-      "show_in_doc": 1,
+      "show_in_doc": 0,
       "recorded": true
     }
   ],
@@ -691,11 +691,11 @@
       ],
       "query": null,
       "request_data": {
-        "business_name": "Mann",
-        "description": "Cupiditate deserunt et consequuntur ut quidem voluptatem. Nemo quos sit qui unde repellendus porro. Sed autem corporis eos ducimus neque.",
-        "phone": "1-371-510-7484",
-        "address": "8971 Paul Rest",
-        "city": "Donnellyville",
+        "business_name": "Goldner",
+        "description": "Illo ut eligendi nostrum quae voluptatibus. Dicta cumque nihil molestiae aut. Nihil tempore sunt occaecati ipsa aut quod.",
+        "phone": "467.789.8167 x661",
+        "address": "8919 Torphy Lodge",
+        "city": "Freddiestad",
         "user_type": "some",
         "category": "category_1",
         "iva": "21%",
@@ -720,11 +720,11 @@
       ],
       "query": null,
       "request_data": {
-        "business_name": "Ankunding",
-        "description": "Repellendus a quod omnis cupiditate ipsam nobis beatae. Ab consequatur porro repellendus totam voluptatum. Dolore numquam odit exercitationem qui impedit ut.",
-        "phone": "419.961.2362 x811",
-        "address": "1447 Boehm Dale",
-        "city": "Bartellfurt",
+        "business_name": "Skiles",
+        "description": "Id blanditiis eum dolores repellendus dolorem veritatis. Et et corrupti quia aut repudiandae et. Dolor dignissimos quis aut at velit eveniet fuga. Eum sed ad ut mollitia repellat iure. Sint cumque autem sequi qui rerum occaecati.",
+        "phone": "1-437-554-5620 x820",
+        "address": "0019 Nolan Heights",
+        "city": "Odisshire",
         "user_type": "provider",
         "category": "category_1",
         "iva": "21%",
@@ -739,20 +739,20 @@
   "users#show": [
     {
       "verb": "GET",
-      "path": "/api/v1/users/f5ba424a-e806-41ba-b6c5-ab379c482c75",
+      "path": "/api/v1/users/bb35057d-bc11-489a-a79c-a4615026bbe6",
       "versions": [
         "1.0"
       ],
       "query": null,
       "request_data": null,
       "response_data": {
-        "id": "f5ba424a-e806-41ba-b6c5-ab379c482c75",
-        "business_name": "Schumm",
+        "id": "bb35057d-bc11-489a-a79c-a4615026bbe6",
+        "business_name": "Cormier",
         "description": null,
-        "email": "elias_gulgowski@fisher.name",
-        "phone": "228.634.1149",
-        "address": "523 Weimann Pike",
-        "city": "New Kassandra",
+        "email": "kent_hilpert@krajcik.co.uk",
+        "phone": "615.860.6934",
+        "address": "546 Shane Heights",
+        "city": "West Lola",
         "iva": "21%",
         "cuit": "30202020209",
         "type": "provider"

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :order do
-    status "pending"
+    status { Order::PENDING }
     commerce
     provider
 
