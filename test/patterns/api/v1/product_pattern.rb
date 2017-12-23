@@ -22,10 +22,10 @@ class Api::V1::ProductPattern < Pattern
   end
 
   def list(products)
-    @pattern = []
+    @pattern = {products: [], metadata: {current_page: 1, per_page: 30, total_entries: products.size }}
 
     products.each do |product|
-      @pattern << list_pattern(product)
+      @pattern[:products] << list_pattern(product)
     end
 
     self

@@ -5,8 +5,9 @@ class Api::V1::ProductsController < Api::V1::BaseController
   end
 
   api :GET, "/v1/provider/:provider_id/products", "List a provider products"
+  param :page, Integer
   def index
-    @products = provider.products
+    @products = provider.products.paginate(page: params[:page])
   end
 
   protected
