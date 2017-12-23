@@ -3,12 +3,14 @@ Apipie.configure do |config|
   config.api_base_url            = "/api"
   config.doc_base_url            = "/apipie"
   # where is your API defined?
-  config.api_controllers_matcher = "#{Rails.root}/app/controllers/api/**/*.rb"
+  config.api_controllers_matcher = File.join(Rails.root, "app", "controllers", "api", "**","*.rb")
+  config.namespaced_resources = true
 
   config.translate         = false
-  config.default_locale = nil
+  config.default_locale    = nil
   config.validate                = false
   config.validate_value          = false
+  show_all_examples = true
 
   # set username and password for access api
   # config.authenticate = Proc.new do

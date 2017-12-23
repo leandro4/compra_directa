@@ -1,12 +1,12 @@
 class Api::V1::Commerce::OrdersController < Api::V1::BaseController
 
   api :POST, "/v1/commerce/orders", "List a commerce created orders"
+  param :page, Integer
   def index
-    @orders = current_user.orders
+    @orders = current_user.orders.paginate(page: params[:page])
   end
 
-  # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-  api :GET, '/v1/commerce/orders/:id', 'Show an order'
+  api :GET, '/v1/commerce/orders/:id', 'Show a commerce order'
   def show
     @order = current_user.orders.find(params[:id])
   end

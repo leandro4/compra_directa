@@ -18,7 +18,7 @@ Rails.application.routes.draw do
         end
       end
       namespace :provider do
-        resources :orders, only: [:show] do
+        resources :orders, only: [:index, :show] do
           member do
             post :accept
             post :reject

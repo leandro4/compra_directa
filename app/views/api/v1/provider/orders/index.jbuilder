@@ -3,6 +3,7 @@ json.orders do
     json.partial! 'order', order: order
   end
 end
+
 json.metadata do
   json.current_page @orders.current_page
   json.per_page @orders.per_page

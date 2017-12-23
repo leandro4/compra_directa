@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   PENDING = "pending"
   ACCEPTED = "accepted"
   REJECTED = "rejected"
+  STATUSES = [PENDING, ACCEPTED, REJECTED]
 
   belongs_to :commerce
   belongs_to :provider
@@ -21,6 +22,6 @@ class Order < ApplicationRecord
   private
 
   def set_pending
-    self.status = PENDING
+    self.status = PENDING unless self.status
   end
 end

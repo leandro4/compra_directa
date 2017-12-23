@@ -5,6 +5,17 @@ class Api::V1::Provider::OrdersController < Api::V1::BaseController
     @order = current_user.orders.find(params[:id])
   end
 
+  api :GET, "/v1/provider/orders", "Get a provider order list"
+  param :page, Integer
+  param :status, String, desc: "One of the list: [#{Order::STATUSES}]"
+  def index
+    if params[:status].present?
+      @orders = current_user.orders.where(status: params[:status]).paginate(page: params[:page])
+    else
+      @orders = current_user.orders.paginate(page: params[:page])
+    end
+  end
+
   api :POST, "/v1/provider/orders/:id/accept", "Accept a provider order"
   def accept
     order = current_user.orders.find(params[:id])

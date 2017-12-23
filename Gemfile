@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'apipie-rails', '0.5.6'
 
+gem 'will_paginate'
+
 group :development, :test do
   gem 'pry'
 
