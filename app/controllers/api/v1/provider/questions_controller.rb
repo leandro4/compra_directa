@@ -1,6 +1,10 @@
 class Api::V1::Provider::QuestionsController < Api::V1::BaseController
-  api :PUT, "/v1/provider/questions/:id", "Answers a provider question"
+  api :GET, "/v1/provider/questions", "Get a providers unanswered questions"
+  def index
+    @questions = current_user.questions.unanswered
+  end
 
+  api :PUT, "/v1/provider/questions/:id", "Answers a provider question"
   def update
     Validators::AnswerValidator.new.validate!(question_params)
 

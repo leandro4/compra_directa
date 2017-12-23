@@ -24,11 +24,12 @@ Rails.application.routes.draw do
             post :reject
           end
         end
-        resources :questions, only: [:update]
+        resources :questions, only: [:index, :update]
       end
 
       namespace :commerce do
         resources :orders, only: [:index, :show]
+        resources :questions, only: [:index]
 
         resources :providers, only: [] do
           resources :orders, only: [:create]
