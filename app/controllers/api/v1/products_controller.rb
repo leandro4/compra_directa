@@ -12,6 +12,6 @@ class Api::V1::ProductsController < Api::V1::BaseController
   protected
 
   def provider
-    Provider.find(params[:provider_id])
+    ::Provider.find(params[:provider_id])
   end
 end

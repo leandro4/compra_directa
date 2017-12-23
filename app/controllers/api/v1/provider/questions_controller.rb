@@ -5,7 +5,7 @@ class Api::V1::Provider::QuestionsController < Api::V1::BaseController
     Validators::AnswerValidator.new.validate!(question_params)
 
     question = current_user.questions.find(params[:id])
-    question.update(question_params)
+    question.update(question_params.merge(answered_at: DateTime.now))
     head :ok
   end
 
