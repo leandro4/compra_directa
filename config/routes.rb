@@ -6,17 +6,12 @@ Rails.application.routes.draw do
   	namespace :v1 do
   		resource :user_session, only: [] do
         resource :google, only: [:create], controller: "google_user_sessions"
-      resource :users, only: [:update]
       end
       resource :user_registration, only: [:update]
       resource :profile, only: [:update]
       resources :users, only: [:show]
       resources :categories, only: [:index]
-      resources :providers, only: [:index] do
-        resources :products, only: [:show, :index] do
-          resources :questions, only: [:create]
-        end
-      end
+
       namespace :provider do
         resources :orders, only: [:index, :show] do
           member do
@@ -31,7 +26,10 @@ Rails.application.routes.draw do
         resources :orders, only: [:index, :show]
         resources :questions, only: [:index]
 
-        resources :providers, only: [] do
+        resources :providers, only: [:index] do
+          resources :products, only: [:show, :index] do
+            resources :questions, only: [:create]
+          end
           resources :orders, only: [:create]
         end
       end

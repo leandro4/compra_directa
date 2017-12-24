@@ -25,7 +25,7 @@ module Api
           end
 
           def get_provider_products(provider)
-            get "/api/v1/providers/#{provider.id}/products"
+            get "/api/v1/commerce/providers/#{provider.id}/products"
           end
         end
       end

@@ -43,7 +43,7 @@ module Api
           end
 
           def post_product_question(product, params)
-            post "/api/v1/providers/#{product.provider.id}/products/#{product.id}/questions/", params
+            post "/api/v1/commerce/providers/#{product.provider.id}/products/#{product.id}/questions/", params
           end
         end
       end

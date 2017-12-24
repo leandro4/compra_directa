@@ -3,7 +3,7 @@ require 'test_helper'
 module Api
   module V1
     module Providers
-      class ListProvidersTest < Api::V1::Providers::ProviderTest
+      class ListProvidersTest < Api::V1::Commerce::CommerceTest
         let(:category) { "category_2" }
 
         before do
@@ -19,7 +19,7 @@ module Api
         end
 
         def get_providers_list(category)
-          get "/api/v1/providers", category: category
+          get "/api/v1/commerce/providers", category: category
         end
       end
     end
