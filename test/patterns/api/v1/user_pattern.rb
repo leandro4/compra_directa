@@ -32,5 +32,4 @@ class Api::V1::UserPattern < Pattern
       type: user.type.downcase
     }
   end
-
 end
