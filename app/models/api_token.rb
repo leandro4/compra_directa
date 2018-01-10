@@ -5,4 +5,5 @@ class ApiToken < ApplicationRecord
   before_create :set_expire_time
 
 	belongs_to :user, polymorphic: true
+
 end

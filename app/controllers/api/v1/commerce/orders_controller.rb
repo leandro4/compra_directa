@@ -3,7 +3,7 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
   api :POST, "/v1/commerce/orders", "List a commerce created orders"
   param :page, Integer
   def index
-    @orders = current_user.orders.paginate(page: params[:page])
+    @orders = current_user.orders.page(params[:page])
   end
 
   api :GET, '/v1/commerce/orders/:id', 'Show a commerce order'

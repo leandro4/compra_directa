@@ -5,8 +5,10 @@ class Api::V1::QuestionPattern < Pattern
       @pattern = {
         id: question.id,
         question: question.question,
+        product_id: question.product_id,
         answer: question.answer,
-        answered_at: l(question.answered_at)
+        answered_at: l(question.answered_at),
+        created_at: l(question.created_at)
       }
     end
 
@@ -27,8 +29,10 @@ class Api::V1::QuestionPattern < Pattern
     {
       id: question.id,
       question: question.question,
+      product_id: question.product_id,
       answer: question.answer,
-      answered_at: l(question.answered_at)
+      answered_at: l(question.answered_at),
+      created_at: l(question.created_at)
     }
   end
 end

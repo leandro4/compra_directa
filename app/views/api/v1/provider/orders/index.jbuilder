@@ -6,6 +6,6 @@ end
 
 json.metadata do
   json.current_page @orders.current_page
-  json.per_page @orders.per_page
-  json.total_entries @orders.total_entries
+  json.per_page @orders.limit_value
+  json.total_entries @orders.count
 end

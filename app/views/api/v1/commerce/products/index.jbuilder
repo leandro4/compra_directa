@@ -5,6 +5,6 @@ json.products do
 end
 json.metadata do
   json.current_page @products.current_page
-  json.per_page @products.per_page
-  json.total_entries @products.total_entries
+  json.per_page @products.limit_value
+  json.total_entries @products.count
 end

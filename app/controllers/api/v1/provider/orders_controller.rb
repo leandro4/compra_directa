@@ -10,9 +10,9 @@ class Api::V1::Provider::OrdersController < Api::V1::BaseController
   param :status, String, desc: "One of the list: [#{Order::STATUSES}]"
   def index
     if params[:status].present?
-      @orders = current_user.orders.where(status: params[:status]).paginate(page: params[:page])
+      @orders = current_user.orders.where(status: params[:status]).page(params[:page])
     else
-      @orders = current_user.orders.paginate(page: params[:page])
+      @orders = current_user.orders.page(params[:page])
     end
   end
 
