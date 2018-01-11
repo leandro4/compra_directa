@@ -4,14 +4,14 @@ module Validators
       :category, :iva, :city, :cuit
 
     validates :business_name, presence: true
-    validates :description, presence: true
     validates :user_type, presence: true
     validates :phone, presence: true
     validates :address, presence: true
     validates :city, presence: true
-    validates :category, presence: true
     validates :iva, presence: true
     validates :cuit, presence: true
+    validates :category, presence: true, if: Proc.new { user_type == User::PROVIDER }
+    validates :description, presence: true, if: Proc.new {user_type == User::PROVIDER }
     validate :invalid_user_type
     validate :invalid_category
 

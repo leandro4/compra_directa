@@ -7,6 +7,7 @@ class Api::V1::ProductPattern < Pattern
         name: product.name,
         description: product.description,
         price: product.price,
+        provider_id: product.provider_id,
         discount_price: product.discount_price,
         is_discount: product.is_discount
       }
@@ -37,6 +38,7 @@ class Api::V1::ProductPattern < Pattern
       name: product.name,
       description: product.description,
       price: product.price,
+      provider_id: product.provider_id,
       discount_price: product.discount_price,
       is_discount: product.is_discount
     }

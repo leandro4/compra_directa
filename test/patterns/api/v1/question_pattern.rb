@@ -6,6 +6,7 @@ class Api::V1::QuestionPattern < Pattern
         id: question.id,
         question: question.question,
         product_id: question.product_id,
+        commerce_id: question.commerce_id,
         answer: question.answer,
         answered_at: l(question.answered_at),
         created_at: l(question.created_at)
@@ -30,6 +31,7 @@ class Api::V1::QuestionPattern < Pattern
       id: question.id,
       question: question.question,
       product_id: question.product_id,
+      commerce_id: question.commerce_id,
       answer: question.answer,
       answered_at: l(question.answered_at),
       created_at: l(question.created_at)

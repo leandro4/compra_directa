@@ -4,7 +4,7 @@ module Api
   module V1
     module UserRegistration
       class UpdateUserTest < Api::ApiIntegrationTest
-        let(:user) { create(:provider) }
+        let(:user) { create(:commerce) }
         let(:api_token) { create(:api_token, user: user, expire_at: 1.hour.ago) }
 
         before do
@@ -21,7 +21,7 @@ module Api
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
           city: FFaker::Address.city,
-          user_type: User::PROVIDER,
+          user_type: User::COMMERCE,
           category: Category.all.first[0],
           iva: "21%",
           cuit: "123456"
@@ -59,12 +59,25 @@ module Api
             assert_equal [t("errors.messages.invalid")], json["errors"]["category"]
           end
 
-          [:business_name, :description, :phone, :address, :city, :user_type,
-            :category, :iva, :cuit].each do |field|
+          [:business_name, :phone, :address, :city, :user_type, :iva, :cuit].each do |field|
             it "reject missing #{field}" do
               valid_params[field] = ""
               put_user_registration(valid_params)
               assert_equal [t("errors.messages.blank")], json["errors"][field.to_s]
+            end
+          end
+
+          context "and user_type is provider" do
+            let(:user) { create(:provider) }
+
+            [:description, :category].each do |field|
+              it "reject missing #{field}" do
+                valid_params[:user_type] = User::PROVIDER
+                valid_params[field] = ""
+
+                put_user_registration(valid_params)
+                assert_equal [t("errors.messages.blank")], json["errors"][field.to_s]
+              end
             end
           end
         end
