@@ -36,6 +36,11 @@ gem 'apipie-rails', '0.5.6'
 
 gem 'kaminari'
 
+gem 'activeadmin'
+
+# Plus integrations with:
+gem 'devise'
+
 group :development, :test do
   gem 'pry'
 

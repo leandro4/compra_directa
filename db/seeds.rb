@@ -14,3 +14,5 @@ provider.products.create(name: "Producto 1", description: "Esta es la descripcio
 
 provider.products.create(name: "Producto 2", description: "Esta es la descripcion 2",
   price: "10", discount_price: "8", is_discount: true)
+
+Admin.create!(email: 'admin@compra-directa.com', password: 'password', password_confirmation: 'password')
