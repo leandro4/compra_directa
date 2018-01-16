@@ -8,7 +8,7 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
   param :google_token, String
   ###### End of Documentation #######
   def create
-    Validators::GoogleUserSessionValidator.new.validate!(authentication_params)
+    GoogleUserSessionValidator.new.validate!(authentication_params)
 
     profile = authenticate(authentication_params)
     user = User.find_google_user(profile)

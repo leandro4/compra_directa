@@ -23,7 +23,7 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
       order = provider.orders.create(commerce_id: current_user.id)
 
       order_params[:order].each do |order_param|
-        Validators::OrderItemValidator.new.validate!(order_param.merge(provider_id: provider.id))
+        OrderItemValidator.new.validate!(order_param.merge(provider_id: provider.id))
 
         product = provider.products.find(order_param[:product_id])
         order.order_items.create(product_id: product.id, quantity: order_param[:quantity],

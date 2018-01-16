@@ -1,7 +1,5 @@
-module Validators
-  class QuestionValidator < BaseValidator
-    attr_accessor :question
+class QuestionValidator < BaseValidator
+  attr_accessor :question
 
-    validates :question, presence: true
-  end
+  validates :question, presence: true
 end

@@ -16,7 +16,9 @@ module CompraDirecta
     # -- all .rb files in that directory are automatically loaded.
     config.active_record.belongs_to_required_by_default = false
 
-    config.paths.add "#{config.root}/app", eager_load: true
+    config.autoload_paths << "#{Rails.root}/app/validators"
+    config.autoload_paths << "#{Rails.root}/app/exceptions"
+
     config.paths.add "#{config.root}/lib/validators", eager_load: true
 
     config.generators do |g|

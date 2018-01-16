@@ -8,7 +8,7 @@ class Api::V1::Commerce::QuestionsController < Api::V1::BaseController
   param :question, String
   ###### End of Documentation #######
   def create
-    Validators::QuestionValidator.new.validate!(question_params)
+    QuestionValidator.new.validate!(question_params)
 
     current_user.questions.create!(question_params.merge(product_id: product.id))
 

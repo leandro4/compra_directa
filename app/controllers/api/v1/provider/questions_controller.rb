@@ -6,7 +6,7 @@ class Api::V1::Provider::QuestionsController < Api::V1::BaseController
 
   api :PUT, "/v1/provider/questions/:id", "Answers a provider question"
   def update
-    Validators::AnswerValidator.new.validate!(question_params)
+    AnswerValidator.new.validate!(question_params)
 
     question = current_user.questions.find(params[:id])
     question.update(question_params.merge(answered_at: DateTime.now))

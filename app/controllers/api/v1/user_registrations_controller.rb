@@ -14,7 +14,7 @@ class Api::V1::UserRegistrationsController < Api::V1::BaseController
   param :user_type, String, desc: "One of the list: [provider, commerce]"
   ###### End of Documentation #######
   def update
-    Validators::CreateUserValidator.new.validate!(registration_params)
+    CreateUserValidator.new.validate!(registration_params)
 
     current_user.completed = true
     current_user.type = params.delete(:user_type).camelize
