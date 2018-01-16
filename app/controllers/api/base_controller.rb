@@ -20,7 +20,7 @@ class Api::BaseController < ActionController::Base
   def authenticate_action
     authenticate_or_request_with_http_token do |token, options|
       @current_api_token = ApiToken.find_by(token: token)
-      @current_api_token.present? && !@current_api_token.expired?
+      @current_api_token.present?
     end
   end
 
