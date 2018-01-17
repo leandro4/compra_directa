@@ -5,11 +5,22 @@ class Api::V1::QuestionPattern < Pattern
       @pattern = {
         id: question.id,
         question: question.question,
-        product_id: question.product_id,
-        commerce_id: question.commerce_id,
         answer: question.answer,
         answered_at: l(question.answered_at),
-        created_at: l(question.created_at)
+        created_at: l(question.created_at),
+        product: {
+          id: question.product.id,
+          name: question.product.name,
+          description: question.product.description
+        },
+        provider: {
+          id: question.product.provider.id,
+          business_name: question.product.provider.business_name
+        },
+        commerce: {
+          id: question.commerce.id,
+          business_name: question.commerce.business_name
+        }
       }
     end
 
@@ -30,11 +41,22 @@ class Api::V1::QuestionPattern < Pattern
     {
       id: question.id,
       question: question.question,
-      product_id: question.product_id,
-      commerce_id: question.commerce_id,
       answer: question.answer,
       answered_at: l(question.answered_at),
-      created_at: l(question.created_at)
+      created_at: l(question.created_at),
+      product: {
+        id: question.product.id,
+        name: question.product.name,
+        description: question.product.description
+      },
+      provider: {
+        id: question.product.provider.id,
+        business_name: question.product.provider.business_name
+      },
+      commerce: {
+        id: question.commerce.id,
+        business_name: question.commerce.business_name
+      }
     }
   end
 end

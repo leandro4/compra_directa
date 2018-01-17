@@ -8,7 +8,6 @@ class Api::BaseController < ActionController::Base
     render json: { errors: exception.errors }, status: :unprocessable_entity
   end
 
-
   rescue_from ActiveRecord::RecordInvalid do |exception|
     render json: { errors: exception.record.errors }, status: :unprocessable_entity
   end
