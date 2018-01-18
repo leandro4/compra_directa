@@ -13,6 +13,10 @@ ActiveAdmin.register Product do
   action_item :only => :index do
     link_to "New Product" , new_admin_provider_product_path
   end
+
+  scope :all
+
+  scope("Discount") { |scope| scope.where(is_discount: true) }
 #
 # or
 #
