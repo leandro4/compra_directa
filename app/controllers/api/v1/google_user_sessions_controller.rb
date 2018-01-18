@@ -24,7 +24,7 @@ class Api::V1::GoogleUserSessionsController < Api::V1::BaseController
   def create_user(profile)
     attributes = profile.slice("email", "google_id")
     # attributes["profile_picture_url"] = profile["picture"]
-    user = User.create!(attributes)
+    user = User.create(attributes)
     user
   end
 

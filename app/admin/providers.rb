@@ -3,7 +3,7 @@ ActiveAdmin.register Provider do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :business_name, :description, :email, :cuit, :address, :city, :phone, :iva
+  permit_params :business_name, :category, :description, :email, :cuit, :address, :city, :phone, :iva
 
   # or
   #
@@ -25,6 +25,9 @@ ActiveAdmin.register Provider do
       truncate(provider.description, omision: "...", length: 20)
     end
 
+    column :category do |provider|
+      Category.all[provider.category]
+    end
     column :email
     column :cuit
     column :address
@@ -40,6 +43,7 @@ ActiveAdmin.register Provider do
     f.inputs do
       f.input :business_name
       f.input :description
+      f.input :category, as: :select, collection: Category.all.map { |c| [c[1], c[0]]}
       f.input :email
       f.input :cuit
       f.input :address

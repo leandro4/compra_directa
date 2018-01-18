@@ -3,6 +3,10 @@ class BaseValidator
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
+  def persisted?
+    false
+  end
+
   def validate!(user_params)
     user_params.each do |k,v|
       begin
