@@ -30,6 +30,7 @@ Rails.application.routes.draw do
         resources :questions, only: [:index]
 
         resources :providers, only: [:index] do
+          resources :discounts, only: [:index]
           resources :products, only: [:show, :index] do
             resources :questions, only: [:create]
           end
