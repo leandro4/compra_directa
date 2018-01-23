@@ -1,13 +1,18 @@
-class Api::V1::Commerce::DiscountsController < ApplicationController
-  api :GET, "/v1/commerce/provider/:provider_id/discounts", "List a provider discounts"
+class Api::V1::Commerce::DiscountsController < Api::V1::BaseController
+  api :GET, "/v1/commerce/discounts", "List a provider discounts"
+  param :category, String
   param :page, Integer
   def index
-    @products = provider.products.active_discount.page(params[:page])
+    @products = products.active_discount.page(params[:page])
   end
 
   protected
 
-  def provider
-    ::Provider.find(params[:provider_id])
+  def products
+    raise ActiveRecord::RecordNotFound if !Category.all.has_key?(params[:category])
+
+    providers = Provider.where(category: params[:category])
+
+    Product.where(provider: providers)
   end
 end

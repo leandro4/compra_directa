@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       resources :categories, only: [:index]
 
       namespace :provider do
+        resources :discounts, only: [:index]
         resources :orders, only: [:index, :show] do
           member do
             post :accept
@@ -28,9 +29,9 @@ Rails.application.routes.draw do
       namespace :commerce do
         resources :orders, only: [:index, :show]
         resources :questions, only: [:index]
+        resources :discounts, only: [:index]
 
         resources :providers, only: [:index] do
-          resources :discounts, only: [:index]
           resources :products, only: [:show, :index] do
             resources :questions, only: [:create]
           end
