@@ -23,7 +23,7 @@ module Api
           it "[Example] returns a list of products of a provider" do
             get_provider_discounts
 
-            assert_json_match Api::V1::ProductPattern.new.list(active_discounts).pattern, json
+            assert_json_match Api::V1::ProductPattern.new.list_discount(active_discounts).pattern, json
           end
 
           def get_provider_discounts

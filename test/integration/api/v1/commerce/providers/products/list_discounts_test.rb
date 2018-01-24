@@ -30,7 +30,7 @@ module Api
           it "[Example] returns a list of products of a provider" do
             get_provider_discounts(provider.category)
 
-            assert_json_match Api::V1::ProductPattern.new.list(active_discounts + another_active_discounts).pattern, json
+            assert_json_match Api::V1::ProductPattern.new.list_discount(active_discounts + another_active_discounts).pattern, json
           end
 
           it "[Example] returns 404 if the category doest exist" do

@@ -1,6 +1,7 @@
 json.products do
   json.array! @products.each do |product|
     json.partial! 'api/v1/commerce/products/product', product: product
+    json.discount_expire_at l(product.discount_expire_at)
   end
 end
 json.metadata do
