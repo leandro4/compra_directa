@@ -1,6 +1,13 @@
 class Api::V1::UserRegistrationsController < Api::V1::BaseController
   # include Concerns::ImageUploaderController
 
+  api :post, "/v1/user_registration", "Update a user registration_id"
+  param :registration_id, String
+  def create
+    RegistrationIdValidator.new.validate!(registration_id: params[:registration_id])
+    current_user.api_token.update(registration_id: params[:registration_id])
+  end
+
   ####### Api Documentation #########
   api :put, "/v1/user_registration", "Update a new user"
   param :business_name, String

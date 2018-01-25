@@ -41,6 +41,8 @@ gem 'activeadmin'
 # Plus integrations with:
 gem 'devise'
 
+gem 'fcm'
+
 group :development, :test do
   gem 'pry'
 

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   		resource :user_session, only: [] do
         resource :google, only: [:create], controller: "google_user_sessions"
       end
-      resource :user_registration, only: [:update]
+      resource :user_registration, only: [:create, :update]
       resource :profile, only: [:update]
       resources :users, only: [:show]
       resources :categories, only: [:index]

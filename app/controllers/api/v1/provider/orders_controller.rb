@@ -21,6 +21,8 @@ class Api::V1::Provider::OrdersController < Api::V1::BaseController
     order = current_user.orders.find(params[:id])
     order.accept!
 
+    Notifier.new.order_accepted_push(order)
+
     head :ok
   end
 
@@ -28,6 +30,8 @@ class Api::V1::Provider::OrdersController < Api::V1::BaseController
   def reject
     order = current_user.orders.find(params[:id])
     order.reject!
+
+    Notifier.new.order_rejected_push(order)
 
     head :ok
   end

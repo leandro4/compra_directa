@@ -35,6 +35,16 @@ module Api
             end
           end
 
+          it "Sends a push notificacion to logged provider" do
+            create(:api_token, user: provider, expire_at: 1.hour.ago)
+
+            stubed_request = stub_request(:post, "https://fcm.googleapis.com/fcm/send")
+
+            post_product_question(product, valid_params)
+
+            assert_requested(stubed_request)
+          end
+
           context "With invalid params" do
             it "[Example] reject empty question" do
               post_product_question(product, valid_params.merge(question: ""))

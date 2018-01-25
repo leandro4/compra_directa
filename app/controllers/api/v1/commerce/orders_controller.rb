@@ -29,6 +29,8 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
         order.order_items.create(product_id: product.id, quantity: order_param[:quantity],
           unit_price: product.price)
       end
+
+      Notifier.new.order_requested_push(order)
     end
 
     head :ok

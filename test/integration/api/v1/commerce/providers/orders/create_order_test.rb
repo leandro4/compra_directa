@@ -48,6 +48,16 @@ module Api
                   post_create_order(provider, order_params)
                 end
               end
+
+              it "Sends a push notificacion to logged provider" do
+                create(:api_token, user: provider, expire_at: 1.hour.ago)
+
+                stubed_request = stub_request(:post, "https://fcm.googleapis.com/fcm/send")
+
+                post_create_order(provider, order_params)
+
+                assert_requested(stubed_request)
+              end
             end
 
             context "When the order has invalid parameters" do
@@ -58,6 +68,7 @@ module Api
                 }]
 
                 post_create_order(provider, order_params)
+
                 assert_equal [t("errors.messages.not_found")], json["errors"]["product_id"]
               end
 
@@ -68,6 +79,7 @@ module Api
                 }]
 
                 post_create_order(provider, order_params)
+
                 assert_equal [t("errors.messages.greater_than")], json["errors"]["quantity"]
               end
 
@@ -75,6 +87,7 @@ module Api
                 order_params = []
 
                 post_create_order(provider, order_params)
+
                 assert_equal t("errors.messages.no_products"), json["errors"]["base"]
               end
             end

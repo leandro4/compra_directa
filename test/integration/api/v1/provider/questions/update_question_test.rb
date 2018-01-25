@@ -23,7 +23,9 @@ module Api
           end
 
           context "With valid params" do
-            it "[Example] updated the questions answer" do question = create(:question, product: product)
+            it "[Example] updated the questions answer" do
+              question = create(:question, product: product)
+
               put_question(question, valid_params)
 
               assert_equal valid_params[:answer], question.reload.answer
@@ -35,6 +37,16 @@ module Api
               put_question(question, valid_params)
 
               assert_response :not_found
+            end
+
+            it "Sends a push notificacion to logged commerce" do
+              create(:api_token, user: question.commerce, expire_at: 1.hour.ago)
+
+              stubed_request = stub_request(:post, "https://fcm.googleapis.com/fcm/send")
+
+              put_question(question, valid_params)
+
+              assert_requested(stubed_request)
             end
           end
 

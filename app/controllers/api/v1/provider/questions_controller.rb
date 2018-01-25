@@ -10,6 +10,9 @@ class Api::V1::Provider::QuestionsController < Api::V1::BaseController
 
     question = current_user.questions.find(params[:id])
     question.update(question_params.merge(answered_at: DateTime.now))
+
+    Notifier.new.question_answered_push(question)
+
     head :ok
   end
 
