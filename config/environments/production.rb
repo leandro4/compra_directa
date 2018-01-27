@@ -1,3 +1,5 @@
+require "#{Rails.root}/config/initializers/config.rb"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -85,6 +87,16 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: APP_CONFIG["smtp_address"],
+    port: APP_CONFIG["smtp_port"],
+    authentication: :login,
+    domain: APP_CONFIG["smtp_domain"],
+    user_name: APP_CONFIG["smtp_user_name"],
+    password: APP_CONFIG["smtp_password"]
+  }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false

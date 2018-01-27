@@ -3,7 +3,6 @@ require 'rails/test_help'
 require 'minitest/spec'
 require 'webmock/minitest'
 require 'json_expressions/minitest'
-require '/home/jcostello/dev/compra_directa/test/patterns/_pattern.rb'
 
 WebMock.disable_net_connect!(allow_localhost: true)
 

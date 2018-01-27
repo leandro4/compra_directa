@@ -1,3 +1,5 @@
+require "#{Rails.root}/config/initializers/config.rb"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -27,7 +29,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -50,5 +52,18 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
+
+  config.action_mailer.delivery_method = :letter_opener
+
+  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: APP_CONFIG["smtp_address"],
+    port: APP_CONFIG["smtp_port"],
+    authentication: :login,
+    domain: APP_CONFIG["smtp_domain"],
+    user_name: APP_CONFIG["smtp_user_name"],
+    password: APP_CONFIG["smtp_password"]
+  }
+
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end

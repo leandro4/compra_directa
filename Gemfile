@@ -67,6 +67,8 @@ group :development, :test do
   gem 'json_expressions'
 
   gem 'webmock'
+
+  gem 'letter_opener'
 end
 
 group :development do

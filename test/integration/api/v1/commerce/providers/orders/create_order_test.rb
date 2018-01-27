@@ -58,6 +58,12 @@ module Api
 
                 assert_requested(stubed_request)
               end
+
+              it "sends a email to the admin" do
+                post_create_order(provider, order_params)
+
+                assert_equal 1, ActionMailer::Base.deliveries.size
+              end
             end
 
             context "When the order has invalid parameters" do

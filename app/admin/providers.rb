@@ -36,6 +36,7 @@ ActiveAdmin.register Provider do
     column :iva
     actions do |provider|
       item "Products", admin_provider_products_path(provider), class: "member_link"
+      item "Orders", admin_provider_orders_path(provider), class: "member_link"
     end
   end
 
