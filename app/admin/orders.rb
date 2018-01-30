@@ -3,6 +3,10 @@ ActiveAdmin.register Order do
 
   actions :index
 
+  scope("Pending", default: true) { |scope| scope.where(status: Order::PENDING )}
+  scope("Accepted") { |scope| scope.where(status: Order::ACCEPTED )}
+  scope("Rejected") { |scope| scope.where(status: Order::REJECTED )}
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -14,15 +18,15 @@ ActiveAdmin.register Order do
   #   permitted
   # end
 
-  filter :status
-
-  index title: proc{ "#{@provider.business_name}'s Products" } do
-    column :status
+  index title: proc{ "#{@provider.business_name}'s Orders" } do
+    column :status do |order|
+      span order.status, class: "status_tag no"
+    end
     column :commerce do |order|
       order.commerce.business_name
     end
     column :products do |order|
-      order.order_items.count
+      span order.order_items.count, class: "status_tag no"
     end
   end
 end
