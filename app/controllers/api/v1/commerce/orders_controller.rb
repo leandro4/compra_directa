@@ -32,7 +32,7 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
 
       Notifier.new.order_requested_push(order)
 
-      # AdminMailer.new_order(order).deliver
+      AdminMailer.new_order(order).deliver
     end
 
     head :ok

@@ -9,7 +9,7 @@ class Api::V1::ProductPattern < Pattern
         price: product.price,
         provider_id: product.provider_id,
         discount_price: product.discount_price,
-        is_discount: product.is_discount
+        is_discount: product.has_discount
       }
     end
 

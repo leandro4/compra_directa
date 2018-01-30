@@ -12,4 +12,8 @@ class Product < ApplicationRecord
 
   scope :active_discount, -> { where(is_discount: true).where("discount_expire_at >= ?", Time.zone.today) }
   scope :expired_discount, -> { where(is_discount: true).where("discount_expire_at < ?", Time.zone.today) }
+
+  def has_discount
+    is_discount && discount_expire_at > Time.zone.now
+  end
 end
