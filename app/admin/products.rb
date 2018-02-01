@@ -58,4 +58,11 @@ ActiveAdmin.register Product do
     end
     f.actions
   end
+
+  # controller do
+  #   def destroy
+  #     parent.products.find(params[:id]).soft_delete!
+  #     redirect_to admin_provider_products_path(notice: "Product deleted")
+  #   end
+  # end
 end

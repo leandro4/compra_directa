@@ -32,7 +32,10 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
 
       Notifier.new.order_requested_push(order)
 
-      AdminMailer.new_order(order).deliver
+      begin
+        AdminMailer.new_order(order).deliver
+      rescue Exception
+      end
     end
 
     head :ok

@@ -1,7 +1,9 @@
 class Product < ApplicationRecord
+  acts_as_paranoid
+
   belongs_to :provider
 
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   validates :name, presence: true
   validates :description, presence: true

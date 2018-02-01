@@ -43,6 +43,8 @@ gem 'devise'
 
 gem 'fcm'
 
+gem "paranoia", "~> 2.2"
+
 group :development, :test do
   gem 'pry'
 
