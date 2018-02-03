@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201115845) do
+ActiveRecord::Schema.define(version: 20180203033058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180201115845) do
     t.uuid "commerce_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "accepted_at"
     t.index ["commerce_id"], name: "index_orders_on_commerce_id"
     t.index ["provider_id"], name: "index_orders_on_provider_id"
   end

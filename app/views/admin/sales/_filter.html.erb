@@ -1,0 +1,9 @@
+ <%= form_tag("/admin/sales", method: "get", class: "filter_form") do %>
+  <div class="filter_form_field">
+    <%= label_tag(:date, "Date") %>
+    <%= date_select("sales", "date", order: [:month, :year], selected: date) %>
+  </div>
+  <div class="buttons">
+    <input type="submit" name="commit" value="Filter">
+  </div>
+<% end %>

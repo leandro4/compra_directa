@@ -26,7 +26,6 @@ ActiveAdmin.register Order do
       order.commerce.business_name
     end
     column :products do |order|
-      binding.pry
       span order.order_items.count, class: "status_tag no"
     end
   end

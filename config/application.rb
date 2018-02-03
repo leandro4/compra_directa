@@ -21,6 +21,8 @@ module CompraDirecta
 
     config.paths.add "#{config.root}/lib/validators", eager_load: true
 
+    config.time_zone = "Buenos Aires"
+
     config.generators do |g|
     	g.orm :active_record, primary_key_type: :uuid
       g.view_specs false

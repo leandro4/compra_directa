@@ -15,14 +15,12 @@ module Api
             assert_equal Order::ACCEPTED, order.reload.status
           end
 
-          it "changes the order status to accepted" do
-            order = create(:order)
+          it "changes the accepted_at date" do
+            order = create(:order, provider: provider)
 
             post_accept_order(order)
 
-            assert_response :not_found
-
-            assert_equal Order::PENDING, order.reload.status
+            assert_in_delta order.reload.accepted_at, Time.zone.now, 1.second
           end
 
           it "Sends a push notificacion to logged commerce" do
@@ -35,6 +33,16 @@ module Api
             post_accept_order(order)
 
             assert_requested(stubed_request)
+          end
+
+          it "returns not found for a order for another provider" do
+            order = create(:order)
+
+            post_accept_order(order)
+
+            assert_response :not_found
+
+            assert_equal Order::PENDING, order.reload.status
           end
 
           def post_accept_order(order)

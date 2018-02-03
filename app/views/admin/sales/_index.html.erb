@@ -1,0 +1,13 @@
+<%=
+  Arbre::Context.new({}, self) do
+    table_for(providers, sortable: true, class: 'index_table') do
+      column :business_name
+      column :accepted_orders do |provider|
+        (provider.orders.accepted & orders).size
+      end
+      column :total do |provider|
+        provider.orders.sum(&:total_price)
+      end
+    end
+  end
+%>

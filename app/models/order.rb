@@ -11,8 +11,14 @@ class Order < ApplicationRecord
 
   before_create :set_pending
 
+  scope :accepted, -> { where(status: ACCEPTED) }
+
+  def total_price
+    order_items.sum { |item| item.unit_price * item.quantity }
+  end
+
   def accept!
-    update(status: ACCEPTED)
+    update(status: ACCEPTED, accepted_at: Time.zone.now)
   end
 
   def reject!
