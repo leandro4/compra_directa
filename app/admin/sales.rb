@@ -3,11 +3,9 @@ ActiveAdmin.register_page "Sales" do
     date = Date.new(* %w(1 2 3).map { |e| params[:sales]["date(#{e}i)"].to_i }) if params[:sales]
     date ||= Time.zone.now.beginning_of_month
 
-    orders = Order.where("accepted_at >= ? AND accepted_at <= ?", date.beginning_of_month, date.end_of_month)
+    providers = Provider.includes(:orders).where("orders.accepted_at >= ? AND orders.accepted_at <= ?", date.beginning_of_month, date.end_of_month).references(:orders)
 
-    providers = orders.collect(&:provider).uniq
-
-    render partial: 'index', locals: { providers: providers, orders: orders }
+    render partial: 'index', locals: { providers: providers }
   end
 
   sidebar :filter do
