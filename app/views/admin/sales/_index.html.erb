@@ -8,6 +8,9 @@
       column :total do |provider|
         provider.orders.map(&:total_price).sum
       end
+      column nil do |provider|
+        link_to "Orders", admin_provider_sales_detail_path(provider, date: date)
+      end
     end
   end
 %>

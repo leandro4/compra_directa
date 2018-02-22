@@ -5,7 +5,7 @@ ActiveAdmin.register_page "Sales" do
 
     providers = Provider.includes(:orders).where("orders.accepted_at >= ? AND orders.accepted_at <= ?", date.beginning_of_month, date.end_of_month).references(:orders)
 
-    render partial: 'index', locals: { providers: providers }
+    render partial: 'index', locals: { providers: providers, date: date }
   end
 
   sidebar :filter do

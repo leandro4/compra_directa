@@ -1,0 +1,21 @@
+<%=
+  Arbre::Context.new({}, self) do
+    table_for(orders, sortable: true, class: 'index_table') do
+      column :commerce do |order|
+        order.commerce.business_name
+      end
+      column :status do |order|
+        span order.status, class: "status_tag no"
+      end
+      column :products do |order|
+        span order.order_items.count, class: "status_tag no"
+      end
+      column :created_at
+      column :accepted_at
+
+      column nil do |order|
+        link_to "Detail", admin_provider_order_path(order.provider, order, date: date)
+      end
+    end
+  end
+%>

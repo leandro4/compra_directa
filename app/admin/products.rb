@@ -19,6 +19,13 @@ ActiveAdmin.register Product do
   scope("Active Discounts") { |scope| scope.active_discount }
   scope("Expired Discounts") { |scope| scope.expired_discount }
 
+
+  breadcrumb do
+    [link_to("Admin", admin_root_path),
+     link_to("Providers", admin_providers_path),
+     provider.business_name
+    ]
+  end
   # or
   #
   # permit_params do

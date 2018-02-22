@@ -26,8 +26,9 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
         OrderItemValidator.new.validate!(order_param.merge(provider_id: provider.id))
 
         product = provider.products.find(order_param[:product_id])
+
         order.order_items.create(product_id: product.id, quantity: order_param[:quantity],
-          unit_price: product.price)
+          unit_price: product.price, product_name: product.name, product_description: product.description)
       end
 
       Notifier.new.order_requested_push(order)
