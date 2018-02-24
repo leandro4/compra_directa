@@ -8,5 +8,7 @@ FactoryBot.define do
     address { FFaker::Address.street_address }
     city { FFaker::Address.city }
     cuit "30202020209"
+
+    avatar {Rack::Test::UploadedFile.new(Rails.root.join('test', 'support', 'images', 'test.png'), 'image/png')}
   end
 end

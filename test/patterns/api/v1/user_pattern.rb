@@ -29,7 +29,8 @@ class Api::V1::UserPattern < Pattern
       city: user.city,
       iva: user.iva,
       cuit: user.cuit,
-      type: user.type.downcase
+      type: user.type.downcase,
+      avatar_url: user.avatar.url
     }
   end
 end

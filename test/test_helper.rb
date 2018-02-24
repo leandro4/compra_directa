@@ -23,6 +23,17 @@ class ActiveSupport::TestCase
     DatabaseCleaner.clean
   end
 
+  Fog.mock!
+
+  service = Fog::Storage.new({
+    provider:                 'AWS',
+    aws_access_key_id:     ENV['S3_KEY'],
+    aws_secret_access_key: ENV['S3_SECRET'],
+    region: ENV['S3_REGION']
+  })
+
+  service.directories.create(key: ENV['S3_BUCKET'])
+
   class << self
     alias :context :describe
   end

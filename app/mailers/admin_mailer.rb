@@ -1,9 +1,9 @@
 class AdminMailer < ApplicationMailer
-  default from: APP_CONFIG["admin_email"]
+  default from: ENV["ADMIN_EMAIL"]
 
   def new_order(order)
     @order = order
 
-    mail(to: APP_CONFIG["admin_email"], subject: "Nuevo pedido")
+    mail(to: ENV["ADMIN_EMAIL"], subject: "Nuevo pedido")
   end
 end

@@ -45,6 +45,14 @@ gem 'fcm'
 
 gem "paranoia", "~> 2.2"
 
+gem 'carrierwave', '~> 1.0'
+
+gem 'carrierwave-base64'
+
+gem 'mini_magick'
+
+gem 'fog-aws'
+
 group :development, :test do
   gem 'pry'
 
@@ -71,6 +79,8 @@ group :development, :test do
   gem 'webmock'
 
   gem 'letter_opener'
+
+  gem 'dotenv-rails'
 end
 
 group :development do

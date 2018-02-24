@@ -35,7 +35,7 @@ class Api::V1::Commerce::OrdersController < Api::V1::BaseController
 
       begin
         AdminMailer.new_order(order).deliver
-      rescue Exception
+      rescue Exception => e
       end
     end
 

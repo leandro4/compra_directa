@@ -36,7 +36,7 @@ class Notifier
 
   def push(notificacion_id, options)
 
-    fcm = FCM.new(APP_CONFIG["firebase_api_key"])
+    fcm = FCM.new(ENV["firebase_api_key"])
 
     response = fcm.send([notificacion_id], options)
   end
