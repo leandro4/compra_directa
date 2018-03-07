@@ -15,13 +15,13 @@ module Api
           user
         end
 
-        let(:image_data) { Base64.encode64(File.open(File.join(Rails.root, '/test/support/images/test.png'), &:read)) }
+        let(:image_data) { Base64.encode64(File.open(File.join(Rails.root, '/test/support/images/test.jpg'), &:read)) }
         let(:valid_params) {{
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
           city: FFaker::Address.city,
           description: FFaker::Lorem.paragraph,
-          avatar: "data:image/png;base64,#{ image_data }"
+          avatar: "data:image/jpeg;base64,#{ image_data }"
           # avatar:  {
           #   filename: "ruby.jpg",
           #   content: base64_open(File.join(Rails.root, 'test', 'support', 'files', 'ruby.jpg')),
