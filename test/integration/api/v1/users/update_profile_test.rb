@@ -15,7 +15,7 @@ module Api
           user
         end
 
-        let(:image_data) { Base64.encode64(File.open(File.join(Rails.root, '/test/support/images/test.jpg'), &:read)) }
+        let(:image_data) { Base64.encode64(File.open(File.join(Rails.root, '/test/support/images/test2.jpg'), &:read)) }
         let(:valid_params) {{
           phone: FFaker::PhoneNumber.phone_number,
           address: FFaker::Address.street_address,
