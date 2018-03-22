@@ -53,6 +53,8 @@ gem 'mini_magick'
 
 gem 'fog-aws'
 
+gem 'loofah', '~> 2.2.1'
+
 group :development, :test do
   gem 'pry'
 
